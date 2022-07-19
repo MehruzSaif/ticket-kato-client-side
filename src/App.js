@@ -1,4 +1,5 @@
 import './App.css';
+import Business from './pages/Home/Business';
 import Footer from './pages/shared/Footer';
 import Navbar from './pages/shared/Navbar';
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <div className="">
       <Navbar></Navbar>
-      <h2 className='text-center'>Ticket Kato</h2>
+      <Business></Business>
       <Footer></Footer>
     </div>
   );
