@@ -1,9 +1,11 @@
 import './App.css';
+import Navbar from './pages/shared/Navbar';
 
 function App() {
   return (
     <div className="">
-      <h2>Ticket Kato</h2>
+      <Navbar></Navbar>
+      <h2 className='text-center'>Ticket Kato</h2>
     </div>
   );
 }
