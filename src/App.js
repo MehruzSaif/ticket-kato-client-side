@@ -1,8 +1,9 @@
-import Slider from "./pages/Home/Slider";
+import './App.css';
+
 function App() {
   return (
-    <div className="App">
-      <Slider></Slider>
+    <div className="">
+      <h2>Ticket Kato</h2>
     </div>
   );
 }
