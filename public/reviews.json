@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "comment": "This is such a very useful application!",
+        "ratings": 4.5
+    },
+    {
+        "id": 2,
+        "comment": "Your management system is organised!",
+        "ratings": 4.5
+    },
+    {
+        "id": 3,
+        "comment": "I satisfied to yours services!",
+        "ratings": 4.5
+    }
+]
