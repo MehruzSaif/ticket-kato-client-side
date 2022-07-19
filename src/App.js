@@ -1,9 +1,10 @@
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="">
-      <h2 className='container text-success'>Ticket Kato</h2>
+    <div className="App">
+      
     </div>
   );
 }
