@@ -3,10 +3,10 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            Navbar
+          <a class="navbar-brand fw-bold text-primary" href="#">
+            Ticket Kato
           </a>
           <button
             class="navbar-toggler"
@@ -24,11 +24,6 @@ const Navbar = () => {
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                   Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
                 </a>
               </li>
               <li class="nav-item dropdown">
@@ -63,11 +58,8 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
