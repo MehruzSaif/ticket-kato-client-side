@@ -20,7 +20,7 @@ const Slider = () => {
     <div class='item'>
         <img src={img1} alt=""  />
           <p className='mt-2'>Air Supp<span>ort</span></p>
-        <h4>Find Biman Bangladesh Airlines Ticket and Schedule on ShareTrip</h4>
+        <h4>Find Biman Bangladesh Airlines Ticket and Schedule on ShareTrip.</h4>
         <button>Book now</button>
     </div>
     <div class='item'>
