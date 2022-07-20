@@ -55,11 +55,23 @@
 .content .box .counter{
   font-size: 50px;
   font-weight: 500;
-  color: #f2f2f2;
+  color: #2CC8A0;
+  font-family: sans-serif;
+}
+.content .box .counter:hover{
+  font-size: 50px;
+  font-weight: 500;
+  color: #2CC8A0;
   font-family: sans-serif;
 }
 
 .content .box .text{
+  font-size: 25px;
+  font-weight: 400;
+  color: #f2f2f2;
+  margin-bottom: 20px;
+}
+.content .box .text:hover{
   font-size: 25px;
   font-weight: 400;
   color: #2CC8A0;
