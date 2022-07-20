@@ -22,7 +22,7 @@ const Business = () => {
                 </div>
                 <div className='box'>
                     <div class='icon'><HiBriefcase /></div>
-                    <div class='counter'><CountUp end={150} duration={1.5} />+</div>
+                    <div class='counter'><CountUp end={160} duration={1.5} />+</div>
                     <div class='text'>Companies</div>
                 </div>
                 <div className='box'>
@@ -32,7 +32,7 @@ const Business = () => {
                 </div>
                 <div className='box'>
                     <div class='icon'><FaBusAlt /></div>
-                    <div class='counter'><CountUp end={1260} duration={1.5} />+</div>
+                    <div class='counter'><CountUp end={1280} duration={1.5} />+</div>
                     <div class='text'>Total Vehicles</div>
                 </div>
 
