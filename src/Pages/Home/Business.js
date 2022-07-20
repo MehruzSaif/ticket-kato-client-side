@@ -8,34 +8,38 @@ import './Business.css';
 
 const Business = () => {
     return (
-        <div className='business'>
-        <div className='business-main'>
-            <h2 className='text-center mb-5 mt-3'>Business Summary</h2>
-            <div className='summary-items'>
-                <div className='summary-item'>
-                <BsPeopleFill className='summary-item-icon'/>
-                <p>Customers</p>
-                <p className='summary-item-number'><CountUp end={15} duration={1.5} />M+</p>
+        <div className='summary'>
+
+            <h2 className='text-center pt-4 font-bold'>A E-ticketing Company You Can Count On</h2>
+
+        <div className='counter-up'>
+
+            <div className='content'>
+                <div className='box'>
+                    <div class='icon'><BsPeopleFill /></div>
+                    <div class='counter'><CountUp end={15} duration={1.5} />M+</div>
+                    <div class='text'>Customers</div>
                 </div>
-                <div className='summary-item'>
-                <HiBriefcase className='summary-item-icon-companies'/>
-                <p>Associate Companies</p>
-                <p className='summary-item-number-companies'><CountUp end={150} duration={1.5} />+</p>
+                <div className='box'>
+                    <div class='icon'><HiBriefcase /></div>
+                    <div class='counter'><CountUp end={150} duration={1.5} />+</div>
+                    <div class='text'>Companies</div>
                 </div>
-                <div className='summary-item'>
-                <FaCommentDots className='summary-item-icon'/>
-                <p>Reviews</p>
-                <p className='summary-item-number'><CountUp end={50} duration={1.5} />K+</p>
+                <div className='box'>
+                    <div class='icon'><FaCommentDots /></div>
+                    <div class='counter'><CountUp end={50} duration={1.5} />K+</div>
+                    <div class='text'>Reviews</div>
+                </div>
+                <div className='box'>
+                    <div class='icon'><FaBusAlt /></div>
+                    <div class='counter'><CountUp end={1260} duration={1.5} />+</div>
+                    <div class='text'>Total Vehicles</div>
                 </div>
 
-                <div className='summary-item'>
-                <FaBusAlt className='summary-item-icon-vehicles'/>
-                <p>Total Vehicles</p>
-                <p className='summary-item-number-vehicles'><CountUp end={1260} duration={1.5} />+</p>
-                </div>
             </div>
+
         </div>
-        </div>
+    </div>
 
     );
 };
