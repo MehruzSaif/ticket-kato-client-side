@@ -1,11 +1,13 @@
 import './App.css';
-import Reviews from './pages/Home/Reviews';
+import Home from './pages/Home/Home';
+import Navbar from './pages/shared/Navbar';
 
 function App() {
   return (
     <div className="">
-      <h2>Ticket Kato</h2>
-      <Reviews></Reviews>
+      <Navbar></Navbar>
+      <h2 className='text-center'>Ticket Kato</h2>
+      <Home></Home>
     </div>
   );
 }
