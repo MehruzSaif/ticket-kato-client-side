@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPeopleGroup,faCommentDots} from '@fortawesome/free-solid-svg-icons';
+import { BsPeopleFill } from "react-icons/bs";
+import { FaCommentDots } from "react-icons/fa";
 import { HiBriefcase } from "react-icons/hi";
 import { FaBusAlt} from "react-icons/fa";
 import CountUp from 'react-countup';
@@ -13,7 +13,7 @@ const Business = () => {
             <h2 className='text-center mb-5 mt-3'>Business Summary</h2>
             <div className='summary-items'>
                 <div className='summary-item'>
-                <FontAwesomeIcon icon={faPeopleGroup} className='summary-item-icon'/>
+                <BsPeopleFill className='summary-item-icon'/>
                 <p>Customers</p>
                 <p className='summary-item-number'><CountUp end={15} duration={1.5} />M+</p>
                 </div>
@@ -23,7 +23,7 @@ const Business = () => {
                 <p className='summary-item-number-companies'><CountUp end={150} duration={1.5} />+</p>
                 </div>
                 <div className='summary-item'>
-                <FontAwesomeIcon icon={faCommentDots} className='summary-item-icon'/>
+                <FaCommentDots className='summary-item-icon'/>
                 <p>Reviews</p>
                 <p className='summary-item-number'><CountUp end={50} duration={1.5} />K+</p>
                 </div>
