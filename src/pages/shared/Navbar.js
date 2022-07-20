@@ -3,11 +3,18 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold text-primary" href="#">
-            Ticket Kato
-          </a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid fs-5">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://i.ibb.co/JdDqrdk/ticket-Kato-2.png"
+                alt=""
+                width="125"
+                height="40"
+              />
+            </a>
+          </div>
           <button
             class="navbar-toggler"
             type="button"
@@ -20,32 +27,34 @@ const Navbar = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
-              <li class="nav-item dropdown">
+            </ul> */}
+            <ul class="d-flex navbar-nav ">
+              <li class="nav-item dropdown me-2">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link active dropdown-toggle"
                   href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Book Ticket
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      Book a Ticket
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Destinations
                     </a>
                   </li>
                   <li>
@@ -53,23 +62,114 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      Schedules
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <ul class="d-flex navbar-nav ">
+              <li class="nav-item dropdown me-4">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Travel Info
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Baggage Info
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Refund Request & Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Terms & Condition
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="d-flex navbar-nav ">
+              <li class="nav-item dropdown me-4">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Offers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Ticket Discounts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Limited Offers
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="d-flex navbar-nav ">
+              <li class="nav-item dropdown me-5">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Contact
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Feedback
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button
+                  class="btn px-4 mx-auto btn-info text-white"
+                  aria-current="page"
+                  href="#"
+                >
+                  Login
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
