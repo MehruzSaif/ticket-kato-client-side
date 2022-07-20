@@ -9,14 +9,45 @@ import img3 from'./images/luanch.jpg'
 import img4 from'./images/train.jpg'
 
 const Slider = () => {
+  const options = {
+    margin: 30,
+    responsiveClass: true,
+    nav: false,
+    autoplay: true,
+    smartSpeed: 1000,
+    responsive: {
+        0: {
+            items: 1,
+            dots:false,
+
+        },
+        400: {
+            items: 1,
+            dots:false,
+        },
+        600: {
+            items: 2,
+            dots:true,
+        },
+        700: {
+            items: 2,
+            dots:true,
+        },
+        1000: {
+            items: 3,
+            dots:true,
+
+        }
+    },
+};
     return (
         <div className='owl-slider'>
             <div className='slidr-dev'>
         <OwlCarousel className='owl-theme'
-          items='3'
-          autoplay
-          dots
-         loop margin={10} nav>
+       
+          margin={10} 
+        {...options}
+        >
     <div class='item'>
         <img src={img1} alt=""  />
           <p className='mt-2'>Air Supp<span>ort</span></p>
