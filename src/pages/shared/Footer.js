@@ -17,29 +17,29 @@ const Footer = () => {
                                 <a href='#' className='text-white text-decoration-none'>The Providers</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Creativity</a>
+                                <a href='#' className='text-white text-decoration-none'>Creativity</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Source Files</a>
+                                <a href='#' className='text-white text-decoration-none'>Source Files</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Bootstrap 5 alpha</a>
+                                <a href='#' className='text-white text-decoration-none'>Bootstrap 5 alpha</a>
                             </p>
                         </div>
 
                         <div className='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
                             <h5 className='text-text-uppercase mb-4 font-weight-bold text-warning '>Useful Links</h5>
                             <p>
-                                <a href='#' className='text-white'>Your Account</a>
+                                <a href='#' className='text-white text-decoration-none'>Your Account</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Become an Affiliates</a>
+                                <a href='#' className='text-white text-decoration-none'>Become an Affiliates</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Shipping Rates</a>
+                                <a href='#' className='text-white text-decoration-none'>Shipping Rates</a>
                             </p>
                             <p>
-                                <a href='#' className='text-white'>Help</a>
+                                <a href='#' className='text-white text-decoration-none'>Help</a>
                             </p>
                         </div>
 
@@ -62,10 +62,10 @@ const Footer = () => {
                         <hr className='mb-4'/>
                         
                         <div className='row align-items-center'>
-                            <div className='col-md-7 col-lg-8'>
+                            <div className='col-md-6 col-lg-12'>
                                 <p>Copyright  Ⓒ 2022 all right reserved by :
-                                <a href='#' >
-                                    <strong className='text-warning'>  Ticket Kato</strong>
+                                <a href='#'  className='text-decoration-none'>
+                                    <strong className='text-warning text-decoration-none'>  Ticket Kato</strong>
                                 </a>
                                 </p>
                                 
