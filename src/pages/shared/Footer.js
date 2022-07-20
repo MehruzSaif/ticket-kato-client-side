@@ -14,7 +14,7 @@ const Footer = () => {
                         <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mt-3'>
                             <h5 className='text-uppercase mb-4 font-weight-bold text-warning'>Products</h5>
                             <p>
-                                <a href='#' className='text-white'>The Providers</a>
+                                <a href='#' className='text-white text-decoration-none'>The Providers</a>
                             </p>
                             <p>
                                 <a href='#' className='text-white'>Creativity</a>
@@ -59,6 +59,18 @@ const Footer = () => {
                             </p>
                         </div>
 
+                        <hr className='mb-4'/>
+                        
+                        <div className='row align-items-center'>
+                            <div className='col-md-7 col-lg-8'>
+                                <p>Copyright  Ⓒ 2022 all right reserved by :
+                                <a href='#' >
+                                    <strong className='text-warning'>  Ticket Kato</strong>
+                                </a>
+                                </p>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
