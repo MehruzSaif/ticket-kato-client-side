@@ -1,9 +1,27 @@
 import React from 'react';
+import { useTypewriter } from 'react-simple-typewriter';
+/* import 'react-simple-typewriter/dist/'; */
+import './Banner.css';
 
 const Banner = () => {
+
+    const { text } = useTypewriter({
+        words: ['Bus', 'Train', 'Launch', 'Domestic Airline'],
+        loop: Infinity,
+        onLoopDone: () => console.log(`loop completed after 3 runs.`),
+    })
+
     return (
-        <div>
-            <h2>This is banner by Mehruz.</h2>
+        <div className='banner'>
+            <div className='main-div-banner'>
+                <div>
+                    <h1>Book Your <br /> Tickets For   
+                        <span class='typewriter'> {text}</span>
+                    </h1>
+
+                    <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
+                </div>
+            </div>
         </div>
     );
 };
