@@ -1,0 +1,20 @@
+.reviewImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-top: -65px;
+}
+
+
+@media screen and (Max-width:688px) {
+
+    .reviewImg {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (Min-width:689px) and (Max-width: 992px) {
+    .reviewImg {
+        margin-top: 0px;
+    }
+}
