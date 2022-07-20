@@ -19,7 +19,7 @@
 }
 
 .reviewImg {
-    padding: 0 100px;
+    padding: 0 78px;
 }
 
 .reviewImg img {
@@ -31,7 +31,7 @@
 
 .review-container {
     background-color: #1E293B;
-    padding: 20px;
+    padding: 30px;
     color: #92A1B6;
 }
 
@@ -59,16 +59,15 @@
     color: #EEBD1F;
 }
 
-
-/* @media screen and (Max-width:688px) {
+@media screen and (Max-width:688px) {
 
     .reviewImg {
-        margin-top: 0px;
+        padding: 0 50px;
     }
 }
 
 @media screen and (Min-width:689px) and (Max-width: 992px) {
     .reviewImg {
-        margin-top: 0px;
+        padding: 0 50px;
     }
-} */
+}

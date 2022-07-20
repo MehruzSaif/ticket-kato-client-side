@@ -1,5 +1,5 @@
 import React from 'react';
-import './reviews.css'
+import './Reviews.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -7,15 +7,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
 
 const Comment = () => {
+    const options = {
+        margin: 30,
+        responsiveClass: true,
+        nav: false,
+        autoplay: true,
+        // smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1,
+                dots: false,
+
+            },
+            400: {
+                items: 1,
+                dots: false,
+            },
+            600: {
+                items: 2,
+                dots: true,
+            },
+            700: {
+                items: 2,
+                dots: true,
+            },
+            1000: {
+                items: 3,
+                dots: true,
+
+            }
+        },
+    }
     return (
         <div className='review-container'>
             <div className='owl-slider'>
                 <div className='slider-div'>
                     <OwlCarousel className='owl-theme'
-                        items='3'
-                        autoplay
-                        dots
-                        loop margin={10} nav>
+                        // items='3'
+                        // autoplay
+                        // dots
+                        // loop margin={10} nav
+                        margin={10}
+                        {...options}
+                    >
                         <div className='col-sm-12 col-md-6 col-lg-4 text-center review w-100 mt-5'>
                             <div class="card reviews">
                                 <div class="card-body">
@@ -182,7 +216,7 @@ const Comment = () => {
                     </OwlCarousel>
                 </div>
             </div>
-            <div className='text-center'>
+            <div className='text-center mt-4'>
                 <button className='addReview'>Add Your Review</button>
             </div>
         </div>
