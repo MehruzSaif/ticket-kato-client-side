@@ -4,7 +4,6 @@ import "./Navber.css";
 const Navbar = () => {
   // navbar-light bg-white 
   return (
-<<<<<<< HEAD
     <div className="style-nev">
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
@@ -18,20 +17,6 @@ const Navbar = () => {
               />
             </a>
           </div>
-=======
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid ">
-          <a class="navbar-brand" href="#">
-            <img
-              href="#"
-              src="https://i.ibb.co/JdDqrdk/ticket-Kato-2.png"
-              alt=""
-              width="125"
-              height="40"
-            />
-          </a>
->>>>>>> 67eb7a2c33e38b98955294ac7f6e0264c7b48d11
           <button
             class="navbar-toggler"
             type="button"
@@ -43,10 +28,7 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
