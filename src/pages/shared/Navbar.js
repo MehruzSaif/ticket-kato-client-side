@@ -1,9 +1,11 @@
 import React from "react";
+import "./Navber.css";
 
 const Navbar = () => {
+  // navbar-light bg-white 
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div className="style-nev">
+      <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
           <div class="container">
             <a class="navbar-brand" href="#">

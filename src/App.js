@@ -5,18 +5,18 @@ import Slider from './pages/Home/Slider';
 import Footer from './pages/shared/Footer';
 import Navbar from './pages/shared/Navbar';
 
+
 function App() {
   return (
     <div className="">
-      <div className='container'>
+      {/* <div className='containers'>
         <Navbar></Navbar>
-      </div>
-      <div className='mt-4'>
+      </div> */}
+      <Navbar></Navbar>
         <Banner></Banner>
-         <Slider></Slider>
+         <Slider/>
         <Business></Business>
         <Footer></Footer>
-      </div>
     </div>
   );
 }
