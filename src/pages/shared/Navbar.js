@@ -4,19 +4,18 @@ import "./Navber.css";
 const Navbar = () => {
   // navbar-light bg-white 
   return (
-    <div className="style-nev">
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid fs-5">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              <img 
-                src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
-                alt=""
-                width="125"
-                height="40"
-              />
-            </a>
-          </div>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">
+            <img
+              href="#"
+              src="https://i.ibb.co/JdDqrdk/ticket-Kato-2.png"
+              alt=""
+              width="125"
+              height="40"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -106,7 +105,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Terms & Condition
+                      Terms & Conditions
                     </a>
                   </li>
                 </ul>
