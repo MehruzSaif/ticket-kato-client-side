@@ -57,7 +57,7 @@ const Comment = () => {
                         <div className='col-sm-12 col-md-6 col-lg-4 text-center review w-100 mt-5'>
                             <div class="card reviews">
                                 <div class="card-body">
-                                    <div className='reviewImg'>
+                                    <div className='w-100 reviewImg'>
                                         <img className='' src='https://i.ibb.co/jzrvcHD/8872153b230eb0da2fd6e26d1f7b1d8e.jpg' alt="" />
                                     </div>
                                     <h2 className='mt-2 name'>Marong lee</h2>

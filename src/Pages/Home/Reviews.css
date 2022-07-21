@@ -20,11 +20,10 @@
 
 .reviewImg {
     padding: 0 75px;
-    width: 70%;
 }
 
 .reviewImg img {
-    width: 50px;
+    width: 90px;
     height: 110px;
     border-radius: 100%;
     margin-top: -70px;
@@ -68,13 +67,11 @@
 
     .reviewImg {
         padding: 0 50px;
-        width: 90%;
     }
 }
 
 @media screen and (Min-width:689px) and (Max-width: 992px) {
     .reviewImg {
         padding: 0 62px;
-        width: 90%;
     }
 }
