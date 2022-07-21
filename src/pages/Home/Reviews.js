@@ -61,7 +61,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src='https://i.ibb.co/jzrvcHD/8872153b230eb0da2fd6e26d1f7b1d8e.jpg' alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Marong lee</h2>
+                                    <h2 className='mt-2 name'>Marong lee</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -79,7 +79,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src='https://i.ibb.co/2321j2k/gettyimages-465470375.jpg' alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Jhoe Biden</h2>
+                                    <h2 className='mt-2 name'>Jhoe Biden</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -98,7 +98,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src='https://i.ibb.co/S56kBdG/louise-loe-profile-image.jpg' alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Leo Marie</h2>
+                                    <h2 className='mt-2 name'>Leo Marie</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -115,7 +115,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={arnob} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Mehruj Saif Arnob</h2>
+                                    <h2 className='mt-2 name'>Mehruj Saif Arnob</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -133,7 +133,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={mehedi} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Mehedi Hassan</h2>
+                                    <h2 className='mt-2 name'>Mehedi Hassan</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -152,7 +152,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={shahria} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>MH Shaharia</h2>
+                                    <h2 className='mt-2 name'>MH Shaharia</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -169,7 +169,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={daniel} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Daniel Newaz</h2>
+                                    <h2 className='mt-2 name'>Daniel Newaz</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -187,7 +187,7 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={sajib} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Hadiuzzaman</h2>
+                                    <h2 className='mt-2 name'>Hadiuzzaman</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -204,9 +204,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='nargisImg' src={nargis} alt="" />
+                                        <img src={nargis} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Farhana Riya</h2>
+                                    <h2 className='mt-2 name'>Farhana Riya</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>

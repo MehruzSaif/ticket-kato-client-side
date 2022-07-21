@@ -4,6 +4,7 @@ import Slider from './pages/Home/Slider';
 import Footer from './pages/shared/Footer';
 import Navbar from './pages/shared/Navbar';
 import Reviews from './pages/Home/Reviews'
+import Business from './pages/Home/Business';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className='mt-4'>
         <Banner></Banner>
         <Slider></Slider>
+        <Business></Business>
         <Reviews></Reviews>
         <Footer></Footer>
       </div>

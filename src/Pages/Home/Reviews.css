@@ -49,7 +49,7 @@
 }
 
 .reviews {
-    background-color: #334155;
+    background-color: #001232;
     border-radius: 0;
 }
 
@@ -59,8 +59,8 @@
     color: #EEBD1F;
 }
 
-.nargisImg {
-    width: 120px;
+.name {
+    color: #2CC8A0;
 }
 
 @media screen and (Max-width:688px) {
