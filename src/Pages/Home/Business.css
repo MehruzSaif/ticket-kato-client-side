@@ -1,10 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-.summary{
+
+.summary {
   background: #001232;
-  color:aliceblue;
+  color: aliceblue;
 }
-.counter-up{
+
+.counter-up {
   background: #001232;
   min-height: 30vh;
   background-size: cover;
@@ -15,7 +16,8 @@
   align-items: center;
 
 }
-.counter-up::before{
+
+.counter-up::before {
   position: absolute;
   content: "";
   top: 0;
@@ -24,7 +26,8 @@
   width: 100%;
   background: #001232;
 }
-.counter-up .content{
+
+.counter-up .content {
   z-index: 1;
   position: relative;
   display: flex;
@@ -34,7 +37,8 @@
   align-items: center;
   justify-content: space-between;
 }
-.counter-up .content .box{
+
+.counter-up .content .box {
   /* border: 1px dashed rgba(255,255,255,0.6); */
   width: calc(25% - 30px);
   border-radius: 5px;
@@ -44,34 +48,39 @@
   flex-direction: column;
 
 }
-.content .box .icon{
+
+.content .box .icon {
   font-size: 48px;
   color: #e6e6e6;
 }
-.content .box .icon:hover{
+
+.content .box .icon:hover {
   font-size: 48px;
   color: #2CC8A0;
 }
-.content .box .counter{
-  font-size: 50px;
-  font-weight: 500;
-  color: #2CC8A0;
-  font-family: sans-serif;
-}
-.content .box .counter:hover{
+
+.content .box .counter {
   font-size: 50px;
   font-weight: 500;
   color: #2CC8A0;
   font-family: sans-serif;
 }
 
-.content .box .text{
+.content .box .counter:hover {
+  font-size: 50px;
+  font-weight: 500;
+  color: #2CC8A0;
+  font-family: sans-serif;
+}
+
+.content .box .text {
   font-size: 25px;
   font-weight: 400;
   color: #f2f2f2;
   margin-bottom: 20px;
 }
-.content .box .text:hover{
+
+.content .box .text:hover {
   font-size: 25px;
   font-weight: 400;
   color: #2CC8A0;
@@ -79,26 +88,30 @@
 }
 
 @media screen and (max-width: 1036px) {
-  .counter-up{
+  .counter-up {
     padding: 50px 50px 0 50px;
   }
-  .counter-up .content .box{
+
+  .counter-up .content .box {
     width: calc(50% - 30px);
     margin-bottom: 50px;
   }
 
 }
+
 @media screen and (max-width: 580px) {
-  .counter-up .content .box{
+  .counter-up .content .box {
     width: 100%;
   }
 
 }
+
 @media screen and (max-width: 500px) {
-  .wrapper{
+  .wrapper {
     padding: 20px;
   }
-  .counter-up{
+
+  .counter-up {
     padding: 30px 20px 0 20px;
   }
 

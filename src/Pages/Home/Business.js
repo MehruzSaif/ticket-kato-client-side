@@ -8,28 +8,28 @@ import './Business.css';
 
 const Business = () => {
     useCountUp({
-      ref: "counter",
-      end:10,
-      enableScrollSpy: true,
-      scrollSpyDelay: 100
+        ref: "counter",
+        end: 10,
+        enableScrollSpy: true,
+        scrollSpyDelay: 100
     });
     useCountUp({
-      ref: "counter2",
-      end:160,
-      enableScrollSpy: true,
-      scrollSpyDelay: 100
+        ref: "counter2",
+        end: 160,
+        enableScrollSpy: true,
+        scrollSpyDelay: 100
     });
     useCountUp({
-      ref: "counter3",
-      end:50,
-      enableScrollSpy: true,
-      scrollSpyDelay: 100
+        ref: "counter3",
+        end: 50,
+        enableScrollSpy: true,
+        scrollSpyDelay: 100
     });
     useCountUp({
-      ref: "counter4",
-      end:1280,
-      enableScrollSpy: true,
-      scrollSpyDelay: 100
+        ref: "counter4",
+        end: 1280,
+        enableScrollSpy: true,
+        scrollSpyDelay: 100
     });
     return (
         <div className='summary'>
@@ -38,7 +38,7 @@ const Business = () => {
                 <div className='content'>
                     <div className='box'>
                         <div class='icon'><BsPeopleFill /></div>
-                        <div class='counter'><enableScrollSpy /><span id="counter" />M+</div> 
+                        <div class='counter'><enableScrollSpy /><span id="counter" />M+</div>
                         <div class='text'>Customers</div>
                     </div>
                     <div className='box'>
