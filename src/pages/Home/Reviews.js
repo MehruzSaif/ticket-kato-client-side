@@ -3,8 +3,7 @@ import './Reviews.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import arnob from '../Home/images/arnob2.jfif'
 import mehedi from '../Home/images/mehedi.jpg'
 import daniel from '../Home/images/daniel.jfif'
@@ -63,11 +62,11 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Marong lee</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStarHalf}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStarHalfAlt className='star'></FaStarHalfAlt>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
                                 </div>
@@ -81,11 +80,11 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Jhoe Biden</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
                                 </div>
@@ -100,10 +99,10 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Leo Marie</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
                                 </div>
@@ -115,13 +114,13 @@ const Comment = () => {
                                     <div className='w-100 reviewImg'>
                                         <img className='' src={arnob} alt="" />
                                     </div>
-                                    <h2 className='mt-2 name'>Mehruj Saif Arnob</h2>
+                                    <h2 className='mt-2 name'>Mehruz Saif</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStarHalf}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
                                 </div>
@@ -135,11 +134,11 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Mehedi Hassan</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
                                 </div>
@@ -154,10 +153,10 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>MH Shaharia</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
                                 </div>
@@ -171,11 +170,11 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Daniel Newaz</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStarHalf}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStarHalfAlt className='star'></FaStarHalfAlt>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
                                 </div>
@@ -189,11 +188,11 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Hadiuzzaman</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
                                 </div>
@@ -208,10 +207,10 @@ const Comment = () => {
                                     </div>
                                     <h2 className='mt-2 name'>Farhana Riya</h2>
                                     <div className='mb-2'>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
-                                        <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
+                                        <FaStar className='star'></FaStar>
                                     </div>
                                     <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
                                 </div>
