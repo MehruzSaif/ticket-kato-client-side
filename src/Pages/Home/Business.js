@@ -6,12 +6,13 @@ import { FaBusAlt } from "react-icons/fa";
 import CountUp, { useCountUp } from "react-countup";
 import './Business.css';
 
+
 const Business = () => {
     useCountUp({
         ref: "counter",
         end: 10,
         enableScrollSpy: true,
-        scrollSpyDelay: 100
+        scrollSpyDelay: 100,
     });
     useCountUp({
         ref: "counter2",
