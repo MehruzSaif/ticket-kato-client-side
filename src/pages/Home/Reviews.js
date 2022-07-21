@@ -5,7 +5,12 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
-
+import arnob from '../Home/images/arnob2.jfif'
+import mehedi from '../Home/images/mehedi.jpg'
+import daniel from '../Home/images/daniel.jfif'
+import sajib from '../Home/images/sojib.jfif'
+import shahria from '../Home/images/shahria.jpg'
+import nargis from '../Home/images/nargis.jpg'
 const Comment = () => {
     const options = {
         margin: 30,
@@ -108,9 +113,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/jzrvcHD/8872153b230eb0da2fd6e26d1f7b1d8e.jpg' alt="" />
+                                        <img className='' src={arnob} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Marong lee</h2>
+                                    <h2 className='mt-2'>Mehruj Saif Arnob</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -126,9 +131,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/2321j2k/gettyimages-465470375.jpg' alt="" />
+                                        <img className='' src={mehedi} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Jhoe Biden</h2>
+                                    <h2 className='mt-2'>Mehedi Hassan</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -145,9 +150,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/S56kBdG/louise-loe-profile-image.jpg' alt="" />
+                                        <img className='' src={shahria} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Leo Marie</h2>
+                                    <h2 className='mt-2'>MH Shaharia</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -162,9 +167,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/jzrvcHD/8872153b230eb0da2fd6e26d1f7b1d8e.jpg' alt="" />
+                                        <img className='' src={daniel} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Marong lee</h2>
+                                    <h2 className='mt-2'>Daniel Newaz</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -180,9 +185,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/2321j2k/gettyimages-465470375.jpg' alt="" />
+                                        <img className='' src={sajib} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Jhoe Biden</h2>
+                                    <h2 className='mt-2'>Hadiuzzaman</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -199,9 +204,9 @@ const Comment = () => {
                             <div class="card reviews">
                                 <div class="card-body">
                                     <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/S56kBdG/louise-loe-profile-image.jpg' alt="" />
+                                        <img className='nargisImg' src={nargis} alt="" />
                                     </div>
-                                    <h2 className='mt-2'>Leo Marie</h2>
+                                    <h2 className='mt-2'>Farhana Riya</h2>
                                     <div className='mb-2'>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
                                         <FontAwesomeIcon className='star' icon={faStar}></FontAwesomeIcon>
@@ -216,7 +221,7 @@ const Comment = () => {
                     </OwlCarousel>
                 </div>
             </div>
-            <div className='text-center mt-4'>
+            <div className='text-center'>
                 <button className='addReview'>Add Your Review</button>
             </div>
         </div>

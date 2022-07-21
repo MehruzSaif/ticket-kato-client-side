@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #1E293B; */
+    background-color: #1E293B;
 }
 
 .slider-div {
@@ -19,7 +19,7 @@
 }
 
 .reviewImg {
-    padding: 0 78px;
+    padding: 0 75px;
 }
 
 .reviewImg img {
@@ -59,6 +59,10 @@
     color: #EEBD1F;
 }
 
+.nargisImg {
+    width: 120px;
+}
+
 @media screen and (Max-width:688px) {
 
     .reviewImg {
@@ -68,6 +72,6 @@
 
 @media screen and (Min-width:689px) and (Max-width: 992px) {
     .reviewImg {
-        padding: 0 50px;
+        padding: 0 62px;
     }
 }
