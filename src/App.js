@@ -6,19 +6,19 @@ import Navbar from './pages/shared/Navbar';
 import Reviews from './pages/Home/Reviews'
 import Business from './pages/Home/Business';
 
+
 function App() {
   return (
     <div className="">
-      <div className='container'>
+      {/* <div className='containers'>
         <Navbar></Navbar>
-      </div>
-      <div className='mt-4'>
+      </div> */}
+      <Navbar></Navbar>
         <Banner></Banner>
         <Slider></Slider>
         <Business></Business>
         <Reviews></Reviews>
         <Footer></Footer>
-      </div>
     </div>
   );
 }
