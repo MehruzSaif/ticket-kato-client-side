@@ -9,8 +9,8 @@ const Navbar = () => {
         <div class="container-fluid fs-5">
           <div class="container">
             <a class="navbar-brand" href="#">
-              <img
-                src="https://i.ibb.co/JdDqrdk/ticket-Kato-2.png"
+              <img 
+                src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
                 alt=""
                 width="125"
                 height="40"
