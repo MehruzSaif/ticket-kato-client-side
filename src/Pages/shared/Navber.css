@@ -1,11 +1,20 @@
 .style-nev{
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(0, 0, 0, 0);
     width: 100%;
     color: white;
     z-index: 1000;
     position: fixed;
     top:0;
     
+}
+.changebg{
+    background-color:navy;
+    width: 100%;
+    color: white;
+    z-index: 1000;
+    position: fixed;
+    top:0;
+   
 }
 .navbar {
     padding: 20px 40px;
@@ -21,6 +30,6 @@
 }
 .dropdown-menu{
     z-index: 1000;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgb(10, 10, 53)
    
 }
