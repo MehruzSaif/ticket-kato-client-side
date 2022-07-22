@@ -68,7 +68,7 @@ const Comment = () => {
                                         <FaStar className='star'></FaStar>
                                         <FaStarHalfAlt className='star'></FaStarHalfAlt>
                                     </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
+                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
                                 </div>
                             </div>
                         </div>
