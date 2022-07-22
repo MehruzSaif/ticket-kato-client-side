@@ -1,10 +1,21 @@
 import React from "react";
 import "./Navber.css";
+import  { useState } from 'react';
 
 const Navbar = () => {
-  // navbar-light bg-white 
+  const [nav,setNav]=useState(false);
+  const backgroundChange=()=>{
+    if(window.scrollY >=80){
+      setNav(true)
+  }else{
+    setNav(false);
+  }
+
+   };
+  //  "style-nev"
+  window.addEventListener('scroll',backgroundChange);
   return (
-    <div className="style-nev">
+    <div class={ nav?"changebg":"style-nev"}>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
           <div class="container">

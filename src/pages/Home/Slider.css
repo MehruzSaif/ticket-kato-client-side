@@ -18,6 +18,8 @@
 }
 .owl-slider .item{
        color:white;
+       /* height: 30rem; */
+       padding: 30px;
 }
 .owl-slider .item h4:hover{
     color:#30D7A9;
