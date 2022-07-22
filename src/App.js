@@ -10,11 +10,12 @@ import Business from './pages/Home/Business';
 function App() {
   return (
     <div className="">
-      {/* <div className='containers'>
-        <Navbar></Navbar>
-      </div> */}
+    
+      <div className='nav-fixed'>
       <Navbar></Navbar>
         <Banner></Banner>
+      </div>
+      
         <Slider></Slider>
         <Business></Business>
         <Reviews></Reviews>

@@ -68,14 +68,14 @@ const Comment = () => {
                                         <FaStar className='star'></FaStar>
                                         <FaStarHalfAlt className='star'></FaStarHalfAlt>
                                     </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
+                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
                                 </div>
                             </div>
                         </div>
                         <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 mt-5 review'>
                             <div class="card reviews">
                                 <div class="card-body">
-                                    <div className='w-100 reviewImg'>
+                                    <div className='reviewImg'>
                                         <img className='' src='https://i.ibb.co/2321j2k/gettyimages-465470375.jpg' alt="" />
                                     </div>
                                     <h2 className='mt-2 name'>Jhoe Biden</h2>
