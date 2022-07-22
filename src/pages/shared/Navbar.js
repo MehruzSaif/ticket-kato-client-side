@@ -46,12 +46,12 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Book Ticket
+                  Book Tickets
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Book a Ticket
+                      Book a Tickets
                     </a>
                   </li>
                   <li>
@@ -103,7 +103,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Terms & Condition
+                      Terms & Conditions
                     </a>
                   </li>
                 </ul>
