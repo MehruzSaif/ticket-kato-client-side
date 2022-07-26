@@ -1,32 +1,41 @@
 import React from "react";
 import "./Navber.css";
-import  { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
-  const [nav,setNav]=useState(false);
-  const backgroundChange=()=>{
-    if(window.scrollY >=80){
-      setNav(true)
-  }else{
-    setNav(false);
-  }
+  const [user] = useAuthState(auth);
 
-   };
+  const logout = () => {
+    signOut(auth);
+  };
+
+  const [nav, setNav] = useState(false);
+  const backgroundChange = () => {
+    if (window.scrollY >= 80) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
+  };
   //  "style-nev"
-  window.addEventListener('scroll',backgroundChange);
+  window.addEventListener("scroll", backgroundChange);
   return (
-    <div class={ nav?"changebg":"style-nev"}>
+    <div className={nav ? "changebg" : "style-nev"}>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
           <div class="container">
-            <a class="navbar-brand" href="#">
-              <img 
+            <Link class="navbar-brand" to="/">
+              <img
                 src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
                 alt=""
                 width="125"
                 height="40"
               />
-            </a>
+            </Link>
           </div>
           <button
             class="navbar-toggler"
@@ -174,13 +183,15 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
-                <button
-                  class="btn px-4 mx-auto btn-info text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Login
-                </button>
+                {user ? (
+                  <button onClick={logout} className="btn btn-danger">
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login" className="btn btn-success btn-rounded">
+                    Login
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

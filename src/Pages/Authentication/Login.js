@@ -1,0 +1,184 @@
+import React, { useEffect } from "react";
+import "./Login.css";
+import { FcGoogle } from "react-icons/fc";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { useForm } from "react-hook-form";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+const Login = () => {
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+      const errorMsg = error || gError;
+      if (errorMsg) {
+        switch (errorMsg?.code) {
+          case "auth/invalid-email":
+            toast("Invalid email provided, please provide a valid email");
+            break;
+
+          case "auth/invalid-password":
+            toast("Wrong password. Intruder!!");
+            break;
+
+          case "auth/wrong-password":
+            toast("Wrong Password");
+            break;
+
+          case "auth/user-not-found":
+            toast("User Not Found");
+            break;
+
+          default:
+            toast("something went wrong");
+        }
+      }
+    }, [error, gError]);
+
+    if (loading || gLoading) {
+      return <h2>Loading...</h2>;
+    }
+
+    const onSubmit = (data) => {
+      // console.log(data);
+      signInWithEmailAndPassword(data.email, data.password);
+      // reset({});
+    };
+
+
+
+  return (
+    <>
+      <div className="login border-0">
+        <div className="my-5 p-4 text-center w-50 border-0 mx-auto">
+          <div className="flex h-screen justify-center items-center border-0">
+            <div className="card border-0">
+              <div className="card-body border-0">
+                <h2 className="text-center">Login</h2>
+                <form className="border-0" onSubmit={handleSubmit(onSubmit)}>
+                  {/* Email */}
+                  <div className="form-control w-full border-0">
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input
+                      {...register("email", {
+                        required: {
+                          value: true,
+                          message: "Email is Required",
+                        },
+                        pattern: {
+                          value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                          message: "Provide a valid Email",
+                        },
+                      })}
+                      type="email"
+                      placeholder="Your Email"
+                      className="form-control w-50 mx-auto"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      for="exampleInputEmail1"
+                    />
+                    <label className="label">
+                      {errors.email?.type === "required" && (
+                        <span className="label-text-alt text-red-600">
+                          {errors.email.message}
+                        </span>
+                      )}
+                      {errors.email?.type === "pattern" && (
+                        <span className="label-text-alt text-red-600">
+                          {errors.email.message}
+                        </span>
+                      )}
+                    </label>
+                  </div>
+
+                  {/* Password */}
+                  <div className="form-control w-full border-0">
+                    <label className="label">
+                      <span className="label-text">Password</span>
+                    </label>
+                    <input
+                      {...register("password", {
+                        required: {
+                          value: true,
+                          message: "Password is Required",
+                        },
+                        minLength: {
+                          value: 6,
+                          message: "Must be 6 characters or longer",
+                        },
+                      })}
+                      type="password"
+                      placeholder="Password"
+                      className="form-control w-50 mx-auto"
+                      id="exampleInputPassword1"
+                    />
+                    <label className="label">
+                      {errors.password?.type === "required" && (
+                        <span className="label-text-alt text-red-600">
+                          {errors.password.message}
+                        </span>
+                      )}
+                      {errors.password?.type === "minLength" && (
+                        <span className="label-text-alt text-red-600">
+                          {errors.password.message}
+                        </span>
+                      )}
+                    </label>
+                  </div>
+                  <input
+                    className="btn btn-primary px-4 mb-3"
+                    type="submit"
+                    value="Login"
+                  />
+                </form>
+                <p>
+                  <small>
+                    New To Ticket-Kato?
+                    <Link className="text-primary mx-2" to="/signup">
+                      Create New Account
+                    </Link>
+                  </small>
+                </p>
+                <div class="divider">
+                  <span></span>
+                  <span>OR</span>
+                  <span></span>
+                </div>
+                <div className="mt-4">
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    className="btn btn-outline-success "
+                  >
+                    Continue With Google{" "}
+                    <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Login;
