@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className='mt-4'>
         <Banner></Banner>
-         <Slider></Slider>
+        <Slider></Slider>
         <Business></Business>
         <Footer></Footer>
       </div>
