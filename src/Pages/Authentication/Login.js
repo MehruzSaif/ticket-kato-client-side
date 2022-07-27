@@ -71,7 +71,7 @@ const Login = () => {
           <div className="flex h-screen justify-center items-center border-0">
             <div className="card border-0">
               <div className="card-body border-0">
-                <h2 className="text-center">Login</h2>
+                <h2 className="text-center text-success">Login</h2>
                 <form className="border-0" onSubmit={handleSubmit(onSubmit)}>
                   {/* Email */}
                   <div className="form-control w-full border-0">
@@ -153,7 +153,10 @@ const Login = () => {
                 <p>
                   <small>
                     New To Ticket-Kato?
-                    <Link className="text-primary mx-2" to="/signup">
+                    <Link
+                      className="text-primary mx-2 text-decoration-none"
+                      to="/signup"
+                    >
                       Create New Account
                     </Link>
                   </small>
