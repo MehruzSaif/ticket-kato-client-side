@@ -5,11 +5,12 @@
     justify-content: center;
     align-items: center;
     background-color: #001232;
-    clip-path:circle(180vh at 50%  -70vh);
+    clip-path:circle(180vh at 50%  -80vh);
 }
 
 .slidr-dev{
    width: 90%;
+   height: 100vh;
 }
 .owl-theme{
    width: 90%;
@@ -17,6 +18,8 @@
 }
 .owl-slider .item{
        color:white;
+       /* height: 30rem; */
+       padding: 30px;
 }
 .owl-slider .item h4:hover{
     color:#30D7A9;

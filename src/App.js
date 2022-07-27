@@ -1,23 +1,21 @@
-import './App.css';
-import Banner from './pages/Home/Banner';
-import Business from './pages/Home/Business';
-import Slider from './pages/Home/Slider';
-import Footer from './pages/shared/Footer';
-import Navbar from './pages/shared/Navbar';
+import "./App.css";
+import Navbar from "./pages/shared/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Authentication/Login";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="">
-      <div className='container'>
-        <Navbar></Navbar>
-      </div>
-      <div className='mt-4'>
-        <Banner></Banner>
-        <Slider></Slider>
-        <Business></Business>
-        <Footer></Footer>
-      </div>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+      </Routes>
+      <ToastContainer position="top-center" />
+    </>
   );
 }
 
