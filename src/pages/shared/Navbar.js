@@ -57,10 +57,10 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav ">
+            <ul class="d-flex navbar-nav text-primary">
               <li class="nav-item dropdown me-2">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -94,7 +94,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -133,7 +133,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -159,7 +159,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-5">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
