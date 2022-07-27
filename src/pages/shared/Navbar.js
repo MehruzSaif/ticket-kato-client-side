@@ -8,6 +8,7 @@ import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
+  console.log(user);
 
   const logout = () => {
     signOut(auth);
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   const [nav, setNav] = useState(false);
   const backgroundChange = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 50) {
       setNav(true);
     } else {
       setNav(false);
@@ -193,6 +194,27 @@ const Navbar = () => {
                   </Link>
                 )}
               </li>
+            </ul>
+            <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
+              {user?.photoURL ? (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src={user?.photoURL}
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              ) : (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              )}
             </ul>
           </div>
         </div>
