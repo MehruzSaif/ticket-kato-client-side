@@ -42,6 +42,8 @@
     border: none;
     border-radius: 7px;
     padding: 10px 16px;
+    text-decoration: none;
+    color: aliceblue;
 }
 
 .review {
