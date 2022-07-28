@@ -7,6 +7,11 @@
     position: relative;
 }
 
+.textClr {
+    background-color: var(--bg-clr);
+    color: var(--text-clr);
+}
+
 .banner::before {
     content: '';
     top: 0;
@@ -52,5 +57,3 @@
 .main-div-banner h1 span {
     color: rgb(23, 185, 142);
 }
-
-

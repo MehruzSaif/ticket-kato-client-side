@@ -1,10 +1,17 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import './Navbar.css'
 const Navbar = () => {
+  const [theme, setTheme] = useState('light-theme')
+  const toggleTheme = () => {
+    theme === 'dark-theme' ? setTheme('light-theme') : setTheme('dark-theme')
+  }
+  useEffect(() => {
+    document.body.className = theme
+  }, [theme])
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid ">
+    <div className="navBG">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
               href="#"
@@ -167,6 +174,18 @@ const Navbar = () => {
                   class="btn px-4 mx-auto btn-info text-white"
                   aria-current="page"
                   href="#"
+                >
+                  Login
+                </button>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button
+                  class="btn px-4 mx-auto btn-info text-white"
+                  aria-current="page"
+                  href="#"
+                  onClick={() => toggleTheme()}
                 >
                   Login
                 </button>

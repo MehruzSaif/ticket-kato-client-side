@@ -1,3 +1,13 @@
+.light-theme {
+  --bg-clr: #fff;
+  --text-clr: #000;
+}
+
+.dark-theme {
+  --bg-clr: #000;
+  --text-clr: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -32,6 +42,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
