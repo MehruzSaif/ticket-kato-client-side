@@ -11,6 +11,7 @@ const AddReview = () => {
         const review = {
             email: user.email,
             name: user.displayName,
+            photo:user.photoURL,
             rating: event.target.rating.value,
             review: event.target.description.value,
         }
