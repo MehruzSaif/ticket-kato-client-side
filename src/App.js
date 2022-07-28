@@ -9,23 +9,21 @@ import { useState } from 'react';
 import UseHooks from "./pages/shared/UseHooks";
 
 
+import Signup from "./pages/Authentication/Signup";
 
 function App() {
   // const [theme,setTheme]=useState(false)
   // const [theme,setTheme]=useH
-    const [theme,setTheme]=UseHooks()
-    console.log(theme);
+    // const [theme,setTheme]=UseHooks()
+    // console.log(theme);
   return(
-    <div className={`${theme?'theme-dark':""}`}>
+    <div >
       <div className="content-bg-color main-content">
-{/* {theme?'theme-dark':""} */}
-     
       <Navbar></Navbar>
-      <h1>This is the background color</h1>
-      <input className="chackbox" type="checkbox" name="" id="" onChange={()=>setTheme(!theme)}/>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
       <ToastContainer position="top-center" />
   

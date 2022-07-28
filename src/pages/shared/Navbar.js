@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import "./Navber.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
@@ -8,6 +8,21 @@ import { signOut } from "firebase/auth";
 import UseHooks from "./UseHooks";
 
 const Navbar = () => {
+  const[tm,setTm]=useState('light-theme')
+  const toggleTheme=()=>{
+    if(tm ==='dark-theme'){
+      setTm('light-theme')
+    }
+    else{
+      setTm('dark-theme')
+    }
+  }
+  useEffect(()=>{
+    document.body.className=tm;
+  },[tm]);
+
+
+
   const [theme,setTheme]=UseHooks()
   console.log(theme);
   
@@ -18,8 +33,8 @@ const Navbar = () => {
     setTheme(!theme);
   }
   useEffect(()=>{
-    //  document.body.className=themes;
   },[])
+  console.log(user);
 
   const logout = () => {
     signOut(auth);
@@ -27,13 +42,12 @@ const Navbar = () => {
 
   const [nav, setNav] = useState(false);
   const backgroundChange = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 20) {
       setNav(true);
     } else {
       setNav(false);
     }
   };
-  //  "style-nev"
   window.addEventListener("scroll", backgroundChange);
   return (
     <div className={nav ? "changebg" : "style-nev"}>
@@ -68,10 +82,10 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav ">
-              <li class="nav-item dropdown me-2">
+            <ul class="d-flex navbar-nav text-black">
+              <li class="nav-item dropdown me-2 text-white">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -105,7 +119,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -144,7 +158,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -170,7 +184,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-5">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -207,12 +221,35 @@ const Navbar = () => {
               </li>
               <li class="nav-item">
               {
-        dark?   <button  onClick={themes} className={`${dark?'bg-primary':'bg-sucess'}`}>Light</button>:
-        <button  onClick={themes} className={`${dark?'bg-primary':'bg-sucess'}`}>Dark
+        dark?   <button onClick={()=>{ toggleTheme(); themes()}
+         }className={`${dark?'bg-sucess':'bg-dark'}`}>Light</button>:
+        <button onClick={()=>{ toggleTheme(); themes()}
+      }className={`${dark?'bg-primary':'bg-sucess'}`}>Dark
         </button>
       }
               </li>
 
+            </ul>
+            <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
+              {user?.photoURL ? (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src={user?.photoURL}
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              ) : (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              )}
             </ul>
           </div>
         </div>

@@ -1,9 +1,9 @@
-:root{
+.light-theme{
   --text-color:#000000;
   --bg-color:#ffffff;
   
 }
-.theme-dark{
+.dark-theme{
   --text-color:#ffffff;
   --bg-color:#000000;
  
