@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navber.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
+import UseHooks from "./UseHooks";
 
 const Navbar = () => {
+  const [theme,setTheme]=UseHooks()
+  console.log(theme);
+  
   const [user] = useAuthState(auth);
+  const [dark,setDark]=useState(false);
+  const themes=()=>{
+    setDark(!dark);
+    setTheme(!theme);
+  }
+  useEffect(()=>{
+    //  document.body.className=themes;
+  },[])
 
   const logout = () => {
     signOut(auth);
@@ -193,6 +205,14 @@ const Navbar = () => {
                   </Link>
                 )}
               </li>
+              <li class="nav-item">
+              {
+        dark?   <button  onClick={themes} className={`${dark?'bg-primary':'bg-sucess'}`}>Light</button>:
+        <button  onClick={themes} className={`${dark?'bg-primary':'bg-sucess'}`}>Dark
+        </button>
+      }
+              </li>
+
             </ul>
           </div>
         </div>
