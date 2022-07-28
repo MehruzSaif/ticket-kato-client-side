@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Authentication/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AddReview from "./pages/Dashboard/Customer/AddReview";
+import Signup from "./pages/Authentication/Signup";
 import Footer from "./pages/shared/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/addReview" element={<AddReview></AddReview>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
       <ToastContainer position="top-center" />
       <Footer></Footer>
