@@ -10,6 +10,7 @@ import daniel from '../Home/images/daniel.jfif'
 import sajib from '../Home/images/sojib.jfif'
 import shahria from '../Home/images/shahria.jpg'
 import nargis from '../Home/images/nargis.jpg'
+import { Link } from 'react-router-dom';
 const Comment = () => {
     const options = {
         margin: 30,
@@ -221,7 +222,7 @@ const Comment = () => {
                 </div>
             </div>
             <div className='text-center'>
-                <button className='addReview'>Add Your Review</button>
+                <Link to='/addReview' className='addReview'>Add Your Review</Link>
             </div>
         </div>
     );

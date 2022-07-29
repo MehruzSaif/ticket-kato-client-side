@@ -11,6 +11,8 @@ import UseHooks from "./pages/shared/UseHooks";
 
 import Signup from "./pages/Authentication/Signup";
 import BookTicket from "./BooksTicket/BookTicket";
+import Footer from "./pages/shared/Footer";
+import AddReview from "./pages/Dashboard/Customer/AddReview";
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -18,7 +20,7 @@ function App() {
     // const [theme,setTheme]=UseHooks()
     // console.log(theme);
   return(
-    <div >
+    <div>
       <div className="content-bg-color main-content">
       <Navbar></Navbar>
       <Routes>
@@ -26,12 +28,13 @@ function App() {
         <Route path='BookList' element={<BookTicket/>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path='/addReview' element={<AddReview></AddReview>}/>
       </Routes>
       <ToastContainer position="top-center" />
-  
-      
+      <Footer></Footer>
       </div>
-    </div>
+      </div>
+  
   );
 
 }
