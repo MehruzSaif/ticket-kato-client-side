@@ -84,6 +84,7 @@ const Navbar = () => {
             </ul> */}
             <ul class="d-flex navbar-nav text-black">
               <li class="nav-item dropdown me-2 text-white">
+              
                 <a
                   class="nav-link active dropdown-toggle text-white"
                   href="#"
@@ -96,9 +97,9 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="BookList">
                       Book a Tickets
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">

@@ -10,6 +10,7 @@ import UseHooks from "./pages/shared/UseHooks";
 
 
 import Signup from "./pages/Authentication/Signup";
+import BookTicket from "./BooksTicket/BookTicket";
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -22,6 +23,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path='BookList' element={<BookTicket/>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
