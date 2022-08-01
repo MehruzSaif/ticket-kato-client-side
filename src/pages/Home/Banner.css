@@ -7,11 +7,6 @@
     position: relative;
 }
 
-.textClr {
-    background-color: var(--bg-clr);
-    color: var(--text-clr);
-}
-
 .banner::before {
     content: '';
     top: 0;

@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
+import "./Navber.css";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 import './Navbar.css'
+
 const Navbar = () => {
   const [theme, setTheme] = useState('light-theme')
   const toggleTheme = () => {
@@ -8,19 +14,38 @@ const Navbar = () => {
   useEffect(() => {
     document.body.className = theme
   }, [theme])
+
+  const [user] = useAuthState(auth);
+  console.log(user);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
+  const [nav, setNav] = useState(false);
+  const backgroundChange = () => {
+    if (window.scrollY >= 50) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
+  };
+  //  "style-nev"
+  window.addEventListener("scroll", backgroundChange);
   return (
-    <div className="navBG">
-      <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              href="#"
-              src="https://i.ibb.co/JdDqrdk/ticket-Kato-2.png"
-              alt=""
-              width="125"
-              height="40"
-            />
-          </a>
+    <div className={nav ? "changebg" : "style-nev"}>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid fs-5">
+          <div class="container">
+            <Link class="navbar-brand" to="/">
+              <img
+                src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
+                alt=""
+                width="125"
+                height="40"
+              />
+            </Link>
+          </div>
           <button
             class="navbar-toggler"
             type="button"
@@ -32,10 +57,7 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -43,22 +65,22 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav ">
+            <ul class="d-flex navbar-nav text-primary">
               <li class="nav-item dropdown me-2">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Book Ticket
+                  Book Tickets
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Book a Ticket
+                      Book a Tickets
                     </a>
                   </li>
                   <li>
@@ -80,7 +102,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -110,7 +132,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Terms & Condition
+                      Terms & Conditions
                     </a>
                   </li>
                 </ul>
@@ -119,7 +141,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -145,7 +167,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-5">
                 <a
-                  class="nav-link active dropdown-toggle"
+                  class="nav-link active dropdown-toggle text-primary"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -170,16 +192,18 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
-                <button
-                  class="btn px-4 mx-auto btn-info text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Login
-                </button>
+                {user ? (
+                  <button onClick={logout} className="btn btn-danger">
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login" className="btn btn-success btn-rounded">
+                    Login
+                  </Link>
+                )}
               </li>
             </ul>
-            <ul class="navbar-nav me-end mb-2 mb-lg-0">
+            <ul class="navbar-nav me-end mb-2 ms-2 mb-lg-0">
               <li class="nav-item">
                 <button
                   class="btn px-4 mx-auto btn-info text-white"
@@ -187,9 +211,30 @@ const Navbar = () => {
                   href="#"
                   onClick={() => toggleTheme()}
                 >
-                  Login
+                  Toggle
                 </button>
               </li>
+            </ul>
+            <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
+              {user?.photoURL ? (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src={user?.photoURL}
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              ) : (
+                <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
+                  <img
+                    src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
+                    class="rounded-circle d-flex justify-center align-items-center"
+                    style={{ width: "50px", height: "45px" }}
+                    alt="Avatar"
+                  />
+                </div>
+              )}
             </ul>
           </div>
         </div>

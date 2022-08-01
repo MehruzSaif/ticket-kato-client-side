@@ -41,7 +41,7 @@ const Slider = () => {
         },
     };
     return (
-        <div className='owl-slider'>
+        <div className='owl-slider mb-5'>
             <div className='slidr-dev'>
                 <OwlCarousel className='owl-theme'
 
