@@ -13,6 +13,10 @@ import Signup from "./pages/Authentication/Signup";
 import BookTicket from "./BooksTicket/BookTicket";
 // import Footer from "./pages/shared/Footer";
 import AddReview from "./pages/Dashboard/Customer/AddReview";
+import Flight from "./pages/Searching/Flight";
+import Train from "./pages/Searching/Train";
+import Launch from "./pages/Searching/Launch";
+import Bus from "./pages/Searching/Bus";
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -24,7 +28,12 @@ function App() {
       <div className="content-bg-color main-content">
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/" element={<Home></Home>}>
+          <Route path='/bus' element={<Bus></Bus>}></Route>
+          <Route path='flight' element={<Flight></Flight>}></Route>
+          <Route path='train' element={<Train></Train>}></Route>
+          <Route path='launch' element={<Launch></Launch>}></Route>
+        </Route>
         <Route path='BookList' element={<BookTicket/>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>

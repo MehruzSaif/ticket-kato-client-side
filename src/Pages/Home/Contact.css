@@ -18,7 +18,7 @@
     margin-left: 20px;
 }
 #contract .container center  h1::after{
-  content: "touch me";
+  /* content: "touch me"; */
   font-size: 20px;
   position: absolute;
    left:50%;

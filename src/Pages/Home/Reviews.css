@@ -67,6 +67,9 @@
     color: #2CC8A0;
 }
 
+.card-body h5{
+    color: rgb(223, 227, 231)!important;
+}
 
 
 @media (max-width:700px) {
