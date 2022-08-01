@@ -50,3 +50,7 @@
     border-radius: 20px;
     background: linear-gradient(to  right, #D24B75, #725BDE,#5A5FFA);
 }
+
+.item h4{
+    color: #ffff!important;
+}

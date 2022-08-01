@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
   const [theme,setTheme]=UseHooks()
-  console.log(theme);
+  // console.log(theme);
   
   const [user] = useAuthState(auth);
   const [dark,setDark]=useState(false);
