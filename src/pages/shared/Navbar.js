@@ -53,7 +53,7 @@ const Navbar = () => {
     <div className={nav ? "changebg" : "style-nev"}>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
-          <div class="container">
+          <div class="">
             <Link class="navbar-brand" to="/">
               <img
                 src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
@@ -74,7 +74,10 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
             {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -82,9 +85,8 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav text-black">
+            <ul class="d-flex navbar-nav text-black ">
               <li class="nav-item dropdown me-2 text-white">
-              
                 <a
                   class="nav-link active dropdown-toggle text-white"
                   href="#"
@@ -117,7 +119,7 @@ const Navbar = () => {
                 </ul>
               </li>
             </ul>
-            <ul class="d-flex navbar-nav ">
+            <ul class="d-flex navbar-nav">
               <li class="nav-item dropdown me-4">
                 <a
                   class="nav-link active dropdown-toggle text-white"
@@ -220,6 +222,7 @@ const Navbar = () => {
                   </Link>
                 )}
               </li>
+
               <li class="nav-item">
               {
         dark?   <button onClick={()=>{ toggleTheme(); themes()}
@@ -229,7 +232,6 @@ const Navbar = () => {
         </button>
       }
               </li>
-
             </ul>
             <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
               {user?.photoURL ? (
