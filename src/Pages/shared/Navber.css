@@ -1,5 +1,5 @@
 .style-nev{
-    background-color:rgba(0, 0, 0, 0);
+    background: linear-gradient(to  right, #D24B75, #725BDE,#5A5FFA);
     width: 100%;
     color: white;
     z-index: 1000;
@@ -17,7 +17,7 @@
    
 }
 .navbar {
-    padding: 20px 40px;
+    padding: 10px 40px;
 }
 .navbar img{
     width: 200px;
@@ -25,7 +25,13 @@
  
     
 }
+.navbar button{
+    margin-left: 20px;
+}
 .navbar a{
+    color: white;
+}
+.navbar ul{
     color: white;
 }
 .dropdown-menu{

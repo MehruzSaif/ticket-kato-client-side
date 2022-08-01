@@ -1,13 +1,39 @@
-import React from "react";
+// import React, { useEffect } from "react";
 import "./Navber.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
+import UseHooks from "./UseHooks";
 
 const Navbar = () => {
+  const[tm,setTm]=useState('light-theme')
+  const toggleTheme=()=>{
+    if(tm ==='dark-theme'){
+      setTm('light-theme')
+    }
+    else{
+      setTm('dark-theme')
+    }
+  }
+  useEffect(()=>{
+    document.body.className=tm;
+  },[tm]);
+
+
+
+  const [theme,setTheme]=UseHooks()
+  // console.log(theme);
+  
   const [user] = useAuthState(auth);
+  const [dark,setDark]=useState(false);
+  const themes=()=>{
+    setDark(!dark);
+    setTheme(!theme);
+  }
+  useEffect(()=>{
+  },[])
   console.log(user);
 
   const logout = () => {
@@ -16,19 +42,18 @@ const Navbar = () => {
 
   const [nav, setNav] = useState(false);
   const backgroundChange = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 20) {
       setNav(true);
     } else {
       setNav(false);
     }
   };
-  //  "style-nev"
   window.addEventListener("scroll", backgroundChange);
   return (
     <div className={nav ? "changebg" : "style-nev"}>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid fs-5">
-          <div class="container">
+          <div class="">
             <Link class="navbar-brand" to="/">
               <img
                 src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
@@ -49,7 +74,10 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
             {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -57,10 +85,10 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav text-primary">
-              <li class="nav-item dropdown me-2">
+            <ul class="d-flex navbar-nav text-black ">
+              <li class="nav-item dropdown me-2 text-white">
                 <a
-                  class="nav-link active dropdown-toggle text-primary"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -71,9 +99,9 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="BookList">
                       Book a Tickets
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
@@ -91,10 +119,10 @@ const Navbar = () => {
                 </ul>
               </li>
             </ul>
-            <ul class="d-flex navbar-nav ">
+            <ul class="d-flex navbar-nav">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle text-primary"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -133,7 +161,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-4">
                 <a
-                  class="nav-link active dropdown-toggle text-primary"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -159,7 +187,7 @@ const Navbar = () => {
             <ul class="d-flex navbar-nav ">
               <li class="nav-item dropdown me-5">
                 <a
-                  class="nav-link active dropdown-toggle text-primary"
+                  class="nav-link active dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -193,6 +221,16 @@ const Navbar = () => {
                     Login
                   </Link>
                 )}
+              </li>
+
+              <li class="nav-item">
+              {
+        dark?   <button onClick={()=>{ toggleTheme(); themes()}
+         }className={`${dark?'bg-sucess':'bg-dark'}`}>Light</button>:
+        <button onClick={()=>{ toggleTheme(); themes()}
+      }className={`${dark?'bg-primary':'bg-sucess'}`}>Dark
+        </button>
+      }
               </li>
             </ul>
             <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">

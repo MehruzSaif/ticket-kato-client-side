@@ -57,27 +57,27 @@ const Signup = () => {
   const onSubmit = async (data, e) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    console.log(data);
+    // console.log(data);
   };
 
   return (
     <div>
-      <div className="my-5 p-4 text-center">
-        <div className="flex h-screen justify-center items-center my-5 border-0 ">
-          <div className="card w-96 bg-base-100 shadow-xl border-0 ">
+      <div className="my-5 p-4 text-center row justify-content-center align-items-center">
+        <div className="flex h-screen w-75 justify-center items-center my-5 border-1 shadow-lg ">
+          <div className="card w-50 justify-content-center mx-auto border-0 ">
             <div className="card-body border-0 ">
               <h2 className="text-center text-2xl font-bold text-success fw-bold">
                 Sign Up
               </h2>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="form-control w-full max-w-xs border-0 ">
+                <div className="form-control w-full border-0 ">
                   <label className="label">
                     <span className="label-text fs-4">Name</span>
                   </label>
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     {...register("name", {
@@ -104,7 +104,7 @@ const Signup = () => {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     for="exampleInputEmail1"
@@ -134,14 +134,14 @@ const Signup = () => {
                 </div>
 
                 {/* Password */}
-                <div className="form-control w-full max-w-xs border-0 ">
+                <div className="form-control w-full border-0 ">
                   <label className="label">
                     <span className="label-text fs-4">Password</span>
                   </label>
                   <input
                     type="password"
                     placeholder="Password"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputPassword1"
                     {...register("password", {
                       required: {
@@ -176,7 +176,7 @@ const Signup = () => {
                 />
               </form>
               <p>
-                <small>
+                <small className="fs-5">
                   Already have an account?
                   <Link
                     className="text-primary mx-2 text-decoration-none"

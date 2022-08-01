@@ -4,6 +4,9 @@
   background: #001232;
   color: aliceblue;
 }
+.summary h2{
+  color: #2CC8A0!important;
+}
 
 .counter-up {
   background: #001232;

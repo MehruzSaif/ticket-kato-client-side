@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: #001232;
-    clip-path:circle(180vh at 50%  -80vh);
+    /* clip-path:circle(180vh at 50%  -80vh); */
 }
 
 .slidr-dev{
@@ -49,4 +49,8 @@
     border: none;
     border-radius: 20px;
     background: linear-gradient(to  right, #D24B75, #725BDE,#5A5FFA);
+}
+
+.item h4{
+    color: #ffff!important;
 }

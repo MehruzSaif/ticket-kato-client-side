@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from '../Searching/Search';
 import Footer from '../shared/Footer';
 import Banner from './Banner';
 import Business from './Business';
@@ -11,6 +12,7 @@ const Home = () => {
     return (
       <div>
         <Banner></Banner>
+        <Search></Search>
         <Slider></Slider>
         <MessengerCustomerChat
           pageId="104716675672600"
