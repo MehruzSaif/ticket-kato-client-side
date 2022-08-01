@@ -11,6 +11,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import login from '../../assests/login.json'
+import Loading from "../shared/Loading";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -64,7 +65,9 @@ const Login = () => {
     }, [error, gError]);
 
     if (loading || gLoading) {
-      return <h2>Loading...</h2>;
+      return (
+        <Loading />
+      );
     }
 
     const onSubmit = (data) => {
@@ -80,7 +83,7 @@ const Login = () => {
       <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
         <div className="d-flex row justify-content-center align-items-center mb-3 mx-5">
           <Lottie
-            className="mx-3 mb-3"
+            className="mx-3 mb-3 "
             options={defaultOptions}
             height={600}
             width={600}
