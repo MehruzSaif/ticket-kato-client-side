@@ -17,6 +17,7 @@ import Flight from "./pages/Searching/Flight";
 import Train from "./pages/Searching/Train";
 import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
+import BussTicket from "./BusTiceket/BussTicket";
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -29,7 +30,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}>
-          <Route path='/bus' element={<Bus></Bus>}></Route>
+          <Route path='/' element={<Bus></Bus>}></Route>
           <Route path='flight' element={<Flight></Flight>}></Route>
           <Route path='train' element={<Train></Train>}></Route>
           <Route path='launch' element={<Launch></Launch>}></Route>
@@ -38,8 +39,10 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path='/addReview' element={<AddReview></AddReview>}/>
+        <Route path='/bus' element={<BussTicket/>}></Route>
       </Routes>
       <ToastContainer position="top-center" />
+      
   
       
       </div>
