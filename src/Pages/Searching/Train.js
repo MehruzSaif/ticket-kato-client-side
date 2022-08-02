@@ -120,12 +120,12 @@ const Train = () => {
     <div className='d-flex justify-content-center mt-3'>
             <button className='search-button'>Search Trains</button>
         </div>
-        <div className='from-text' >{suggestions && suggestions.map((suggestion, i) =>
+        <div className='from-text' >{suggestions && suggestions.slice(0,4).map((suggestion, i) =>
             <div
                 onClick={() => onSuggestionHandler(suggestion.district)}
                 className='suggestion' key={i}>{suggestion.district}</div>
         )}</div>
-        <div className='from-text2' >{suggestions2 && suggestions2.map((suggestion2, i) =>
+        <div className='from-text2' >{suggestions2 && suggestions2.slice(0,4).map((suggestion2, i) =>
             <div
                 onClick={() => onSuggestionHandler2(suggestion2.district)}
                 className='suggestion' key={i}>{suggestion2.district}</div>
