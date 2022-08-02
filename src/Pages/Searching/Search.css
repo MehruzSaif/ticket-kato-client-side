@@ -1,3 +1,8 @@
+.search-header{
+    background-color: #001232;
+}
+
+
 .search-container {
     position: relative;
     background-color: #001232;
@@ -80,14 +85,23 @@
 
 }
 .from-text{
-    margin-left: 50px;
-
+    margin-left: 47px;
+    position: absolute;
+    top: 300px;
+    background-color: #ffffff;
+    z-index: 2; 
+    border: 1px solid rgb(237, 242, 243);
+    border-radius: 5px;
 
 }
 .from-text2{
-    margin-left: 300px;
-
-
+    margin-left: 305px;
+    position: absolute;
+    top: 300px;
+    background-color: #ffffff;
+    z-index: 2; 
+    border: 1px solid rgb(237, 242, 243);
+    border-radius: 5px;
 }
 .To-text{
     margin-left: 250px;
@@ -95,16 +109,18 @@
 .suggestion{
     cursor: pointer;
     padding: 5px;
-    width: 207px;
+    width: 213px;
     /* border-right: 1px solid rgb(57, 182, 184);
     border-left: 1px solid rgb(57, 182, 184);
     border-bottom: 1px solid rgb(57, 182, 184); */
     border-radius: 5px;
+
 }
 
 .suggestion:hover{
     background-color: #F2F2F2;
     color: rgb(57, 182, 184);
+    border-radius: 5px;
 }
 .search-bar{
     color: rgb(57, 182, 184);
@@ -123,4 +139,9 @@
     position: absolute;
     top: 50px;
     z-index: 2;
+}
+
+
+.flight-info{
+    color: #001232;
 }

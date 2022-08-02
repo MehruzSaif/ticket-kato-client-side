@@ -75,9 +75,10 @@ const Train = () => {
     }
     return (
         <div>
+            <h6 className='text-center mt-3 flight-info'>Book Train Tickets Instead of Waiting and Queueing up in Lines !</h6>
         <div className='d-flex justify-content-evenly text-center search-content mt-0'>
         <div>
-            <label for="From" class="form-label mt-4 fs-4">From</label>
+            <label for="From" class="form-label mt-2 fs-4">From</label>
             <input type="text"
                 onChange={e => onChangeHandler(e.target.value)}
                 value={text}
@@ -93,7 +94,7 @@ const Train = () => {
         </div>
 
         <div>
-            <label for="To" class="form-label mt-4 fs-4">To</label>
+            <label for="To" class="form-label mt-2 fs-4">To</label>
             <input type="text"
                 onChange={e => onChangeHandler2(e.target.value)}
                 value={text2}
@@ -108,14 +109,17 @@ const Train = () => {
                 required />
         </div>
         <div>
-            <label for="date" class="form-label mt-4 fs-4">Travel Date</label><br />
+            <label for="date" class="form-label mt-2 fs-4">Travel Date</label><br />
             <DatePicker className='departing' />
         </div>
         <div>
-            <label for="date" class="form-label mt-4 fs-4">Return Date</label><br />
+            <label for="date" class="form-label mt-2 fs-4">Return Date</label><br />
             <DatePicker className='returning' />
         </div>
     </div>
+    <div className='d-flex justify-content-center mt-3'>
+            <button className='search-button'>Search Trains</button>
+        </div>
         <div className='from-text' >{suggestions && suggestions.map((suggestion, i) =>
             <div
                 onClick={() => onSuggestionHandler(suggestion.district)}
@@ -127,9 +131,7 @@ const Train = () => {
                 className='suggestion' key={i}>{suggestion2.district}</div>
         )}</div>
 
-        <div className='d-flex justify-content-center mt-4'>
-            <button className='search-button'>Search Trains</button>
-        </div>
+
     </div>
     );
 };
