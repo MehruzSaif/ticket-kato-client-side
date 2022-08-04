@@ -9,9 +9,20 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
+import Lottie from "react-lottie";
+import signup from "../../assests/signup.json"
 
 const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: signup,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const {
     register,
@@ -61,10 +72,18 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
+      <div className="d-flex row justify-content-center align-items-center my-4">
+        <Lottie
+          className=""
+          options={defaultOptions}
+          height={500}
+          width={500}
+        />
+      </div>
       <div className="my-5 p-4 text-center row justify-content-center align-items-center">
-        <div className="flex h-screen w-75 justify-center items-center my-5 border-1 shadow-lg ">
-          <div className="card w-50 justify-content-center mx-auto border-0 ">
+        <div className="flex h-screen w-full justify-center items-center my-5 border-1 shadow-lg ">
+          <div className="card w-full justify-content-center mx-auto border-0 ">
             <div className="card-body border-0 ">
               <h2 className="text-center text-2xl font-bold text-success fw-bold">
                 Sign Up
