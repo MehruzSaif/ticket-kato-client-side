@@ -7,13 +7,13 @@ import { GrFacebook } from "react-icons/gr";
 import { ImTwitter } from "react-icons/im";
 import { SiGooglechrome } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
-import { IoLogoYoutube} from "react-icons/io";
+import { IoLogoYoutube } from "react-icons/io";
 import "./Footer.css";
 
 const Footer = () => {
     return (
         <div className='footers'>
-            <div className='bg-dark text-white pt-5 pb-4'>
+            <div className=' text-white pt-5 pb-4'>
                 <div className='container text-center text-md-left'>
                     <div className='row text-center text-md-left'>
                         <div className='col-md-3 col-lg-3 col-xl-3 mx-auto mt-3'>
@@ -69,14 +69,14 @@ const Footer = () => {
                             </p>
                         </div>
 
-                        <hr className='mb-4'/>
-                        
+                        <hr className='mb-4' />
+
                         <div className='row align-items-center'>
                             <div className='col-md-7 col-lg-8'>
                                 <p>Copyright  Ⓒ 2022 all right reserved by :
-                                <a href='#'  className='text-decoration-none'>
-                                    <strong className='text-warning text-decoration-none'>  Ticket Kato</strong>
-                                </a>
+                                    <a href='#' className='text-decoration-none'>
+                                        <strong className='text-warning text-decoration-none'>  Ticket Kato</strong>
+                                    </a>
                                 </p>
                             </div>
                             <div className='col-md-5 col-lg-4'>

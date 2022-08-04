@@ -8,12 +8,12 @@ import './Search.css';
 import { DatePicker } from 'antd';
 import "antd/dist/antd.css";
 import axios from 'axios';
-import { NavLink,Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 
 const Search = () => {
     return (
-        <div className='d-flex justify-content-center p-3 search-header'>
+        <div className='d-flex justify-content-center search p-5 shadow-lg'>
             <div className='search-container search-main p-4'>
                 <div className='text-center search-title mb-3'>
                     <h3>Find Your Tickets</h3>
@@ -21,11 +21,11 @@ const Search = () => {
                 <div className='d-flex justify-content-center '>
                     <div className='w-75 d-flex justify-content-evenly search-icon-container '>
                         <div className='text-center'>
-                        <NavLink className='search-bar' to='/'>
-                            <BiBus className='search-icon' />
-                            <p className='search-icon-name'>Buses</p>
+                            <NavLink className='search-bar' to='/'>
+                                <BiBus className='search-icon' />
+                                <p className='search-icon-name'>Buses</p>
                             </NavLink>
-                            
+
                         </div>
                         {/* <div className='text-center'>
                         <NavLink className='search-bar' to='/bus'>
@@ -35,33 +35,33 @@ const Search = () => {
                             
                         </div> */}
                         <div className='text-center'>
-                        <NavLink className='search-bar' to='/flight'>
-                            <GiCommercialAirplane className='search-icon' />
-                            <p className='search-icon-name'>Flights</p>
+                            <NavLink className='search-bar' to='/flight'>
+                                <GiCommercialAirplane className='search-icon' />
+                                <p className='search-icon-name'>Flights</p>
                             </NavLink>
                         </div>
-                     
+
                         <div className='text-center'>
-                        <NavLink className='search-bar' to='/train'>
-                            <IoMdTrain className='search-icon' />
-                            <p className='search-icon-name'>Trains</p>
+                            <NavLink className='search-bar' to='/train'>
+                                <IoMdTrain className='search-icon' />
+                                <p className='search-icon-name'>Trains</p>
                             </NavLink>
-                            
+
                         </div>
-                        
+
                         <div className='text-center'>
-                        <NavLink className='search-bar' to='/launch'>
-                            <RiShipLine className='search-icon' />
-                            <p className='search-icon-name'>Launches</p>
+                            <NavLink className='search-bar' to='/launch'>
+                                <RiShipLine className='search-icon' />
+                                <p className='search-icon-name'>Launches</p>
                             </NavLink>
-                           
+
                         </div>
                     </div>
                 </div>
-                <Outlet/>
+                <Outlet />
             </div>
 
-            
+
         </div>
     );
 };
