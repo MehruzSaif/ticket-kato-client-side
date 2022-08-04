@@ -9,9 +9,20 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
+import Lottie from "react-lottie";
+import signup from "../../assests/signup.json"
 
 const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: signup,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const {
     register,
@@ -61,23 +72,31 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <div className="my-5 p-4 text-center">
-        <div className="flex h-screen justify-center items-center my-5 border-0 ">
-          <div className="card w-96 bg-base-100 shadow-xl border-0 ">
+    <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
+      <div className="d-flex row justify-content-center align-items-center my-4">
+        <Lottie
+          className=""
+          options={defaultOptions}
+          height={500}
+          width={500}
+        />
+      </div>
+      <div className="my-5 p-4 text-center row justify-content-center align-items-center">
+        <div className="flex h-screen w-full justify-center items-center my-5 border-1 shadow-lg ">
+          <div className="card w-full justify-content-center mx-auto border-0 ">
             <div className="card-body border-0 ">
               <h2 className="text-center text-2xl font-bold text-success fw-bold">
                 Sign Up
               </h2>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="form-control w-full max-w-xs border-0 ">
+                <div className="form-control w-full border-0 ">
                   <label className="label">
                     <span className="label-text fs-4">Name</span>
                   </label>
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     {...register("name", {
@@ -104,7 +123,7 @@ const Signup = () => {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     for="exampleInputEmail1"
@@ -134,14 +153,14 @@ const Signup = () => {
                 </div>
 
                 {/* Password */}
-                <div className="form-control w-full max-w-xs border-0 ">
+                <div className="form-control w-full border-0 ">
                   <label className="label">
                     <span className="label-text fs-4">Password</span>
                   </label>
                   <input
                     type="password"
                     placeholder="Password"
-                    className="form-control w-25 mx-auto"
+                    className="form-control w-full mx-auto"
                     id="exampleInputPassword1"
                     {...register("password", {
                       required: {
@@ -176,7 +195,7 @@ const Signup = () => {
                 />
               </form>
               <p>
-                <small>
+                <small className="fs-5">
                   Already have an account?
                   <Link
                     className="text-primary mx-2 text-decoration-none"

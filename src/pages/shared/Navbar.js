@@ -1,39 +1,40 @@
 // import React, { useEffect } from "react";
 import "./Navber.css";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
 import UseHooks from "./UseHooks";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
-  const[tm,setTm]=useState('light-theme')
-  const toggleTheme=()=>{
-    if(tm ==='dark-theme'){
+  const [tm, setTm] = useState('light-theme')
+  const toggleTheme = () => {
+    if (tm === 'dark-theme') {
       setTm('light-theme')
     }
-    else{
+    else {
       setTm('dark-theme')
     }
   }
-  useEffect(()=>{
-    document.body.className=tm;
-  },[tm]);
+  useEffect(() => {
+    document.body.className = tm;
+  }, [tm]);
 
 
 
-  const [theme,setTheme]=UseHooks()
-  // console.log(theme);
-  
+  // const [theme, setTheme] = UseHooks()
+  // // console.log(theme);
+
   const [user] = useAuthState(auth);
-  const [dark,setDark]=useState(false);
-  const themes=()=>{
+  const [dark, setDark] = useState(false);
+  const themes = () => {
     setDark(!dark);
-    setTheme(!theme);
+    // setTheme(!theme);
   }
-  useEffect(()=>{
-  },[])
+  useEffect(() => {
+  }, [])
   console.log(user);
 
   const logout = () => {
@@ -51,9 +52,9 @@ const Navbar = () => {
   window.addEventListener("scroll", backgroundChange);
   return (
     <div className={nav ? "changebg" : "style-nev"}>
-      <nav class="navbar navbar-expand-lg ">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid fs-5">
-          <div class="container">
+          <div class="">
             <Link class="navbar-brand" to="/">
               <img
                 src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
@@ -74,7 +75,10 @@ const Navbar = () => {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
             {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -82,9 +86,8 @@ const Navbar = () => {
                 </a>
               </li>
             </ul> */}
-            <ul class="d-flex navbar-nav text-black">
+            <ul class="d-flex navbar-nav text-black ">
               <li class="nav-item dropdown me-2 text-white">
-              
                 <a
                   class="nav-link active dropdown-toggle text-white"
                   href="#"
@@ -117,7 +120,7 @@ const Navbar = () => {
                 </ul>
               </li>
             </ul>
-            <ul class="d-flex navbar-nav ">
+            <ul class="d-flex navbar-nav">
               <li class="nav-item dropdown me-4">
                 <a
                   class="nav-link active dropdown-toggle text-white"
@@ -208,6 +211,14 @@ const Navbar = () => {
                 </ul>
               </li>
             </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
+              <li class="nav-item">
+                {
+                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
+                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
+                }
+              </li>
+            </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
@@ -220,17 +231,8 @@ const Navbar = () => {
                   </Link>
                 )}
               </li>
-              <li class="nav-item">
-              {
-        dark?   <button onClick={()=>{ toggleTheme(); themes()}
-         }className={`${dark?'bg-sucess':'bg-dark'}`}>Light</button>:
-        <button onClick={()=>{ toggleTheme(); themes()}
-      }className={`${dark?'bg-primary':'bg-sucess'}`}>Dark
-        </button>
-      }
-              </li>
-
             </ul>
+
             <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
               {user?.photoURL ? (
                 <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
