@@ -33,8 +33,8 @@ const Business = () => {
         scrollSpyDelay: 100
     });
     return (
-        <div className='summary'>
-            <h2 className='text-center pt-4 font-bold'>A E-ticketing Company You Can Count On</h2>
+        <div className='summary py-3'>
+            <h2 className='text-center pt-5 font-bold'>A E-ticketing Company You Can Count On</h2>
             <div className='counter-up'>
                 <div className='content'>
                     <div className='box'>

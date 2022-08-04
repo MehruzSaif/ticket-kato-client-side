@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from "emailjs-com";
 import { FcBusinessman } from "react-icons/fc";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { FcAddressBook } from "react-icons/fc";
@@ -6,6 +7,19 @@ import { FcAddressBook } from "react-icons/fc";
 import './Contact.css';
 
 const Contact = () => {
+
+    function sendEmail(e){
+      e.preventDefault();
+
+      emailjs.sendForm('gmail', 'template_zykgh9h', e.target, 'C1UIEfl0Q59TaE21m')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset()
+    }
+
     return (
         <div>
             <section id="contract">
@@ -40,14 +54,14 @@ const Contact = () => {
     </div>
        <div class="col-md-6 contract-2" >
          <h1>Message:</h1>
-         <form>
+         <form onSubmit={sendEmail}>
           {/* <!--  --> */}
              <div class="name-email">
-             <input type="text"placeholder=" name"name="Name" class="nam" />
-             <input type="email"placeholder="email" name="Email" class="eml"/>
+             <input type="text"placeholder=" name"name="name" class="nam"  />
+             <input type="email"placeholder="email" name="email" class="eml"/>
              </div>
              <div>
-               <input type="text"placeholder="subject"class="sub"name="Subject" class="subject"/>
+               <input type="text"placeholder="subject"class="sub"name="subject" class="subject"/>
              </div>
              <div>
                <textarea name="message" id="" cols="60" rows="6"placeholder="message :"  class="mess"></textarea>
