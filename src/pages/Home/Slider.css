@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #001232;
+    background-color: var(--slider-bg);
     /* clip-path:circle(180vh at 50%  -80vh); */
 }
 
@@ -51,10 +51,14 @@
     z-index: 10;
 }
 
-.owl-slider .item button {
+/* .owl-slider .item button {
     padding: 10px 30px;
     color: #30D7A9;
     border: none;
     border-radius: 20px;
     background: linear-gradient(to right, #D24B75, #725BDE, #5A5FFA);
+} */
+
+.item h4 {
+    color: #ffff !important;
 }
