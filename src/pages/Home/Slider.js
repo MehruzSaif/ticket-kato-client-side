@@ -41,7 +41,7 @@ const Slider = () => {
         },
     };
     return (
-        <div className='owl-slider'>
+        <div className='owl-slider py-5'>
             <div className='slidr-dev'>
                 <OwlCarousel className='owl-theme'
 
@@ -52,76 +52,76 @@ const Slider = () => {
                         <img src={img1} alt="" />
                         <p className='mt-2'>Air Supp<span>ort</span></p>
                         <h4>Find Biman Bangladesh Airlines Ticket and Schedule on ShareTrip.</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img2} alt="" />
                         <p className='mt-2'>Bus Supp<span>ort</span></p>
                         <h4>Find Bus Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img3} alt="" />
                         <p className='mt-2'>Luanch Supp<span>ort</span></p>
                         <h4>Find Luanch Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
 
                     <div class='item'>
                         <img src={img4} alt="" />
                         <p className='mt-2'>Train Supp<span>ort</span></p>
                         <h4>Find Train Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img1} alt="" />
                         <p className='mt-2'>Air Supp<span>ort</span></p>
                         <h4>Find Biman Bangladesh Airlines Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img2} alt="" />
                         <p className='mt-2'>Bus Supp<span>ort</span></p>
                         <h4>Find Bus Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img3} alt="" />
                         <p className='mt-2'>Luanch Supp<span>ort</span></p>
                         <h4>Find Luanch Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
 
                     <div class='item'>
                         <img src={img4} alt="" />
                         <p className='mt-2'>Train Supp<span>ort</span></p>
                         <h4>Find Train Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img1} alt="" />
                         <p className='mt-2'>Air Supp<span>ort</span></p>
                         <h4>Find Biman Bangladesh Airlines Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img2} alt="" />
                         <p className='mt-2'>Bus Supp<span>ort</span></p>
                         <h4>Find Bus Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
                     <div class='item'>
                         <img src={img3} alt="" />
                         <p className='mt-2'>Luanch Supp<span>ort</span></p>
                         <h4>Find Luanch Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
 
                     <div class='item'>
                         <img src={img4} alt="" />
                         <p className='mt-2'>Train Supp<span>ort</span></p>
                         <h4>Find Train Ticket and Schedule on ShareTrip</h4>
-                        <button>Book now</button>
+                        <button className="addReview">Book now</button>
                     </div>
 
                 </OwlCarousel>

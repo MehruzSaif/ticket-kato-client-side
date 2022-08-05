@@ -15,7 +15,7 @@ const Banner = () => {
         <div className='banner'>
             <div className='main-div-banner'>
                 <div>
-                    <h1>Book Your <br /> Tickets For   
+                    <h1>Book Your <br /> Tickets For
                         <span class='typewriter'> {text}</span>
                     </h1>
 

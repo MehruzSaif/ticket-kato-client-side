@@ -11,6 +11,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import login from '../../assests/login.json'
+import Loading from "../shared/Loading";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -33,54 +34,56 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
-    useEffect(() => {
-      const errorMsg = error || gError;
-      if (errorMsg) {
-        switch (errorMsg?.code) {
-          case "auth/invalid-email":
-            toast("Invalid email provided, please provide a valid email");
-            break;
+  useEffect(() => {
+    const errorMsg = error || gError;
+    if (errorMsg) {
+      switch (errorMsg?.code) {
+        case "auth/invalid-email":
+          toast("Invalid email provided, please provide a valid email");
+          break;
 
-          case "auth/invalid-password":
-            toast("Wrong password. Intruder!!");
-            break;
+        case "auth/invalid-password":
+          toast("Wrong password. Intruder!!");
+          break;
 
-          case "auth/wrong-password":
-            toast("Wrong Password");
-            break;
+        case "auth/wrong-password":
+          toast("Wrong Password");
+          break;
 
-          case "auth/user-not-found":
-            toast("User Not Found");
-            break;
+        case "auth/user-not-found":
+          toast("User Not Found");
+          break;
 
-          default:
-            toast("something went wrong");
-        }
+        default:
+          toast("something went wrong");
       }
-    }, [error, gError]);
+    }
+  }, [error, gError]);
 
-    if (loading || gLoading) {
-      return <h2>Loading...</h2>;
+  if (loading || gLoading) {
+      return (
+        <Loading />
+      );
     }
 
-    const onSubmit = (data) => {
-      // console.log(data);
-      signInWithEmailAndPassword(data.email, data.password);
-      // reset({});
-    };
+  const onSubmit = (data) => {
+    // console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
+    // reset({});
+  };
 
 
 
   return (
     <>
       <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
-        <div className="d-flex row justify-content-center align-items-center mb-3 mx-5">
+        <div className="d-flex row justify-content-center align-items-center mb-3 mx-5 my-2">
           <Lottie
-            className="mx-3 mb-3"
+            className="mx-3 mb-3 "
             options={defaultOptions}
             height={600}
             width={600}
