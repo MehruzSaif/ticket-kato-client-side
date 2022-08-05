@@ -80,13 +80,13 @@ const Login = () => {
 
   return (
     <>
-      <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
-        <div className="d-flex row justify-content-center align-items-center mb-3 mx-5 my-2">
+      <div className="d-lg-flex justify-content-evenly align-items-center mt-5">
+        <div className="d-flex row justify-content-center align-items-center mb-3 mx-5 my-5 py-4">
           <Lottie
-            className="mx-3 mb-3 "
+            className="mx-3 mb-3 my-5"
             options={defaultOptions}
-            height={600}
-            width={600}
+            height={400} 
+            width={400} 
           />
         </div>
         <div className="login border-0 my-5 mt-5">

@@ -5,6 +5,7 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import { FcAddressBook } from "react-icons/fc";
 
 import './Contact.css';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
 
@@ -18,6 +19,7 @@ const Contact = () => {
             console.log(error.text);
         });
         e.target.reset()
+        toast("Message Sent")
     }
 
     return (
@@ -33,15 +35,15 @@ const Contact = () => {
         <div class="contact-icone">
           <div><i><FcBusinessman></FcBusinessman></i></div>
           <div class="i-p">
-            <b> name :</b>
-             <p>Daniel Newaz</p>
+            <b> Company </b>
+             <p>Ticket kato</p>
           </div>
        </div>
         <div class="contact-icone">
            <div><i><HiOutlineMailOpen></HiOutlineMailOpen></i></div>
            <div class="i-p">
-             <b> EMAIL :</b>
-              <p>danielnwz420@gmail.com</p>
+             <b> EMAIL </b>
+              <p>info@ticketkato.com</p>
            </div>
         </div>
         <div class="contact-icone">

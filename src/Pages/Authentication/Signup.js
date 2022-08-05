@@ -72,7 +72,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="d-flex col justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column mt-5">
+    <div className="d-lg-flex col justify-content-evenly align-items-center mt-5">
       <div className="d-flex row justify-content-center align-items-center my-4">
         <Lottie
           className=""
