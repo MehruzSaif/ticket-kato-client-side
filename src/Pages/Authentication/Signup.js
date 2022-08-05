@@ -72,8 +72,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="d-lg-flex col justify-content-evenly align-items-center mt-5">
-      <div className="d-flex row justify-content-center align-items-center my-4">
+    <div className="d-lg-flex col justify-content-evenly align-items-center mt-5 py-4">
+      <div className="d-flex row justify-content-center align-items-center my-4 py-4">
         <Lottie
           className=""
           options={defaultOptions}
