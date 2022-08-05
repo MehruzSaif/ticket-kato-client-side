@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "operator_name": "Hanif Enterprise",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"AC Business",
@@ -14,7 +13,6 @@
         "dropping-point":"Technical Bus Point"
     },
     {
-        "id": 2,
         "operator_name": "S.R Travels (Pvt) Ltd",
         "bus_class":" Hyundai Universe",
         "bus_type":"AC Business",
@@ -28,7 +26,7 @@
         "dropping-point":"Technical Bus Point"
     },
     {
-        "id": 3,
+
         "operator_name": "Agomony Express",
         "bus_class":" Scania",
         "bus_type":"AC",
@@ -42,7 +40,6 @@
         "dropping-point":"Technical Bus Point"
     },
     {
-        "id": 4,
         "operator_name": "Ena Transport (Pvt) Ltd",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"Non AC",
@@ -56,7 +53,7 @@
         "dropping-point":"Technical Bus Point"
     },
     {
-        "id": 5,
+
         "operator_name": "Nabil Paribahan",
         "bus_class":"AK1J Super Plus",
         "bus_type":"Non AC",
@@ -70,7 +67,7 @@
         "dropping-point":"Technical Bus Point"
     },
     {
-        "id": 6,
+
         "operator_name": "National Travels",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"AC Business",
@@ -84,7 +81,7 @@
         "dropping-point":"Mohakhali Bus Point"
     },
     {
-        "id": 7,
+
         "operator_name": "Akota Express",
         "bus_class":" Hyundai Universe",
         "bus_type":"AC Business",
@@ -98,7 +95,7 @@
         "dropping-point":"Mohakhali Bus Point"
     },
     {
-        "id": 8,
+
         "operator_name": "Shah Ali Paribahan",
         "bus_class":" Scania",
         "bus_type":"AC",
@@ -112,7 +109,7 @@
         "dropping-point":"Mohakhali Bus Point"
     },
     {
-        "id": 9,
+
         "operator_name": "Shyamoli Paribahan",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"Non AC",
@@ -126,7 +123,7 @@
         "dropping-point":"Mohakhali Bus Point"
     },
     {
-        "id": 10,
+
         "operator_name": "Nabil Paribahan",
         "bus_class":"AK1J Super Plus",
         "bus_type":"Non AC",
@@ -140,7 +137,7 @@
         "dropping-point":"Mohakhali Bus Point"
     },
     {
-        "id": 11,
+
         "operator_name": "Soudia Coach Service",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"AC Business",
@@ -154,7 +151,7 @@
         "dropping-point":"Abdullahpur Bus Point"
     },
     {
-        "id": 12,
+
         "operator_name": "Green Line Paribahan",
         "bus_class":" Hyundai Universe",
         "bus_type":"AC Business",
@@ -168,7 +165,7 @@
         "dropping-point":"Abdullahpur Bus Point"
     },
     {
-        "id": 13,
+
         "operator_name": "Agomony Express",
         "bus_class":" Scania",
         "bus_type":"AC",
@@ -182,7 +179,7 @@
         "dropping-point":"Abdullahpur Bus Point"
     },
     {
-        "id": 14,
+
         "operator_name": "Ena Transport (Pvt) Ltd",
         "bus_class":" Hino 1J Pluss",
         "bus_type":"Non AC",
@@ -196,7 +193,7 @@
         "dropping-point":"Abdullahpur Bus Point"
     },
     {
-        "id": 15,
+
         "operator_name": "Hanif Enterprise",
         "bus_class":"AK1J Super Plus",
         "bus_type":"Non AC",
@@ -209,18 +206,4 @@
         "boarding-point":"Dampara Bus Point",
         "dropping-point":"Abdullahpur Bus Point"
     }
-    // {
-    //     "id": 6,
-    //     "operator_name": "",
-    //     "bus_class":"",
-    //     "bus_type":"",
-    //     "coach_number":"",
-    //     "route": "",
-    //     "departure_time": "",
-    //     "arrival_time": "",
-    //     "available_seats":,
-    //     "price":"",
-    //     "boarding-point":"",
-    //     "dropping-point":""
-    // },
 ]
