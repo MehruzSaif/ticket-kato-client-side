@@ -3,13 +3,6 @@ import './Reviews.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import arnob from '../Home/images/arnob2.jfif'
-import mehedi from '../Home/images/mehedi.jpg'
-import daniel from '../Home/images/daniel.jfif'
-import sajib from '../Home/images/sojib.jfif'
-import shahria from '../Home/images/shahria.jpg'
-import nargis from '../Home/images/nargis.jpg'
 import { Link } from 'react-router-dom';
 import Review from './Review';
 const Reviews = () => {
