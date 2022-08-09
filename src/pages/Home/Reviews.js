@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Reviews.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -11,7 +11,16 @@ import sajib from '../Home/images/sojib.jfif'
 import shahria from '../Home/images/shahria.jpg'
 import nargis from '../Home/images/nargis.jpg'
 import { Link } from 'react-router-dom';
+import Review from './Review';
 const Comment = () => {
+
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+      fetch("https://intense-dawn-70089.herokuapp.com/reviews")
+        .then((res) => res.json())
+        .then((data) => setReviews(data));
+    }, []);
+
     const options = {
         margin: 30,
         responsiveClass: true,
@@ -44,187 +53,35 @@ const Comment = () => {
         },
     }
     return (
-        <div className='review-container'>
-            <div className='owl-slider'>
-                <div className='slider-div'>
-                    <OwlCarousel className='owl-theme'
-                        // items='3'
-                        // autoplay
-                        // dots
-                        // loop margin={10} nav
-                        margin={10}
-                        {...options}
-                    >
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center review w-100 mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/jzrvcHD/8872153b230eb0da2fd6e26d1f7b1d8e.jpg' alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Marong lee</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStarHalfAlt className='star'></FaStarHalfAlt>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 mt-5 review'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='reviewImg'>
-                                        <img className='' src='https://i.ibb.co/2321j2k/gettyimages-465470375.jpg' alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Jhoe Biden</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 mt-5 review'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src='https://i.ibb.co/S56kBdG/louise-loe-profile-image.jpg' alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Leo Marie</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src={arnob} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Mehruz Saif</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src={mehedi} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Mehedi Hassan</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src={shahria} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>MH Shaharia</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src={daniel} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Daniel Newaz</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStarHalfAlt className='star'></FaStarHalfAlt>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, harum!</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img className='' src={sajib} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Hadiuzzaman</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">Your management system is organised! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo sapiente quibusdam. Maiores, itaque similique.</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='col-sm-12 col-md-6 col-lg-4 text-center w-100 review mt-5'>
-                            <div class="card reviews">
-                                <div class="card-body">
-                                    <div className='w-100 reviewImg'>
-                                        <img src={nargis} alt="" />
-                                    </div>
-                                    <h2 className='mt-2 name'>Farhana Riya</h2>
-                                    <div className='mb-2'>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                        <FaStar className='star'></FaStar>
-                                    </div>
-                                    <h5 class="card-title">This is such a very useful application! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quod dolor architecto quos esse praesentium!</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                    </OwlCarousel>
-                </div>
-            </div>
-            <div className='text-center'>
-                <Link to='/addReview' className='addReview'>Add Your Review</Link>
-            </div>
+      <div className="review-container">
+        <div>
+          <h2 className="text-center text-light fs-1">
+            See, What Our Clients Are Saying!
+          </h2>
         </div>
+        <div className="owl-slider">
+          <div className="slider-div">
+            <OwlCarousel
+              className="owl-theme"
+              // items='3'
+              // autoplay
+              // dots
+              // loop margin={10} nav
+              margin={10}
+              {...options}
+            >
+              {reviews.map((review) => (
+                <Review key={review._id} review={review}></Review>
+              ))}
+            </OwlCarousel>
+          </div>
+        </div>
+        <div className="text-center">
+          <Link to="/addReview" className="addReview">
+            Add Your Review
+          </Link>
+        </div>
+      </div>
     );
 };
 

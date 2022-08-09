@@ -19,7 +19,7 @@ const Banner = () => {
                         <span class='typewriter'> {text}</span>
                     </h1>
 
-                    <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
+                    <p className='text-center'>Safe, Secure, Reliable Ticketing!</p>
                 </div>
             </div>
         </div>
