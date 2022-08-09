@@ -16,7 +16,7 @@ const Banner = () => {
             <div className='main-div-banner'>
                 <div>
                     <h1>Book Your <br /> Tickets For   
-                        <span class='typewriter'> {text}</span>
+                        <span className='typewriter'> {text}</span>
                     </h1>
 
                     <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>

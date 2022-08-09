@@ -1,10 +1,10 @@
-import { json } from 'express';
+
 import React, { useEffect,useState } from 'react';
 import Search from '../pages/Searching/Search';
 import './BussTiceket.css'
 
 const BussTicket = () => {
-  const [busData,setBusData]=useState([]);
+  // const [busData,setBusData]=useState([]);
   const array=[{
     name:'Hanif'
   },{
@@ -14,12 +14,13 @@ const BussTicket = () => {
   },{
     name:'GreenLine'
   }];
-  setBusData(array)
+  // setBusData(array)
 
 
    
     return (
         <div className='busTiceket'>
+          <h1>hi this is md</h1>
             <div className='mt-5 pt-5'>
                 <Search></Search>
               <div className='BusTicket'>
@@ -48,7 +49,7 @@ const BussTicket = () => {
                 </div>
                 <div className='Results'>
                     {
-                        busData.map(item=><div className='Each-bus'>
+                        array.map(item=><div className='Each-bus'>
                               <h1>Name:{item.name}</h1>
                               <div>
                               <h1>Name:{item.name}</h1>

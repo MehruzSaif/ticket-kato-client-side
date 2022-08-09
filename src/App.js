@@ -5,8 +5,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Authentication/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from 'react';
-import UseHooks from "./pages/shared/UseHooks";
+
 
 
 import Signup from "./pages/Authentication/Signup";
@@ -39,7 +38,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path='/addReview' element={<AddReview></AddReview>}/>
-        <Route path='/bus' element={<BussTicket/>}></Route>
+        <Route path='/buss' element={<BussTicket></BussTicket>}></Route>
       </Routes>
       <ToastContainer position="top-center" />
       
