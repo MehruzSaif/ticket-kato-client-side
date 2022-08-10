@@ -58,6 +58,7 @@ const BussTicket = () => {
                               <p>Operator Name: {item.operator_name}</p>
                               <p>Price: {item.price}</p>
                               <p>Route: {item.route}</p>
+                              <p></p>
                               </div>
                               <div>
                               <p>Arrival Time: {item.arrival_time}</p>
