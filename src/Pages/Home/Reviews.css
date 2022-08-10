@@ -63,14 +63,14 @@
 
 .review {
     background-color: #92A1B6;
-    column-gap: 20px;
-    padding-top: 53px;
+    column-gap: 20px;  
+    padding-top: 10px;  
 }
 
 .reviews {
     background-color: #001232;
     border-radius: 0;
-    height: 100%
+    height: 60% 
 }
 
 .star {
@@ -85,6 +85,9 @@
 
 .card-body h5 {
     color: rgb(223, 227, 231) !important;
+}
+.reviews {
+    height: 25rem;
 }
 
 

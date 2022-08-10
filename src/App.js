@@ -18,6 +18,7 @@ import Train from "./pages/Searching/Train";
 import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
 import NotFound from "./pages/shared/NotFound";
+import Contact from "./pages/Home/Contact";
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -40,6 +41,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path='/addReview' element={<AddReview></AddReview>} />
+          <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
