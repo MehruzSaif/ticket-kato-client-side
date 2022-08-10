@@ -15,11 +15,11 @@ const Banner = () => {
         <div className='banner'>
             <div className='main-div-banner'>
                 <div>
-                    <h1>Book Your <br /> Tickets For   
-                        <span className='typewriter'> {text}</span>
+                    <h1>Book Your <br /> Tickets For
+                        <span class='typewriter'> {text}</span>
                     </h1>
 
-                    <p>Safe, secure, reliable ticketing.Your ticket to live entertainment!</p>
+                    <p className='text-center'>Safe, Secure, Reliable Ticketing!</p>
                 </div>
             </div>
         </div>
