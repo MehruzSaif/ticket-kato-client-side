@@ -5,10 +5,6 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Authentication/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from 'react';
-import UseHooks from "./pages/shared/UseHooks";
-
-
 import Signup from "./pages/Authentication/Signup";
 import BookTicket from "./BooksTicket/BookTicket";
 // import Footer from "./pages/shared/Footer";
@@ -17,8 +13,11 @@ import Flight from "./pages/Searching/Flight";
 import Train from "./pages/Searching/Train";
 import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
+
 import NotFound from "./pages/shared/NotFound";
 import Contact from "./pages/Home/Contact";
+import BussTicket from "./BusTiceket/BussTicket";
+
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -28,6 +27,7 @@ function App() {
   return (
     <div >
       <div className="content-bg-color main-content">
+
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}>
@@ -42,10 +42,10 @@ function App() {
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/contactus' element={<Contact></Contact>} />
+          <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
-
 
       </div>
     </div>
