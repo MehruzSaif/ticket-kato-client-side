@@ -30,7 +30,7 @@ const BussTicket = () => {
                           </ul>
                       </div>
                       <div>
-                        <h3>Travel Oparator</h3>
+                        <h3>Travel Oparators</h3>
                           <ul>
                              <li><input type="checkbox" value={'First Class'} />  Hanif</li>
                              <li><input type="checkbox" value={'First Class'} />  Ena</li>
