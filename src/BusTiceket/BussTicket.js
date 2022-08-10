@@ -19,7 +19,7 @@ const BussTicket = () => {
               <div className='BusTicket'>
                 <div className='filter'>
                       <div>
-                        <h3>Quick Filter</h3>
+                        <p>Quick Filter</p>
                           <ul>
                             
                              <li><input type="checkbox" value={'First Class'} />  First Class</li>
@@ -30,7 +30,7 @@ const BussTicket = () => {
                           </ul>
                       </div>
                       <div>
-                        <h3>Travel Oparators</h3>
+                        <p>Travel Oparators</p>
                           <ul>
                              <li><input type="checkbox" value={'First Class'} />  Hanif</li>
                              <li><input type="checkbox" value={'First Class'} />  Ena</li>
@@ -45,10 +45,26 @@ const BussTicket = () => {
                         bus.map(item=><div className='Each-bus'>
                               {/* <h1>Name:{item.operator_name}</h1> */}
                               <div>
-                              <h1>Name:{item.operator_name}</h1>
+                                <p>Boarding Point: {item.boarding_point}</p>
+                                <p>Bus Class: {item.bus_class}</p>
+                                <p>Bus Type: {item.bus_type}</p>
                               </div>
-                              <div></div>
-                               
+                              <div>
+                                  <p>Coach Number: {item.coach_number}</p>
+                                  <p>Departure Time: {item.departure_time}</p>
+                                  <p>Dropping Point: {item.dropping_point}</p>
+                              </div>
+                              <div>
+                              <p>Operator Name: {item.operator_name}</p>
+                              <p>Price: {item.price}</p>
+                              <p>Route: {item.route}</p>
+                              <p></p>
+                              </div>
+                              <div>
+                              <p>Arrival Time: {item.arrival_time}</p>
+                              <p>Available Seats: {item.available_seats}</p>
+                              <button className="btn bg-danger">Booking</button>
+                              </div>
                         </div>)
                     }
                 </div>
