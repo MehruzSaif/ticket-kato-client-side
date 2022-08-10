@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 .summary {
-  background: #001232;
+  background: var(--business-bg);
   color: aliceblue;
 }
-.summary h2{
-  color: #2CC8A0!important;
+
+.summary h2 {
+  color: #2CC8A0 !important;
 }
 
 .counter-up {
-  background: #001232;
+  background: var(--business-bg);
   min-height: 30vh;
   background-size: cover;
   background-attachment: fixed;
@@ -27,7 +28,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: #001232;
+  background: var(--business-bg);
 }
 
 .counter-up .content {

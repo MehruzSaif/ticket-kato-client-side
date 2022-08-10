@@ -4,20 +4,13 @@ import Search from '../pages/Searching/Search';
 import './BussTiceket.css'
 
 const BussTicket = () => {
-  // const [busData,setBusData]=useState([]);
-  const array=[{
-    name:'Hanif'
-  },{
-    name:'Ena'
-  },{
-    name:'Shamoli'
-  },{
-    name:'GreenLine'
-  }];
-  // setBusData(array)
+  const [bus,setBus]=useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:5000/busInfo')
+    .then(response => response.json())
+    .then(data =>setBus(data))
+  },[])
 
-
-   
     return (
         <div className='busTiceket'>
           <h1>hi this is md</h1>
@@ -49,17 +42,16 @@ const BussTicket = () => {
                 </div>
                 <div className='Results'>
                     {
-                        array.map(item=><div className='Each-bus'>
-                              <h1>Name:{item.name}</h1>
+                        bus.map(item=><div className='Each-bus'>
+                              {/* <h1>Name:{item.operator_name}</h1> */}
                               <div>
-                              <h1>Name:{item.name}</h1>
+                              <h1>Name:{item.operator_name}</h1>
                               </div>
                               <div></div>
                                
                         </div>)
                     }
                 </div>
-
 
               </div>
             </div>
