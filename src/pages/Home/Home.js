@@ -24,9 +24,7 @@ const Home = () => {
       <Slider></Slider>
       <Reviews></Reviews>
       <BackTop />
-      Scroll down to see the bottom-right
-      <strong className="site-back-top-basic"> gray </strong>
-      button.
+      <strong className="site-back-top-basic"> </strong>
       <Footer></Footer>
     </div>
   );
