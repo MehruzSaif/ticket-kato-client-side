@@ -17,6 +17,7 @@ import Bus from "./pages/Searching/Bus";
 import NotFound from "./pages/shared/NotFound";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
+          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
