@@ -1,10 +1,11 @@
 import React from 'react';
+import BussTicket from '../BusTiceket/BussTicket';
 import './BooksTicket.css'
 
 const BookTicket = () => {
     return (
         <div className='book'>
-            <div className='p-5 mt-5'><h1>BOOkS Your Tikets</h1></div>
+            <BussTicket></BussTicket>
         </div>
     );
 

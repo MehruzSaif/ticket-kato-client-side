@@ -17,6 +17,7 @@ import Bus from "./pages/Searching/Bus";
 import NotFound from "./pages/shared/NotFound";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
+import About from './pages/About';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/contactus' element={<Contact></Contact>} />
+          <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
