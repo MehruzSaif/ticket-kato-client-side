@@ -28,6 +28,7 @@
     padding: 10px;
     text-decoration: none;
     color: black;
+    width: 700px;
 }
 
 
@@ -65,7 +66,9 @@
 .returning {
     width: 200px;
     height: 37px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 1px solid #c5c0c0;
+    z-index: 2;
 }
 
 .search-button {
@@ -160,3 +163,46 @@
 .flight-info {
     color: #001232;
 }
+
+
+/*------busList-------*/
+
+.busList{
+    margin-top: 100px;
+}
+
+.bus-name{
+    color: #070b10!important;
+}
+.route-name{
+    color: crimson;
+}
+
+@media screen and (max-width: 580px) {
+    .search-container {
+        position: relative;
+        background-color: #001232;
+        width: 100%;
+        background-color: #ffff;
+    }
+    .search-content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+    }
+    .search-icon-container {
+        border-radius: 20px;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        width: 100%;
+    }
+    .search-title{
+        margin-top: 20px;
+    }
+    .search-button{
+        margin-bottom: 20px;
+    }
+  
+  }

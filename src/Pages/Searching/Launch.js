@@ -82,11 +82,6 @@ const Launch = () => {
             <input type="text"
                 onChange={e => onChangeHandler(e.target.value)}
                 value={text}
-                onBlur={() => {
-                    setTimeout(() => {
-                        setSuggestions([])
-                    }, 100);
-                }}
                 class="form-control"
                 name='From'
                 placeholder='        Departure Place'
@@ -98,11 +93,6 @@ const Launch = () => {
             <input type="text"
                 onChange={e => onChangeHandler2(e.target.value)}
                 value={text2}
-                onBlur={() => {
-                    setTimeout(() => {
-                        setSuggestions2([])
-                    }, 100);
-                }}
                 class="form-control"
                 name='To'
                 placeholder='          Arrival Place'
@@ -110,7 +100,9 @@ const Launch = () => {
         </div>
         <div>
             <label for="date" class="form-label mt-2 fs-4">Travel Date</label><br />
-            <DatePicker className='departing' />
+            <DatePicker
+
+            className='departing' />
         </div>
         <div>
             <label for="date" class="form-label mt-2 fs-4">Return Date</label><br />
