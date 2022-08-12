@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,p,span{
     /* background-color: yellow; */
 }
 .filter{
-    background-color:red
+    background-color:gray
 }
 .filter div{
     margin-left: 40px;
@@ -25,6 +25,7 @@ h1,h2,h3,h4,h5,p,span{
 }
 .Each-bus{
     display: flex;
+    padding: 30px;
     justify-content: space-between;
     border: solid skyblue 5px;
     margin: 30px;
