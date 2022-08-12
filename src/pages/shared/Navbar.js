@@ -208,6 +208,11 @@ const Navbar = () => {
                       Feedback
                     </a>
                   </li>
+                  <li>
+                    <Link class="dropdown-item" to="/about">
+                      About Us
+                    </Link>
+                  </li>
                 </ul>
               </li>
             </ul>

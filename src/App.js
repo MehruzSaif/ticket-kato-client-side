@@ -15,10 +15,11 @@ import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
 
 import NotFound from "./pages/shared/NotFound";
+import BusList from "./pages/SearchResult/BusList";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import Dashboard from "./pages/Dashboard/Dashboard";
-
+import About from './pages/About';
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -39,10 +40,12 @@ function App() {
             <Route path='launch' element={<Launch></Launch>}></Route>
           </Route>
           <Route path='BookList' element={<BookTicket />}></Route>
+          <Route path='/busList' element={<BusList />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/contactus' element={<Contact></Contact>} />
+          <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
           <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
