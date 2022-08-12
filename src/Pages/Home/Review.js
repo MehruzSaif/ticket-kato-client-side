@@ -3,7 +3,7 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const Review = ({ review }) => {
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4 text-center review w-100 mt-5'>
+        <div className='col-sm-12 col-md-6 col-lg-4 text-center review w-75 mt-5 mx-auto'>
             <div class="card reviews">
                 <div class="card-body">
                     <div className='w-100 reviewImg'>
