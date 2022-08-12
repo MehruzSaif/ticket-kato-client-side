@@ -199,14 +199,19 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/contactus">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
                       Feedback
                     </a>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/about">
+                      About Us
+                    </Link>
                   </li>
                 </ul>
               </li>
