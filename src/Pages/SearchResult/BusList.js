@@ -9,6 +9,7 @@ const BusList = () => {
     console.log(email)
     const [to,setTo]=useState(location.state.text2);
     const [travel,setTravel]=useState(location.state.select);
+    console.log(travel);
     const [ret,setRet]=useState(location.state.select2);
     const [parts, setParts] = useState([]);
     useEffect(() => {
