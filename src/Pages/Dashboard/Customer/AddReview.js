@@ -16,7 +16,7 @@ const AddReview = () => {
             review: event.target.description.value,
         }
 
-        fetch('https://intense-dawn-70089.herokuapp.com/reviews', {
+        fetch('https://hidden-stream-11117.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

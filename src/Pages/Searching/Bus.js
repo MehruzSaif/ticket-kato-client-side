@@ -75,9 +75,9 @@ const Bus = () => {
         setSuggestions2([])
     }
 
-    const disabledDate = (current) => {
+    const disabledDate = (select) => {
         // Can not select days before today and today
-        return current && current < moment().add(-1, 'days').endOf('day');
+        return select && select < moment().add(-1, 'days').endOf('day');
     };
 
     //date-picker

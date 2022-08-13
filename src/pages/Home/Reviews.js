@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 const Comment = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://intense-dawn-70089.herokuapp.com/reviews")
+    fetch("https://hidden-stream-11117.herokuapp.com/busInfo/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
