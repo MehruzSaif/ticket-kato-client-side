@@ -33,12 +33,13 @@ const Navbar = () => {
     setDark(!dark);
     // setTheme(!theme);
   }
-  useEffect(() => {
-  }, [])
-  console.log(user);
+  // useEffect(() => {
+  // }, [])
+  // console.log(user);
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken')
   };
 
   const [nav, setNav] = useState(false);
@@ -209,6 +210,11 @@ const Navbar = () => {
                     </a>
                   </li>
                 </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
+              <li class="nav-item">
+                <Link to='/dashboard'>Dashboard</Link>
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">

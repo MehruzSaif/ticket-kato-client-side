@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import login from '../../assests/login.json'
 import Loading from "../shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -37,6 +38,15 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+
+  const [token] = useToken(user || gUser)
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate])
+
 
   useEffect(() => {
     const errorMsg = error || gError;
@@ -75,10 +85,9 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password);
     // reset({});
   };
-  if (user || gUser) {
-    navigate('/')
-  }
-
+  // if (user || gUser) {
+  //   navigate('/')
+  // }
 
   return (
     <>
