@@ -15,11 +15,18 @@ import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
 
 import NotFound from "./pages/shared/NotFound";
+
+
+// import BusList from "./pages/SearchResult/BusList";
+
+
 import BusList from "./pages/SearchResult/BusList";
+
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import About from './pages/shared/About';
+
 
 function App() {
   // const [theme,setTheme]=useState(false)

@@ -14,6 +14,9 @@ const BussTicket = () => {
     fetch("https://intense-dawn-70089.herokuapp.com/busInfo")
       .then((response) => response.json())
       .then((data) => setBus(data));
+    fetch('https://hidden-stream-11117.herokuapp.com/busInfo')
+    .then(response => response.json())
+    .then(data =>setBus(data))
   },[])
     const [hyundai, setHyundai] =useState(true);
     const [hino, setHino] =useState(true);
