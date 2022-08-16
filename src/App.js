@@ -25,7 +25,7 @@ import BusList from "./pages/SearchResult/BusList";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import About from './pages/About';
+import About from './pages/shared/About';
 
 
 function App() {
