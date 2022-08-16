@@ -11,9 +11,9 @@ const BussTicket = () => {
   console.log(array)
 
   useEffect(()=>{
-    fetch('http://localhost:5000/busInfo')
-    .then(response => response.json())
-    .then(data =>setBus(data))
+    fetch("https://intense-dawn-70089.herokuapp.com/busInfo")
+      .then((response) => response.json())
+      .then((data) => setBus(data));
   },[])
     const [hyundai, setHyundai] =useState(true);
     const [hino, setHino] =useState(true);
