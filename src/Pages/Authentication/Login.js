@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
@@ -10,12 +11,16 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Lottie from "react-lottie";
-import login from '../../assests/login.json'
+import login from "../../assests/login.json";
 import Loading from "../shared/Loading";
 import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [sendPasswordResetEmail, sending, error1] =
+    useSendPasswordResetEmail(auth);
+
+  const emailRef = useRef("");
 
   const defaultOptions = {
     loop: true,
@@ -75,16 +80,28 @@ const Login = () => {
   }, [error, gError]);
 
   if (loading || gLoading) {
+
     return (
       <Loading />
     );
   }
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast.info("Email Sent 😃");
+    } else {
+      toast.error("Please Enter Your Email address");
+    }
+  };
+
 
   const onSubmit = (data) => {
     // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     // reset({});
   };
+
   // if (user || gUser) {
   //   navigate('/')
   // }
@@ -123,6 +140,7 @@ const Login = () => {
                             message: "Provide a valid Email",
                           },
                         })}
+                        ref={emailRef}
                         type="email"
                         placeholder="Your Email"
                         className="form-control w-full mx-auto"
@@ -184,6 +202,15 @@ const Login = () => {
                       value="Login"
                     />
                   </form>
+                  <p className="text-danger fs-5">
+                    Forget Password?
+                    <button
+                      className="btn btn-link text-decoration-none b-0 fs-5"
+                      onClick={resetPassword}
+                    >
+                      Reset Password
+                    </button>
+                  </p>
                   <p>
                     <small className="fs-5">
                       New To Ticket-Kato?

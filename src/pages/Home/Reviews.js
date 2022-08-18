@@ -92,8 +92,6 @@ const Reviews = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
-
+      </div>)}
 export default Reviews;
+
