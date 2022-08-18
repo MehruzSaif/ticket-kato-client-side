@@ -123,7 +123,7 @@ const Login = () => {
                             message: "Provide a valid Email",
                           },
                         })}
-                        ref={emailRef}
+                        // ref={emailRef}
                         type="email"
                         placeholder="Your Email"
                         className="form-control w-full mx-auto"
