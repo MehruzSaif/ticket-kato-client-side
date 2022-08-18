@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
-/* import 'react-simple-typewriter/dist/'; */
+// import 'react-simple-typewriter/dist/'; 
 import "./Banner.css";
 
 const Banner = () => {
