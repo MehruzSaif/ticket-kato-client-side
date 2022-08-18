@@ -33,9 +33,6 @@ const Navbar = () => {
     setDark(!dark);
     // setTheme(!theme);
   }
-  useEffect(() => {
-  }, [])
-  console.log(user);
 
   const logout = () => {
     signOut(auth);
