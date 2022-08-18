@@ -5,7 +5,7 @@ import air from "../../assests/img.png";
 
 const About = () => {
     return (
-        <div className='home'>
+        <div className='home mt-16'>
             <div className='title'>
             <div className='air-animation'>
                     <div className="timer">

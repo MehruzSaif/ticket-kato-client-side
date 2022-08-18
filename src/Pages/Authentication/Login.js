@@ -105,12 +105,12 @@ const Login = () => {
             <div className="flex h-screen justify-center items-center border-0">
               <div className="card border-0">
                 <div className="card-body border-0">
-                  <h2 className="text-center text-success">Login</h2>
+                  <h2 className="text-center text-success text-2xl font-semibold">Login</h2>
                   <form className="border-0" onSubmit={handleSubmit(onSubmit)}>
                     {/* Email */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-lg">Email</span>
                       </label>
                       <input
                         {...register("email", {
@@ -148,7 +148,7 @@ const Login = () => {
                     {/* Password */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-lg">Password</span>
                       </label>
                       <input
                         {...register("password", {
@@ -180,7 +180,7 @@ const Login = () => {
                       </label>
                     </div>
                     <input
-                      className="btn btn-primary px-4 mb-3"
+                      className="btn btn-primary px-4 mb-3 text-blue-600"
                       type="submit"
                       value="Login"
                     />
@@ -213,10 +213,10 @@ const Login = () => {
                   <div className="mt-4">
                     <button
                       onClick={() => signInWithGoogle()}
-                      className="btn btn-outline-success "
+                      className="btn btn-outline-success d-flex justify-center mx-auto"
                     >
-                      Continue With Google{" "}
-                      <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>
+                      Continue With Google
+                      <FcGoogle className="w-6 h-7 ml-1"></FcGoogle>
                     </button>
                   </div>
                 </div>
