@@ -1,55 +1,44 @@
 import React from 'react';
-import '../Searching/Search.css';
-const BusItem = ({order}) => {
+import { Link } from 'react-router-dom';
+import './BusItem.css';
+const BusItem = ({ item }) => {
     return (
-        <div className='d-flex justify-content-center'>
-        <div >
-            <div class="card mb-3" style={{'max-width':'540px'}}>
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        {/* <img src='' class="img-fluid rounded-start" alt="..."> */}
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body bus-name">
-                            {/* <h5 class="card-title bus-name">Bus-1</h5> */}
-                            <h4 className='bus-name'>Bus-1</h4>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
-                        </div>
-                    </div>
-                </div>
+        <div className="searchItem p-4" >
+            <img
+                src={item.photos[0]}
+                alt=""
+                className="siImg mt-5"
+            />
+            <div className="siDesc">
+                <h1 className="siTitle">{item.operator_name}</h1>
+                <span className="siDistance">{item.bus_type}</span>
+                <span className="siTaxiOp" style={{"width":"150px"}}>Departure Time: {item.departure_time}</span>
+                <span className="siTaxiOp" style={{"width":"150px"}}>Arrival Time: {item.arrival_time}</span>
+                <span className="siSubtitle">
+                {item.bus_class}
+                </span>
+                <span className="siFeatures">
+                    Coach-Number: {item.coach_number}
+                </span>
+                <span className="siCancelOp">Free Cancellation </span>
+                <span className="siTaxOp">Boarding Point:{item.boarding_point}</span>
+                    <span className="siTaxOp">Dropping Point Point:{item.dropping_point}</span>
             </div>
-            <div class="card mb-3" style={{'max-width':'540px'}}>
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        {/* <img src="..." class="img-fluid rounded-start" alt="..."> */}
+            <div className="siDetails">
+                {item.rating &&
+                    <div className="siRating">
+                        <span>Excellent</span>
+                        <button>{item.rating}</button>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h4 className='bus-name'>Bus-2</h4>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style={{'max-width':'540px'}}>
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        {/* <img src="..." class="img-fluid rounded-start" alt="..."> */}
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h4 className='bus-name'>Bus-3</h4>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted"></small></p>
-                        </div>
-                    </div>
+                }
+
+                <div className="siDetailTexts">
+                    <span className="siPrice">{item.price} Tk</span>
+                    
+                    <Link to='/singleHotel'><button className="siCheckButton">View Seats</button></Link>
                 </div>
             </div>
         </div>
-        </div>
-        
     );
 };
 
