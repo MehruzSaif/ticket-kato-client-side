@@ -11,7 +11,7 @@ const BussTicket = () => {
   console.log(array)
 
   useEffect(()=>{
-    fetch('https://hidden-stream-11117.herokuapp.com/busInfo')
+    fetch('https://hidden-stream-11117.herokuapp.com/busesInfo')
     .then(response => response.json())
     .then(data =>setBus(data))
   },[])

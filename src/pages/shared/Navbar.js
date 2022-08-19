@@ -218,6 +218,12 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
+
+                <Link to='/dashboard'>Dashboard</Link>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
+              <li class="nav-item">
                 {
                   dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
                     <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
