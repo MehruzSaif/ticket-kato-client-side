@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import login from "../../assests/login.json";
 import Loading from "../shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -43,6 +44,15 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  const [token] = useToken(user || gUser)
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate])
+
+
   useEffect(() => {
     const errorMsg = error || gError;
     if (errorMsg) {
@@ -70,9 +80,11 @@ const Login = () => {
   }, [error, gError]);
 
   if (loading || gLoading) {
-    return <Loading />;
-  }
 
+    return (
+      <Loading />
+    );
+  }
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
@@ -83,11 +95,16 @@ const Login = () => {
     }
   };
 
+
   const onSubmit = (data) => {
     // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     // reset({});
   };
+
+  // if (user || gUser) {
+  //   navigate('/')
+  // }
 
   return (
     <>
@@ -180,7 +197,7 @@ const Login = () => {
                       </label>
                     </div>
                     <input
-                      className="btn btn-primary px-4 mb-3 text-blue-600"
+                      className="btn bg-cyan-500 px-4 mb-3 border-0 text-white"
                       type="submit"
                       value="Login"
                     />
