@@ -8,7 +8,7 @@ const Review = ({ review }) => {
                 <div class="card-body">
                     <div className='w-100 reviewImg'>
                         {
-                            review.photo ? <img className='' src={review.photo} alt="" /> : <img className='' src='https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png' alt="" />
+                            review.photos ? <img className='' src={review.photos} alt="" /> : <img className='' src='https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png' alt="" />
                         }
                     </div>
                     <h2 className='mt-2 name'>{review.name}</h2>
