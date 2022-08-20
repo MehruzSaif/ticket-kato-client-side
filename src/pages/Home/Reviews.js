@@ -11,42 +11,10 @@ import Slider from "react-slick";
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
   useEffect(() => {
-    fetch('https://intense-dawn-70089.herokuapp.com/reviews')
-      .then(res => res.json())
-      .then(data => setReviews(data))
-  }, [])
-
-  const options = {
-    margin: 30,
-    responsiveClass: true,
-    nav: false,
-    autoplay: true,
-    // smartSpeed: 1000,
-    responsive: {
-      0: {
-        items: 1,
-        dots: false,
-
-      },
-      400: {
-        items: 1,
-        dots: false,
-      },
-      600: {
-        items: 2,
-        dots: true,
-      },
-      700: {
-        items: 2,
-        dots: true,
-      },
-      1000: {
-        items: 3,
-        dots: true,
-
-      }
-    },
-  }
+    fetch("https://hidden-stream-11117.herokuapp.com/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
 
   const settings = {
     dots: true,

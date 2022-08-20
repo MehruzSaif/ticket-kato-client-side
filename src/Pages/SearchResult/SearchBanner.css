@@ -1,0 +1,28 @@
+.searchBanner{
+    background-color: #293C5A;
+    width: 100%;
+    height: 280px;
+    margin: 0px;
+    position: relative;
+  }
+  .searchBannerContainer{
+  margin: 0px;
+  }
+  
+  .searchBannerText1{
+    display: inline;
+    color: #ffffff;
+    position: absolute;
+    top: 50px;
+    left: 530px;
+    margin: 0px;
+  }
+  .searchBannerText2{
+    display: inline;
+    color: #ffffff;
+    position: absolute;
+    top: 110px;
+    left: 640px;
+    font-size: 20px;
+  }
+  
