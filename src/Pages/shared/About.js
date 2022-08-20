@@ -1,11 +1,11 @@
 import React from 'react';
 import { GiHamburgerMenu} from 'react-icons/gi';
 import "./About.css";
-import air from "../../src/assests/img.png";
+import air from "../../assests/img.png";
 
 const About = () => {
     return (
-        <div className='home'>
+        <div className='home mt-16'>
             <div className='title'>
             <div className='air-animation'>
                     <div className="timer">
@@ -18,7 +18,7 @@ const About = () => {
                     </div>
                 </div>
                 
-                <div className='card'>
+                <div className='card-about'>
                     <h1>Welcome to <br/><span>Ticket Kato</span></h1>
                     <p>We are committed to deliver <span> The best service.</span>  Our emloy have experience in working with clients.</p>
                     <div className='d-flex'>

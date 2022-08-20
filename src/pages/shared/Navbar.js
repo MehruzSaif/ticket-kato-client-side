@@ -33,9 +33,11 @@ const Navbar = () => {
     setDark(!dark);
     // setTheme(!theme);
   }
+
   // useEffect(() => {
   // }, [])
   // console.log(user);
+
 
   const logout = () => {
     signOut(auth);
@@ -55,14 +57,15 @@ const Navbar = () => {
     <div className={nav ? "changebg" : "style-nev"}>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid fs-5">
-          <div class="">
+          <div class="flex items-center justify-center">
             <Link class="navbar-brand" to="/">
-              <img
+              {/* <img
                 src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
                 alt=""
-                width="125"
-                height="40"
-              />
+                width="160"
+                height="120"
+              /> */}
+              <h2 className="text-2xl text-white ">Ticket-Kato</h2>
             </Link>
           </div>
           <button
@@ -219,25 +222,42 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
+
                 <Link to='/dashboard'>Dashboard</Link>
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                {
-                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
-                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
-                }
+                {dark ? (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaSun></FaSun>
+                  </a>
+                ) : (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaMoon></FaMoon>
+                  </a>
+                )}
+
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
-                  <button onClick={logout} className="btn btn-danger">
+                  <button onClick={logout} className="btn btn-success text-white">
                     Logout
                   </button>
                 ) : (
-                  <Link to="/login" className="btn btn-success btn-rounded">
+                  <Link to="/login" className="btn btn-success">
                     Login
                   </Link>
                 )}
@@ -250,7 +270,7 @@ const Navbar = () => {
                   <img
                     src={user?.photoURL}
                     class="rounded-circle d-flex justify-center align-items-center"
-                    style={{ width: "50px", height: "45px" }}
+                    style={{ width: "50px", height: "40px" }}
                     alt="Avatar"
                   />
                 </div>
@@ -259,7 +279,7 @@ const Navbar = () => {
                   <img
                     src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
                     class="rounded-circle d-flex justify-center align-items-center"
-                    style={{ width: "50px", height: "45px" }}
+                    style={{ width: "50px", height: "40px" }}
                     alt="Avatar"
                   />
                 </div>

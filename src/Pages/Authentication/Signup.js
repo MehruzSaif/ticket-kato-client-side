@@ -220,7 +220,7 @@ const Signup = () => {
               </div>
               <button
                 onClick={() => signInWithGoogle()}
-                className="btn btn-outline-success"
+                className="btn btn-outline-success d-flex justify-center mx-auto"
               >
                 Continue with Google
                 <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>
