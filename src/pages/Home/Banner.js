@@ -10,13 +10,14 @@ const Banner = () => {
         loop: Infinity,
         onLoopDone: () => console.log(`loop completed after 3 runs.`),
     })
+    console.log(text);
 
     return (
         <div className='banner'>
             <div className='main-div-banner'>
                 <div>
-                    <h1>Book Your <br /> Tickets For
-                        <span class='typewriter'> {text}</span>
+                    <h1>Book Your <br /> Tickets Fors
+                        <h2 class='typewriter'> {text}</h2>
                     </h1>
 
                     <p className='text-center'>Safe, Secure, Reliable Ticketing!</p>
@@ -27,3 +28,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+//
