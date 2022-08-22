@@ -33,6 +33,8 @@ const Dashboard = () => {
                         admin && <>
                         <li><Link to='/dashboard/userPanel' className='hover:bg-violet-600 hover:text-white text-slate-200 bg-slate-600 font-bold mb-2'
                     >User Panel</Link></li>
+                        <li><Link to='/dashboard/addBuses' className='hover:bg-violet-600 hover:text-white text-slate-200 bg-slate-600 font-bold mb-2'
+                    >Add Buses</Link></li>
                         </>
                     }
 

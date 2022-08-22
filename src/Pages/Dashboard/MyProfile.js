@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth)
-    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`http://localhost:5000/user/${user.email}`, {
+    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`https://hidden-stream-11117.herokuapp.com/users/${user.email}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +30,7 @@ const MyProfile = () => {
         }
         console.log(updatedUser)
         if (email) {
-            fetch(`http://localhost:5000/user/update/${email}`, {
+            fetch(`https://hidden-stream-11117.herokuapp.com/users/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',
@@ -63,7 +63,7 @@ const MyProfile = () => {
                                 <div class="card-body">
                                
                                    {
-                                        data.img && <div class="avatar justify-center">
+                                        data?.img && <div class="avatar justify-center">
                                             <div class="w-36 rounded-full ">
                                                 <img src={data.img} alt='' />
                                             </div>
@@ -85,13 +85,13 @@ const MyProfile = () => {
                                     <h2 class="card-title font-bold py-2 text-3xl text-slate-700 justify-center">{user?.displayName}</h2>
                                     <p className='text-xl font-semibold'>Email: <span className='font-thin'>{user?.email}</span></p>
                                     {
-                                        data.phone && <p className='text-xl font-semibold'>Phone: <span className='font-thin'>{data.phone}</span></p>
+                                        data?.phone && <p className='text-xl font-semibold'>Phone: <span className='font-thin'>{data.phone}</span></p>
                                     }
                                     {
-                                        data.education && <p className='text-xl font-semibold'>Education: <span className='font-thin'>{data.education}</span></p>
+                                        data?.education && <p className='text-xl font-semibold'>Education: <span className='font-thin'>{data.education}</span></p>
                                     }
                                     {
-                                        data.address && <p className='text-xl font-semibold'>Address: <span className='font-thin'>{data.address}</span></p>
+                                        data?.address && <p className='text-xl font-semibold'>Address: <span className='font-thin'>{data.address}</span></p>
                                     }
                                 </div>
                             </div>

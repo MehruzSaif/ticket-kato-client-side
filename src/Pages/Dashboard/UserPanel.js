@@ -11,7 +11,7 @@ const UserPanel = () => {
     const [makeAdmin, setMakeAdmin] = useState(null)
     const [removeAdmin, setRemoveAdmin] = useState(null)
 
-    const { isLoading, data: users, refetch } = useQuery(['users'], () => fetch('http://localhost:5000/user', {
+    const { isLoading, data: users, refetch } = useQuery(['users'], () => fetch('https://hidden-stream-11117.herokuapp.com/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

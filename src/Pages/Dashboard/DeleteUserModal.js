@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteUserModal = ({ deleteConfirm, setDeleteConfirm, refetch }) => {
     const { _id } = deleteConfirm
     const handleUserDelete = () => {
-        fetch(`http://localhost:5000/user/${_id}`, {
+        fetch(`https://hidden-stream-11117.herokuapp.com/users/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -12,7 +12,7 @@ const DeleteUserModal = ({ deleteConfirm, setDeleteConfirm, refetch }) => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.acknowledged) {
+                if (data) {
                     toast.success(`User deleted Successfully!`)
                     setDeleteConfirm(null)
                     refetch()
