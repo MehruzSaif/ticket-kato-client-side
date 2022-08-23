@@ -24,8 +24,7 @@ const Navbar = () => {
 
 
 
-  // const [theme, setTheme] = UseHooks()
-  // // console.log(theme);
+ 
 
   const [user] = useAuthState(auth);
   const [dark, setDark] = useState(false);
@@ -35,7 +34,7 @@ const Navbar = () => {
   }
   useEffect(() => {
   }, [])
-  console.log(user);
+
 
   const logout = () => {
     signOut(auth);

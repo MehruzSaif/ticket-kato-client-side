@@ -26,14 +26,14 @@ import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import About from './pages/About';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 
 
 function App() {
-  // const [theme,setTheme]=useState(false)
-  // const [theme,setTheme]=useH
-  // const [theme,setTheme]=UseHooks()
-  // console.log(theme);
+  const queryClient = new QueryClient()
   return (
+    <QueryClientProvider client={queryClient}>
+       
     <div >
       <div className="content-bg-color main-content">
 
@@ -62,6 +62,7 @@ function App() {
 
       </div>
     </div>
+    </QueryClientProvider>
   );
 
 }
