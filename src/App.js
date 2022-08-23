@@ -53,6 +53,7 @@ function App() {
            <Route path="myProfile" element={<MyProfile></MyProfile>}></Route> 
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
           
+          
         </Route>
 
           <Route path='/addReview' element={<RequireAuth><AddReview></AddReview></RequireAuth>} />

@@ -5,7 +5,7 @@ const SearchBanner = () => {
         <div>
             <div className='searchBanner'>
                 <div className='searchBannerContainer'>
-                    <h2 className='searchBannerText1'>Bangladesh's Best Buses Are Here</h2>
+                    <p className='searchBannerText1'>Bangladesh's Best Buses Are Here</p>
                     <p className='searchBannerText2'>We Believe Traveling Is An Art</p>
                 </div>
             </div>
