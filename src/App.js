@@ -20,11 +20,18 @@ import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import RequireAuth from "./pages/Authentication/RequireAuth";
 import About from './pages/shared/About';
+
+import Privacy from './pages/Home/Privacy';
+import TermsConditions from './pages/Home/TermsConditions';
+
+
+
 import Dashboard from './pages/Dashboard/Dashboard'
 import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
+
 function App() {
   // const [theme,setTheme]=useState(false)
   // const [theme,setTheme]=useH
@@ -48,6 +55,11 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
 
+          <Route path='/addReview' element={<AddReview></AddReview>} />
+          <Route path='/privacy' element={<Privacy></Privacy>} />
+          <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
+
+
           <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
            <Route index element={<DashboardIndex></DashboardIndex>}></Route>
@@ -59,6 +71,7 @@ function App() {
         </Route>
 
           <Route path='/addReview' element={<RequireAuth><AddReview></AddReview></RequireAuth>} />
+
           <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
