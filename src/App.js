@@ -26,6 +26,8 @@ import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import About from './pages/shared/About';
+import Privacy from './pages/Home/Privacy';
+import TermsConditions from './pages/Home/TermsConditions';
 
 
 function App() {
@@ -51,6 +53,8 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path='/addReview' element={<AddReview></AddReview>} />
+          <Route path='/privacy' element={<Privacy></Privacy>} />
+          <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
           <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>

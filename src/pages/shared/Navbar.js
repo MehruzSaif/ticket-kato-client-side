@@ -140,9 +140,9 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/privacy">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
@@ -153,9 +153,9 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/termsCondition">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
