@@ -33,12 +33,15 @@ const Navbar = () => {
     setDark(!dark);
     // setTheme(!theme);
   }
-  useEffect(() => {
-  }, [])
-  console.log(user);
+
+  // useEffect(() => {
+  // }, [])
+  // console.log(user);
+
 
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken')
   };
 
   const [nav, setNav] = useState(false);
@@ -219,35 +222,25 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                {dark ? (
-                  <a
-                    onClick={() => {
-                      toggleTheme();
-                      themes();
-                    }}
-                  >
-                    <FaSun></FaSun>
-                  </a>
-                ) : (
-                  <a
-                    onClick={() => {
-                      toggleTheme();
-                      themes();
-                    }}
-                  >
-                    <FaMoon></FaMoon>
-                  </a>
-                )}
+                <Link to='/dashboard'>Dashboard</Link>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
+              <li class="nav-item">
+                {
+                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
+                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
+                }
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
-                  <button onClick={logout} className="btn btn-danger">
+                  <button onClick={logout} className="btn btn-success text-white">
                     Logout
                   </button>
                 ) : (
-                  <Link to="/login" className="btn btn-success btn-rounded">
+                  <Link to="/login" className="btn btn-success">
                     Login
                   </Link>
                 )}
