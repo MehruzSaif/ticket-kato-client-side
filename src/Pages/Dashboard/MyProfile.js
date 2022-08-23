@@ -7,7 +7,11 @@ import { toast } from 'react-toastify';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth)
+<<<<<<< HEAD
     const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`http://localhost:5000/user/singleUser/${user.email}`, {
+=======
+    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`https://hidden-stream-11117.herokuapp.com/users/${user.email}`, {
+>>>>>>> 60703b0327a2bff650f37bba222e63b4b1b0890a
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +34,7 @@ const MyProfile = () => {
         }
         console.log(updatedUser)
         if (email) {
-            fetch(`http://localhost:5000/user/update/${email}`, {
+            fetch(`https://hidden-stream-11117.herokuapp.com/users/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',
@@ -62,8 +66,13 @@ const MyProfile = () => {
                             <div class="card w-96 bg-slate-200 shadow-xl">
                                 <div class="card-body">
                                
+<<<<<<< HEAD
                                    {/* {
                                         data.img && <div class="avatar justify-center">
+=======
+                                   {
+                                        data?.img && <div class="avatar justify-center">
+>>>>>>> 60703b0327a2bff650f37bba222e63b4b1b0890a
                                             <div class="w-36 rounded-full ">
                                                 <img src={data.img} alt='' />
                                             </div>

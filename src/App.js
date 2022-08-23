@@ -24,6 +24,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
+import AddBuses from "./pages/Dashboard/AddBuses";
 function App() {
   // const [theme,setTheme]=useState(false)
   // const [theme,setTheme]=useH
@@ -52,8 +53,9 @@ function App() {
            <Route index element={<DashboardIndex></DashboardIndex>}></Route>
            <Route path="myProfile" element={<MyProfile></MyProfile>}></Route> 
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
-          
-          
+           <Route path="addReview" element={<AddReview></AddReview>}></Route>
+           <Route path="addBuses" element={<AddBuses></AddBuses>}></Route>
+           
         </Route>
 
           <Route path='/addReview' element={<RequireAuth><AddReview></AddReview></RequireAuth>} />

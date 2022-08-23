@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const RemoveAdminModal = ({ removeAdmin, setRemoveAdmin, refetch }) => {
     const { email } = removeAdmin
     const handleRemoveAdmin = () => {
-        fetch(`http://localhost:5000/user/admins/${email}`, {
+        fetch(`https://hidden-stream-11117.herokuapp.com/users/removeAdmin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
