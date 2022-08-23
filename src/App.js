@@ -52,9 +52,9 @@ function App() {
           <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
            <Route index element={<DashboardIndex></DashboardIndex>}></Route>
            <Route path="myProfile" element={<MyProfile></MyProfile>}></Route> 
+          <Route path="addReview" element={<AddReview></AddReview>}></Route>
            <Route path="addReview" element={<AddReview></AddReview>}></Route>
            <Route path="addBuses" element={<AddBuses></AddBuses>}></Route>
-           
            
         </Route>
 
