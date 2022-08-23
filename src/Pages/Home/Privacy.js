@@ -9,7 +9,7 @@ const Privacy = () => {
             <h1 className='h1 text-center'>Privacy Policy for Ticket Kato</h1>
             <h1 className='h1 text-center'>Privacy Policy for Ticket Kato</h1> <br></br>
 
-<p>At Ticket Kato, accessible from https://effulgent-dragon-142d3e.netlify.app/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Ticket Kato and how we use it.</p>
+<p>At Ticket Kato, accessible from <span>https://ticket-kato.web.app/</span> , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Ticket Kato and how we use it.</p>
 
 <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 
