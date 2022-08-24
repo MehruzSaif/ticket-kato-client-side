@@ -11,6 +11,7 @@ import { BackTop } from "antd";
 import "./Home.css"
 import TermsConditions from "./TermsConditions";
 import Privacy from "./Privacy";
+import Feedback from "./Feedback";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
       <strong className="site-back-top-basic"> </strong>
       {/* <TermsConditions></TermsConditions> */}
       {/* <Privacy></Privacy> */}
+      <Feedback></Feedback>
       <Footer></Footer>
     </div>
   );
