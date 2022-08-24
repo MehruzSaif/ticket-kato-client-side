@@ -30,7 +30,7 @@ const Home = () => {
       <strong className="site-back-top-basic"> </strong>
       {/* <TermsConditions></TermsConditions> */}
       {/* <Privacy></Privacy> */}
-      <Feedback></Feedback>
+      {/* <Feedback></Feedback> */}
       <Footer></Footer>
     </div>
   );

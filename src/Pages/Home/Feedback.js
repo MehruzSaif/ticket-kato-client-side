@@ -8,7 +8,7 @@ const Feedback = () => {
         <div className='row'>
             <div className='col-md-2'></div>
             <div className='col-md-8'>
-                <h1 className='text-center mt-5 font-weight-bold text-4xl'>Feedback</h1>
+                <h1 className='text-center mt-20 font-weight-bold text-4xl'>Feedback</h1>
                 <hr className='bg-black'/>
                 <h6 className='text-center text-2xl mt-2'>Please Write Your Feedback Below : </h6>
                 <h3 className='mt-4 text-center'>How Do You Rate Your Overall Experience ? </h3>

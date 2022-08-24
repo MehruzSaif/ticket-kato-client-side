@@ -31,6 +31,7 @@ import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
+import Feedback from './pages/Home/Feedback';
 
 function App() {
   // const [theme,setTheme]=useState(false)
@@ -58,6 +59,8 @@ function App() {
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/privacy' element={<Privacy></Privacy>} />
           <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
+          <Route path='/feedback' element={<Feedback></Feedback>} />
+          
 
 
           <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
