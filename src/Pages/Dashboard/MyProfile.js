@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';np
+import auth from '../../firebase.init';
 import { useQuery } from 'react-query';
 import Loading from '../shared/Loading';
 import { toast } from 'react-toastify';
@@ -8,7 +8,9 @@ import { toast } from 'react-toastify';
 const MyProfile = () => {
     const [user] = useAuthState(auth)
 
-    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`http://localhost:5000/user/singleUser/${user.email}`, {
+    
+
+    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`https://hidden-stream-11117.herokuapp.com/users/${user.email}`, {
 
         method: 'GET',
         headers: {
