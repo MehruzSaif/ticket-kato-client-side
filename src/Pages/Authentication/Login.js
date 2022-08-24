@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import login from "../../assests/login.json";
 import Loading from "../shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -43,6 +44,15 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  const [token] = useToken(user || gUser)
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate])
+
+
   useEffect(() => {
     const errorMsg = error || gError;
     if (errorMsg) {
@@ -70,9 +80,11 @@ const Login = () => {
   }, [error, gError]);
 
   if (loading || gLoading) {
-    return <Loading />;
-  }
 
+    return (
+      <Loading />
+    );
+  }
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
@@ -83,11 +95,16 @@ const Login = () => {
     }
   };
 
+
   const onSubmit = (data) => {
     // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     // reset({});
   };
+
+  // if (user || gUser) {
+  //   navigate('/')
+  // }
 
   return (
     <>
@@ -105,12 +122,12 @@ const Login = () => {
             <div className="flex h-screen justify-center items-center border-0">
               <div className="card border-0">
                 <div className="card-body border-0">
-                  <h2 className="text-center text-success">Login</h2>
+                  <h2 className="text-center text-success text-2xl font-semibold">Login</h2>
                   <form className="border-0" onSubmit={handleSubmit(onSubmit)}>
                     {/* Email */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-lg">Email</span>
                       </label>
                       <input
                         {...register("email", {
@@ -123,7 +140,7 @@ const Login = () => {
                             message: "Provide a valid Email",
                           },
                         })}
-                        ref={emailRef}
+                        // ref={emailRef}
                         type="email"
                         placeholder="Your Email"
                         className="form-control w-full mx-auto"
@@ -148,7 +165,7 @@ const Login = () => {
                     {/* Password */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-lg">Password</span>
                       </label>
                       <input
                         {...register("password", {
@@ -180,7 +197,7 @@ const Login = () => {
                       </label>
                     </div>
                     <input
-                      className="btn btn-primary px-4 mb-3"
+                      className="btn bg-cyan-500 px-4 mb-3 border-0 text-white"
                       type="submit"
                       value="Login"
                     />
@@ -213,10 +230,10 @@ const Login = () => {
                   <div className="mt-4">
                     <button
                       onClick={() => signInWithGoogle()}
-                      className="btn btn-outline-success "
+                      className="btn btn-outline-success d-flex justify-center mx-auto"
                     >
-                      Continue With Google{" "}
-                      <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>
+                      Continue With Google
+                      <FcGoogle className="w-6 h-7 ml-1"></FcGoogle>
                     </button>
                   </div>
                 </div>

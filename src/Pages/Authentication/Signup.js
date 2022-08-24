@@ -11,6 +11,7 @@ import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import signup from "../../assests/signup.json"
+import useToken from "../../hooks/useToken";
 
 const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -60,10 +61,17 @@ const Signup = () => {
     return <h3>Loading...</h3>;
   }
 
-  if (user || gUser) {
-    toast.success("User Created Successfully");
-    navigate("/");
-  }
+  // if (user || gUser) {
+  //   toast.success("User Created Successfully");
+  //   navigate("/");
+  // }
+  const [token] = useToken(user || gUser)
+
+  useEffect(() => {
+    if (token) {
+      navigate('/')
+    }
+  }, [token, navigate])
 
   const onSubmit = async (data, e) => {
     await createUserWithEmailAndPassword(data.email, data.password);
@@ -212,7 +220,7 @@ const Signup = () => {
               </div>
               <button
                 onClick={() => signInWithGoogle()}
-                className="btn btn-outline-success"
+                className="btn btn-outline-success d-flex justify-center mx-auto"
               >
                 Continue with Google
                 <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>

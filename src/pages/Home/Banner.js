@@ -1,16 +1,16 @@
-import React from 'react';
-import { useTypewriter } from 'react-simple-typewriter';
-/* import 'react-simple-typewriter/dist/'; */
-import './Banner.css';
+import React from "react";
+import { useTypewriter } from "react-simple-typewriter";
+// import 'react-simple-typewriter/dist/'; 
+import "./Banner.css";
 
 const Banner = () => {
+  const { text } = useTypewriter({
+    words: ["Bus", "Train", "Launch", "Domestic Airline"],
+    loop: Infinity,
+    onLoopDone: () => console.log(`loop completed after 3 runs.`),
+  });
 
-    const { text } = useTypewriter({
-        words: ['Bus', 'Train', 'Launch', 'Domestic Airline'],
-        loop: Infinity,
-        onLoopDone: () => console.log(`loop completed after 3 runs.`),
-    })
-    console.log(text);
+
 
     return (
         <div className='banner'>
@@ -23,10 +23,8 @@ const Banner = () => {
                     <p className='text-center'>Safe, Secure, Reliable Ticketing!</p>
                 </div>
             </div>
-        </div>
-    );
+  </div>
+  );
 };
 
 export default Banner;
-
-//

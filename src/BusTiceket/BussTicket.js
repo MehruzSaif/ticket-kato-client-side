@@ -1,14 +1,16 @@
 
+
 import axios from 'axios';
 import React, { useEffect,useState } from 'react';
 import { useQueries, useQuery } from 'react-query';
+
 import Search from '../pages/Searching/Search';
 import './BussTiceket.css'
 
 const BussTicket = () => {
   const [bus,setBus]=useState([]);
   useEffect(()=>{
-    fetch('http://localhost:5000/busInfo')
+    fetch('http://localhost:88000/buses')
     .then(response => response.json())
     .then(datas =>setBus(datas))
   },[])
@@ -25,7 +27,7 @@ const BussTicket = () => {
 
    
     const {isLoading, error,data,refetch} = useQuery('todos', async () => {
-      const res = await fetch('http://localhost:5000/busInfo');
+      const res = await fetch('http://localhost:8800/buses');
       return res.json()})
 
 
@@ -44,7 +46,7 @@ const BussTicket = () => {
         
         const handleChange=(datas,newData) =>{
           if(Hanif==true){
-            console.log(datas);
+        
             const result =data.filter(word => 
               { return  word.operator_name===datas 
             } 
@@ -172,10 +174,13 @@ const BussTicket = () => {
                     }
                 </div>
 
-              </div>
-            </div>
+
+
+
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default BussTicket;
