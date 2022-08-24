@@ -101,7 +101,7 @@ const Contact = () => {
                     placeholder="subject"
                     class="sub"
                     name="subject"
-                    class="subject"
+                    className="subject"
                   />
                 </div>
                 <div>
