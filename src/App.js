@@ -8,32 +8,50 @@ import "react-toastify/dist/ReactToastify.css";
 import Signup from "./pages/Authentication/Signup";
 import BookTicket from "./BooksTicket/BookTicket";
 // import Footer from "./pages/shared/Footer";
-import AddReview from "./pages/Dashboard/Customer/AddReview";
+import AddReview from "./pages/Dashboard/AddReview";
 import Flight from "./pages/Searching/Flight";
 import Train from "./pages/Searching/Train";
 import Launch from "./pages/Searching/Launch";
 import Bus from "./pages/Searching/Bus";
-
 import NotFound from "./pages/shared/NotFound";
-
-
 // import BusList from "./pages/SearchResult/BusList";
-
-
 import BusList from "./pages/SearchResult/BusList";
-
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
+
 import Dashboard from "./pages/Dashboard/Dashboard";
+// import About from './pages/About';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+
+
+
+import RequireAuth from "./pages/Authentication/RequireAuth";
+
+
+
+
 import About from './pages/shared/About';
+
+import Privacy from './pages/Home/Privacy';
+import TermsConditions from './pages/Home/TermsConditions';
+
+
+
+// import Dashboard from './pages/Dashboard/Dashboard'
+
+import UserPanel from "./pages/Dashboard/UserPanel";
+import MyProfile from "./pages/Dashboard/MyProfile";
+import DashboardIndex from "./pages/Dashboard/DashboardIndex"
+import AddBuses from "./pages/Dashboard/AddBuses";
+
+// import About from "./pages/shared/About";
 
 
 function App() {
-  // const [theme,setTheme]=useState(false)
-  // const [theme,setTheme]=useH
-  // const [theme,setTheme]=UseHooks()
-  // console.log(theme);
+  const queryClient = new QueryClient()
   return (
+    <QueryClientProvider client={queryClient}>
+       
     <div >
       <div className="content-bg-color main-content">
 
@@ -50,19 +68,39 @@ function App() {
           <Route path='/busList' element={<BusList />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
+
           <Route path='/addReview' element={<AddReview></AddReview>} />
+          <Route path='/privacy' element={<Privacy></Privacy>} />
+          <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
+
+
+          <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+          <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
+           <Route index element={<DashboardIndex></DashboardIndex>}></Route>
+           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route> 
+          <Route path="addReview" element={<AddReview></AddReview>}></Route>
+           <Route path="addReview" element={<AddReview></AddReview>}></Route>
+           <Route path="addBuses" element={<AddBuses></AddBuses>}></Route>
+           
+        </Route>
+
+          <Route path='/addReview' element={<RequireAuth><AddReview></AddReview></RequireAuth>} />
+
           <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
-          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
+      
 
       </div>
     </div>
+    </QueryClientProvider>
   );
 
 }
 
 export default App;
+
+

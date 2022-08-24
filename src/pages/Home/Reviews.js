@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
-import "./Reviews.css";
-import { Link } from "react-router-dom";
-import Review from "./Review";
+import React, { useEffect, useState } from 'react';
+import './Reviews.css'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { Link } from 'react-router-dom';
+import Review from './Review';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 
-const Comment = () => {
-  const [reviews, setReviews] = useState([]);
+const Reviews = () => {
+  const [reviews, setReviews] = useState([])
   useEffect(() => {
-    fetch("https://hidden-stream-11117.herokuapp.com/busInfo/reviews")
+    fetch("https://hidden-stream-11117.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -23,48 +25,18 @@ const Comment = () => {
   };
 
   return (
-    <div className="review-container">
-      <div>
+    <div className='review-container'>
+<div>
         <h2 className="text-center text-light fs-1">
           See, What Our Clients Are Saying!
         </h2>
       </div>
-      {/* <div className="owl-slider">
-        <div className="slider-div">
-          <OwlCarousel
-            className="owl-theme"
-            // items='3'
-            // autoplay
-            // dots
-            // loop margin={10} nav
-            margin={10}
-            {...options}
-          >
-            {reviews.map((review) => (
-              <Review key={review._id} review={review}></Review>
-            ))}
-          </OwlCarousel>
-        </div>
-      </div>
-      <div className="text-center">
-        <Link to="/addReview" className="addReview">
-          Add Your Review
-        </Link>
-      </div> */}
-
-      {/* <div class="card" style={{ width: "18rem" }}>
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            {reviews.map((review) => (
-              <Review key={review._id} review={review}></Review>
-            ))}
-          </div> */}
-
       <div className="flex flex-col items-center justify-center mb-3">
         <h1 className="lg:text-4xl text-3xl font-bold text-center text-blue-600">
           Hear From Our Clients
         </h1>
       </div>
+
       {/* <div>
         <Slider {...settings}>
           {reviews
@@ -143,4 +115,5 @@ const Comment = () => {
   );
 };
 
-export default Comment;
+export default Reviews;
+

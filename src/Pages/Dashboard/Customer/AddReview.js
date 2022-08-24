@@ -11,10 +11,11 @@ const AddReview = () => {
         const review = {
             email: user.email,
             name: user.displayName,
-            photo:user.photoURL,
+            photos:user.photoURL,
             rating: event.target.rating.value,
             review: event.target.description.value,
         }
+        console.log(review)
 
         fetch('https://hidden-stream-11117.herokuapp.com/reviews', {
             method: 'POST',
