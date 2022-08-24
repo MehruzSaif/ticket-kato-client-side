@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+  
 }
 
 .banner::before {
@@ -24,27 +25,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: brown; */
 }
 
-.main-div-banner div {
+/* .main-div-banner div {
     position: absolute;
     color: white;
     font-weight: 900;
     z-index: 100 !important;
-}
+} */
 
 .main-div-banner h1 {
-    /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
     font-size: 4rem;
-    /* color: white; */
-    color: white;
     font-weight: 900;
     z-index: 100 !important;
 }
 
 .main-div-banner p {
-    /* font-family: open-sans; */
     font-size: 2rem;
     color: white;
     font-weight: 900;
@@ -52,4 +50,8 @@
 
 .main-div-banner h1 span {
     color: rgb(23, 185, 142)!important;
+}
+.main-div-banner h1 input{
+    background-color: transparent;
+    color:white !important;
 }
