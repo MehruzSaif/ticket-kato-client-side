@@ -1,9 +1,10 @@
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
-import BusItem from './BusItem';
+// import BusItem from './BusItem';
 import './BusList.css'
+import './BusItem.css';
 import RefineSearch from './RefineSearch';
 import SearchBanner from './SearchBanner';
 const BusList = () => {
@@ -24,6 +25,27 @@ const BusList = () => {
         ))
     }
     console.log(operator);
+    
+    const [bus,setBus]=useState([]);
+    useEffect(()=>{
+      fetch(`https://hidden-stream-11117.herokuapp.com/buses?departure_city=${departure}&arrival_city=${arrival}`)
+      .then(response => response.json())
+      .then(data =>setBus(data))
+    },[])
+    const handleChange=(datas)=>{
+        const result =data.filter(word => 
+            { return  word.bus_class===datas 
+          } 
+            );
+            setBus(result)
+    }
+    const handleChangebyOparator=(datas)=>{
+        const result =data.filter(word => 
+            { return  word.operator_name===datas 
+          } 
+            );
+            setBus(result)
+    }
     return (
         <div className='BusListContainer'>
             <SearchBanner></SearchBanner>
@@ -46,11 +68,11 @@ const BusList = () => {
                                 <div className='IsItem'>
                                     <div>
                                         <div className='filterProperty'>
-                                            <p>{item.operator_names[0]}</p>
-                                            <p>{item.operator_names[1]}</p>
-                                            <p>{item.operator_names[2]}</p>
-                                            <p>{item.operator_names[3]}</p>
-                                            <p>{item.operator_names[4]}</p>
+                                            <p value={item.operator_names[0]} onClick={()=>handleChangebyOparator(item.operator_names[0])}>{item.operator_names[0]}</p>
+                                            <p value={item.operator_names[1]} onClick={()=>handleChangebyOparator(item.operator_names[1])}>{item.operator_names[1]}</p>
+                                            <p value={item.operator_names[2]} onClick={()=>handleChangebyOparator(item.operator_names[2])}>{item.operator_names[2]}</p>
+                                            <p value={item.operator_names[3]} onClick={()=>handleChangebyOparator(item.operator_names[3])}>{item.operator_names[3]}</p>
+                                            <p value={item.operator_names[4]} onClick={()=>handleChangebyOparator(item.operator_names[4])}>{item.operator_names[4]}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,8 +85,8 @@ const BusList = () => {
                                 <div className='IsItem'>
                                     <div>
                                         <div className='filterProperty'>
-                                            <p>{item.bus_classes[0]}</p>
-                                            <p>{item.bus_classes[1]}</p>
+                                            <p value={item.bus_classes[0]} onClick={()=>handleChange(item.bus_classes[0])}>{item.bus_classes[0]}</p>
+                                            <p value={item.bus_classes[1]} onClick={()=>handleChange(item.bus_classes[1])}>{item.bus_classes[1]}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -77,11 +99,43 @@ const BusList = () => {
                             <p className='text-center returnDate'>Return Date:{`${format(returnDate, "dd/MM/yyyy")}`}</p>
                         </div>
                         {loading ? "loading" : <>
-                            {data.map(item => (
-                                <BusItem
-                                    item={item}
-                                    key={item._id}
-                                />
+                            {bus.map(item => (
+                              <div className="searchItem p-4" >
+                              <img
+                                  src={item.photos[0]}
+                                  alt=""
+                                  className="siImg mt-5"
+                              />
+                              <div className="siDesc">
+                                  <h1 className="siTitle">{item.operator_name}</h1>
+                                  <span className="siDistance">{item.bus_type}</span>
+                                  <span className="siTaxiOp" style={{"width":"150px"}}>Departure Time: {item.departure_time}</span>
+                                  <span className="siTaxiOp" style={{"width":"150px"}}>Arrival Time: {item.arrival_time}</span>
+                                  <span className="siSubtitle">
+                                  {item.bus_class}
+                                  </span>
+                                  <span className="siFeatures">
+                                      Coach-Number: {item.coach_number}
+                                  </span>
+                                  <span className="siCancelOp">Free Cancellation </span>
+                                  <span className="siTaxOp">Boarding Point:{item.boarding_point}</span>
+                                      <span className="siTaxOp">Dropping Point Point:{item.dropping_point}</span>
+                              </div>
+                              <div className="siDetails">
+                                  {item.rating &&
+                                      <div className="siRating">
+                                          <span>Excellent</span>
+                                          <button>{item.rating}</button>
+                                      </div>
+                                  }
+                  
+                                  <div className="siDetailTexts">
+                                      <span className="siPrice">{item.price} Tk</span>
+                                      
+                                      <Link to='/singleHotel'><button className="siCheckButton">View Seats</button></Link>
+                                  </div>
+                              </div>
+                          </div>
                             ))}
                         </>}
                     </div>

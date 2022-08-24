@@ -18,7 +18,18 @@ import NotFound from "./pages/shared/NotFound";
 import BusList from "./pages/SearchResult/BusList";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
+
+import Dashboard from "./pages/Dashboard/Dashboard";
+// import About from './pages/About';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+
+
+
 import RequireAuth from "./pages/Authentication/RequireAuth";
+
+
+
+
 import About from './pages/shared/About';
 
 import Privacy from './pages/Home/Privacy';
@@ -26,19 +37,22 @@ import TermsConditions from './pages/Home/TermsConditions';
 
 
 
-import Dashboard from './pages/Dashboard/Dashboard'
+// import Dashboard from './pages/Dashboard/Dashboard'
+
 import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
 import Feedback from './pages/Home/Feedback';
 
+// import About from "./pages/shared/About";
+
+
 function App() {
-  // const [theme,setTheme]=useState(false)
-  // const [theme,setTheme]=useH
-  // const [theme,setTheme]=UseHooks()
-  // console.log(theme);
+  const queryClient = new QueryClient()
   return (
+    <QueryClientProvider client={queryClient}>
+       
     <div >
       <div className="content-bg-color main-content">
 
@@ -81,11 +95,15 @@ function App() {
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
+      
 
       </div>
     </div>
+    </QueryClientProvider>
   );
 
 }
 
 export default App;
+
+

@@ -18,8 +18,12 @@ const About = () => {
                     </div>
                 </div>
                 
+
+                
+
                 <div className='card-about'>
                     <h1>Welcome to <br/><span>Ticket Kato</span></h1>
+
                     <p>We are committed to deliver <span> The best service.</span>  Our emloy have experience in working with clients.</p>
                     <div className='d-flex'>
                     <button className='button'>Support Us</button>
