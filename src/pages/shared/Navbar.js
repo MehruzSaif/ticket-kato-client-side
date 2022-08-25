@@ -152,9 +152,9 @@ const Navbar = () => {
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/refund">
                       Refund Request & Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/termsCondition">
