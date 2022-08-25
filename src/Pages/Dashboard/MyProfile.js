@@ -7,11 +7,9 @@ import { toast } from 'react-toastify';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth)
-<<<<<<< HEAD
     const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`http://localhost:5000/user/singleUser/${user.email}`, {
-=======
-    const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`https://hidden-stream-11117.herokuapp.com/users/${user.email}`, {
->>>>>>> 60703b0327a2bff650f37bba222e63b4b1b0890a
+
+
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -66,31 +64,7 @@ const MyProfile = () => {
                             <div class="card w-96 bg-slate-200 shadow-xl">
                                 <div class="card-body">
                                
-<<<<<<< HEAD
-                                   {/* {
-                                        data.img && <div class="avatar justify-center">
-=======
-                                   {
-                                        data?.img && <div class="avatar justify-center">
->>>>>>> 60703b0327a2bff650f37bba222e63b4b1b0890a
-                                            <div class="w-36 rounded-full ">
-                                                <img src={data.img} alt='' />
-                                            </div>
-                                        </div>
-                                    } */}
-                                   {/* {
-                                        user?.photoURL?
-                                         <div class="avatar justify-center">
-                                            <div class="w-36 rounded-full ">
-                                                <img src={user?.photoURL} alt='' />
-                                            </div>
-                                        </div> : 
-                                        <div class="avatar justify-center">
-                                            <div class="w-36 rounded-full ">
-                                                <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"alt='' />
-                                            </div>
-                                        </div>
-                                    } */}
+
                                     <h2 class="card-title font-bold py-2 text-3xl text-slate-700 justify-center">{user?.displayName}</h2>
                                     <p className='text-xl font-semibold'>Email: <span className='font-thin'>{user?.email}</span></p>
                                     {
