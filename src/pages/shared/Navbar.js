@@ -223,25 +223,46 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                <Link to='/dashboard'>Dashboard</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                {
-                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
-                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
-                }
+                {dark ? (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaSun></FaSun>
+                  </a>
+                ) : (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaMoon></FaMoon>
+                  </a>
+                )}
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
-                  <button onClick={logout} className="btn btn-success text-white">
+                  <button
+                    onClick={logout}
+                    className="bg-red-500 p-2 rounded-lg text-lg font-semibold"
+                  >
                     Logout
                   </button>
                 ) : (
-                  <Link to="/login" className="btn btn-success">
+                  <Link
+                    to="/login"
+                    className="bg-green-500 p-2 rounded-lg text-lg font-semibold hover:text-white"
+                  >
                     Login
                   </Link>
                 )}
