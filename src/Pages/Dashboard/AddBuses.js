@@ -25,7 +25,7 @@ const AddBuses = () => {
             featured: event.target.featured.value,
         }
 console.log(busInfo)
-        fetch('https://hidden-stream-11117.herokuapp.com/buses', {
+        fetch('http://localhost:5000/buses', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,21 +64,69 @@ console.log(busInfo)
             <div class="card pr-8 lg:w-3/5 shadow-xl text-center bg-slate-300">
                 <h1 className='text-3xl text-slate-700 my-4 font-bold'>Add a new Bus</h1>
                 <form onSubmit={handleAddReview} className='text-center'>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Operator Name</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='operator_name' required placeholder='Enter Operator Name'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Bus Type</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='bus_type' required placeholder='Enter Bus Type'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Bus Class</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='bus_class' required placeholder='Enter Bus Class'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Coach Number</span>
+                    </label>
                     <input type="number" class="input input-bordered input-lg w-full mb-4 mx-4" name='coach_number' required placeholder='Enter Coach Number'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Route</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='route' required placeholder='Enter Route'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Departure City</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='departure_city' required placeholder='Enter Departure City'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Arrival City</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='arrival_city' required placeholder='Enter Arrival City'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Departure Time</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='departure_time' required placeholder='Enter Departure Time'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Arrival Time</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='arrival_time' required placeholder='Enter Operator Name'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Photo URL</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='photos' required placeholder='Enter Photos'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Available Seats</span>
+                    </label>
                     <input type="number" class="input input-bordered input-lg w-full mb-4 mx-4" name='available_seats' required placeholder='Enter Available Seats'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Boarding Point</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='boarding_point' required placeholder='Enter Boarding Point'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Dropping Point</span>
+                    </label>
                     <input type="text" class="input input-bordered input-lg w-full mb-4 mx-4" name='dropping_point' required placeholder='Enter Dropping Point'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Price</span>
+                    </label>
                     <input type="number" class="input input-bordered input-lg w-full mb-4 mx-4" name='price' required placeholder='Enter Price'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Ratings</span>
+                    </label>
                     <input type="number" class="input input-bordered input-lg w-full mb-4 mx-4" name='rating' required placeholder='Enter Rating'/>
+                    <label className="label ml-6">
+                        <span className="label-text text-lg">Features</span>
+                    </label>
                     <input type="boolean" class="input input-bordered input-lg w-full mb-4 mx-4" name='featured' placeholder='Enter Features'/>
                     
                     <input type="submit" value="Add Bus" className='btn border-0 bg-cyan-500 mb-4' required />
