@@ -44,6 +44,8 @@ import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
 import Feedback from './pages/Home/Feedback';
+import Refund from "./pages/Home/Refund";
+import BagInfo from "./pages/Home/BagInfo";
 
 // import About from "./pages/shared/About";
 
@@ -74,6 +76,8 @@ function App() {
           <Route path='/privacy' element={<Privacy></Privacy>} />
           <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
           <Route path='/feedback' element={<Feedback></Feedback>} />
+          <Route path='/refund' element={<Refund></Refund>} />
+          <Route path='/bagInfo' element={<BagInfo></BagInfo>} />
           
 
 
