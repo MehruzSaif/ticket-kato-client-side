@@ -34,7 +34,7 @@ const Home = () => {
       {/* <Privacy></Privacy> */}
       {/* <Feedback></Feedback> */}
       {/* <Refund></Refund> */}
-      <BagInfo></BagInfo>
+      {/* <BagInfo></BagInfo> */}
       <Footer></Footer>
     </div>
   );
