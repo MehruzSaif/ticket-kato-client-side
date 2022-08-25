@@ -13,6 +13,7 @@ import TermsConditions from "./TermsConditions";
 import Privacy from "./Privacy";
 import Feedback from "./Feedback";
 import Refund from "./Refund";
+import BagInfo from "./BagInfo";
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
       {/* <Privacy></Privacy> */}
       {/* <Feedback></Feedback> */}
       {/* <Refund></Refund> */}
+      <BagInfo></BagInfo>
       <Footer></Footer>
     </div>
   );
