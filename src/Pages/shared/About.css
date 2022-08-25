@@ -1,27 +1,23 @@
 .home{
     background-image: linear-gradient(to right, #00052D ,#000638, #010847);
-    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding:10rem 5rem;
-    /* margin-top: 100px; */
+    
 }
-.title{
-    /* background-color: red; */
 
-}
 .soler-system{
     background-color: pink;
 }
 .air-animation{
-    /* background-color: aqua; */
+    
     animation: ani01 2s linear infinite;
   
 }
 
 .timer{
     display:flex;
-    /* animation: ani01 2s linear infinite; */
+   
     position: relative;
     animation-name:anima1;
     animation-duration: 3s;
@@ -33,7 +29,7 @@
     display: flex;
      align-items: center;
     justify-content: center;
-    /* background-color:black;   */
+   
 }
 @keyframes anima1{
     0%{left:0%;}
@@ -55,9 +51,9 @@
 }
 .card-about  h1 span{
     background-image: linear-gradient(90deg,#CBF231,#E3F891);
-    background-clip: text;
-    color: transparent;
-     
+  background-clip: text;
+    color: transparent; 
+      
 }
 .card-about p{
     width: 500px;
@@ -156,7 +152,6 @@
 .space-body span::before,.space-body span::after{
     content: '';
     position: absolute;
-    /* background: #fff; */
     background-image: linear-gradient(to right, #C2F1FF,#5CD9FF);
     border-radius: 50%;
 }
@@ -165,7 +160,6 @@
     height: 40px;
     bottom: 6px;
     left: 20px;
-    /* background-image: linear-gradient(to right, #C2F1FF,#5CD9FF); */
     background-color: #979797;
     transition-duration:2s;
      
@@ -176,7 +170,7 @@
     top: 6px;
     right: 20px;
     background-color: #979797;
-    /* background-image: linear-gradient(to right, #C2F1FF,#5CD9FF); */
+    
     transition-duration:2s;
 }
 
@@ -186,7 +180,6 @@
     top: 4px;
     left: 100px;
     background-color: #979797;
-    /* background-image: linear-gradient(to right, #C2F1FF,#5CD9FF); */
     transition-duration:2s;
 }
 .planet2::after{
@@ -194,7 +187,6 @@
     height: 40px;
     bottom: 6px;
     right: 100px;
-    /* background-color: #979797; */
     background-image: linear-gradient(to right, #C2F1FF,#5CD9FF);
     transition-duration:2s;
 }
@@ -204,7 +196,6 @@
     top: 200px;
     left: -10px;
     position:absolute;
-    /* background-color: #979797; */
     background-image: linear-gradient(to right, #C2F1FF,#5CD9FF);
     transition-duration:2s;
 }
@@ -213,7 +204,6 @@
     height: 50px;
     bottom: 200px;
     right: 0px;
-    /* background-color: #979797; */
     background-image: linear-gradient(to right, #C2F1FF,#5CD9FF);
     transition-duration:2s;
 }

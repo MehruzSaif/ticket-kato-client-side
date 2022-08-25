@@ -15,7 +15,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
     console.log(goingDate);
     console.log("busItem",busItem)
     console.log("seatName:",seatName);
-    const { data, loading, error, refetch } = useFetch(`http://localhost:8800/buses/seats/${busId}`)
+    const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`)
 
     const travelingDate = travelDate;
     console.log("traveling", travelingDate)
@@ -54,7 +54,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
         await Promise.all(
           selectSeats[0].map((seatId) => {
             console.log(seatId)
-            const res = axios.put(`http://localhost:8800/seats/availability/${seatId}`, {
+            const res = axios.put(`https://hidden-stream-11117.herokuapp.com/seats/availability/${seatId}`, {
               dates: travelingDate,
             });
             return res.data;
@@ -84,7 +84,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
                     <label className='seatName'>{seatNumber.seatName}</label>
                     <input
                       type="checkbox"
-                      value={[seatNumber._id," ",seatNumber.seatName]}
+                      value={[seatNumber.seatName," /",seatNumber._id]} 
                       // SeatName={seatNumber.seatName}
                       onChange={handleSelect}
                       // disabled={!isAvailable(seatNumber)}

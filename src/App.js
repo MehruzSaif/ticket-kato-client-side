@@ -18,20 +18,45 @@ import NotFound from "./pages/shared/NotFound";
 import BusList from "./pages/SearchResult/BusList";
 import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
+
+import Dashboard from "./pages/Dashboard/Dashboard";
+// import About from './pages/About';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+
+
+
 import RequireAuth from "./pages/Authentication/RequireAuth";
+
+
+
+
 import About from './pages/shared/About';
-import Dashboard from './pages/Dashboard/Dashboard'
+
+import Privacy from './pages/Home/Privacy';
+import TermsConditions from './pages/Home/TermsConditions';
+
+
+
+// import Dashboard from './pages/Dashboard/Dashboard'
+
 import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
 import Payment from "./pages/Payment/Payment";
+import Feedback from './pages/Home/Feedback';
+import Refund from "./pages/Home/Refund";
+import BagInfo from "./pages/Home/BagInfo";
+
+// import About from "./pages/shared/About";
+
+
+
 function App() {
-  // const [theme,setTheme]=useState(false)
-  // const [theme,setTheme]=useH
-  // const [theme,setTheme]=UseHooks()
-  // console.log(theme);
+  const queryClient = new QueryClient()
   return (
+    <QueryClientProvider client={queryClient}>
+       
     <div >
       <div className="content-bg-color main-content">
 
@@ -50,6 +75,15 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
 
+          <Route path='/addReview' element={<AddReview></AddReview>} />
+          <Route path='/privacy' element={<Privacy></Privacy>} />
+          <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
+          <Route path='/feedback' element={<Feedback></Feedback>} />
+          <Route path='/refund' element={<Refund></Refund>} />
+          <Route path='/bagInfo' element={<BagInfo></BagInfo>} />
+          
+
+
           <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
            <Route index element={<DashboardIndex></DashboardIndex>}></Route>
@@ -61,17 +95,22 @@ function App() {
         </Route>
 
           <Route path='/addReview' element={<RequireAuth><AddReview></AddReview></RequireAuth>} />
+
           <Route path='/contactus' element={<Contact></Contact>} />
           <Route path='/about' element={<About></About>} />
           <Route path='/busTicket' element={<BussTicket></BussTicket>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <ToastContainer position="top-center" />
+      
 
       </div>
     </div>
+    </QueryClientProvider>
   );
 
 }
 
 export default App;
+
+

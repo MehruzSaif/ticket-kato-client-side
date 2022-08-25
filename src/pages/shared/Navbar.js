@@ -24,8 +24,7 @@ const Navbar = () => {
 
 
 
-  // const [theme, setTheme] = UseHooks()
-  // // console.log(theme);
+ 
 
   const [user] = useAuthState(auth);
   const [dark, setDark] = useState(false);
@@ -34,9 +33,11 @@ const Navbar = () => {
     // setTheme(!theme);
   }
 
+
   // useEffect(() => {
   // }, [])
   // console.log(user);
+
 
 
   const logout = () => {
@@ -138,27 +139,27 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/privacy">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/refund">
                       Refund Request & Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/termsCondition">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -208,9 +209,9 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/feedback">
                       Feedback
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/about">
