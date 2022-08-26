@@ -1,9 +1,10 @@
 .bodyy{
     background-color: #9b93f5;
+    height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .radio-inline{
-    margin: 0px 40px 20px 0px;
+    margin: 0px 40px 20px 0px; 
     cursor: pointer;
 }
 label{
@@ -12,7 +13,7 @@ label{
 #text{
     height: 40px;
     border-radius: 5px;
-    padding-left: 10px;
+    padding-left: 10px; 
     font-size: 14px;
     border: none;
     width: 100%;

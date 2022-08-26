@@ -102,9 +102,9 @@ const Login = () => {
     // reset({});
   };
 
-  // if (user || gUser) {
-  //   navigate('/')
-  // }
+  if (user || gUser) {
+    navigate('/')
+  }
 
   return (
     <>
