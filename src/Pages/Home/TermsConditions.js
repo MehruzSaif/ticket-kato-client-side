@@ -10,7 +10,7 @@ const TermsConditions = () => {
             </div>
             <div className='terms-box'>
                 <div className='terms-text'>
-                    <h2>Terms And Conditions</h2>
+                    
                     <h2 className='pt-5'>Terms And Conditions</h2>
                     <p>Last Edit : 23/08/2022</p>
                     <p>Greeting User</p>

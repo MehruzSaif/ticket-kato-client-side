@@ -43,8 +43,13 @@ import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
+import Payment from "./pages/Payment/Payment";
+import Feedback from './pages/Home/Feedback';
+import Refund from "./pages/Home/Refund";
+import BagInfo from "./pages/Home/BagInfo";
 
 // import About from "./pages/shared/About";
+
 
 
 function App() {
@@ -64,6 +69,7 @@ function App() {
             <Route path='train' element={<Train></Train>}></Route>
             <Route path='launch' element={<Launch></Launch>}></Route>
           </Route>
+          <Route path='/payment' element={<Payment></Payment>}/>
           <Route path='BookList' element={<BookTicket />}></Route>
           <Route path='/busList' element={<BusList />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
@@ -72,6 +78,10 @@ function App() {
           <Route path='/addReview' element={<AddReview></AddReview>} />
           <Route path='/privacy' element={<Privacy></Privacy>} />
           <Route path='/termsCondition' element={<TermsConditions></TermsConditions>} />
+          <Route path='/feedback' element={<Feedback></Feedback>} />
+          <Route path='/refund' element={<Refund></Refund>} />
+          <Route path='/bagInfo' element={<BagInfo></BagInfo>} />
+          
 
 
           <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
