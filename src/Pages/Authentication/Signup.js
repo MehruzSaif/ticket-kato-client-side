@@ -24,6 +24,13 @@ const Signup = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  // const [token] = useToken(user || gUser);
+
+  // useEffect(() => {
+  //   if (token) {
+  //     navigate("/");
+  //   }
+  // }, [token, navigate]);
 
   const {
     register,
@@ -65,13 +72,7 @@ const Signup = () => {
   //   toast.success("User Created Successfully");
   //   navigate("/");
   // }
-  const [token] = useToken(user || gUser)
-
-  useEffect(() => {
-    if (token) {
-      navigate('/')
-    }
-  }, [token, navigate])
+  
 
   const onSubmit = async (data, e) => {
     await createUserWithEmailAndPassword(data.email, data.password);
