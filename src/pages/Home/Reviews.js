@@ -32,7 +32,7 @@ const Reviews = () => {
         </h2>
       </div>
       <div className="flex flex-col items-center justify-center mb-3">
-        <h1 className="lg:text-4xl text-3xl font-bold text-center text-primary">
+        <h1 className="lg:text-4xl text-3xl font-bold text-center text-blue-600">
           Hear From Our Clients
         </h1>
       </div>

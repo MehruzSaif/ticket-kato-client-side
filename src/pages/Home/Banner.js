@@ -20,7 +20,7 @@ const Banner = () => {
                         <div>
                           <h1>
                 <Typed
-                    strings={['Book Your Tickets Fors']}
+                    strings={['Book Your Tickets For']}
                     typeSpeed={40}
                 />
                 <br/>

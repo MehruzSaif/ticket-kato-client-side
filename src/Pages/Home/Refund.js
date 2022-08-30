@@ -5,7 +5,7 @@ const Refund = () => {
         <div className='ttbody'>
             <div className='terms-box'>
                 <div className='terms-text'>
-            <h1 className='h1 text-center mt-16 mb-5'>Return and Refund Policy</h1>
+            <h1 className='fs-1 text-blue-600 font-semibold text-center mt-16 mb-5'>Return and Refund Policy</h1>
 <p><strong>Last updated:</strong> August 25, 2022</p>
 <p>Thank you for shopping at Ticket Kato.</p>
 <p>If, for any reason, You are not completely satisfied with a purchase We invite You to review our policy on refunds and returns. This Return and Refund Policy has been created with the help of the <a href="https://www.freeprivacypolicy.com/free-return-refund-policy-generator/" target="_blank">Free Return and Refund Policy Generator</a>.</p>
