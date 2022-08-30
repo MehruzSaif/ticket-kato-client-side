@@ -36,7 +36,7 @@ const BusItem = ({ item, travelDate,returnDate}) => {
                 <span className="siCancelOp">Free Cancellation </span>
                 <span className="siTaxOp">Boarding Point:{item.boarding_point}</span>
                     <span className="siTaxOp">Dropping Point Point:{item.dropping_point}</span>
-                    <span>{`${format(travelDate, "dd/MM/yyyy")}`}</span>
+                    
             </div>
            
 

@@ -48,10 +48,17 @@ const AddReview = () => {
         console.log(name,email,rating,img,review)
         try {
             const res=await axios.post("https://hidden-stream-11117.herokuapp.com/reviews",{name:name,email:email,rating:rating,img:img,review:review})
+            setName('')
+            setEmail('')
+            setRating('')
+            setImg('')
+            setReview('')
             console.log(res.response.data)
+            toast.success("Review added Successfully!");
                 }
         catch (err) {
             console.log(err.response.data)
+            toast.error("Failed to add review!");
         }
     };
         return (

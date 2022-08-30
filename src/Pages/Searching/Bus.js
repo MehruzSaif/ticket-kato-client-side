@@ -24,7 +24,7 @@ const Bus = () => {
     useEffect(() => {
         const loadDistricts = async () => {
             const response = await axios.get('https://bdapis.herokuapp.com/api/v1.1/districts');
-            console.log(response.data.data);
+            // console.log(response.data.data);
             setDistricts(response.data.data)
         }
         loadDistricts();
@@ -32,7 +32,7 @@ const Bus = () => {
     useEffect(() => {
         const loadDistricts2 = async () => {
             const response = await axios.get('https://bdapis.herokuapp.com/api/v1.1/districts');
-            console.log(response);
+            // console.log(response);
             setDistricts2(response.data.data)
         }
         loadDistricts2();
@@ -42,12 +42,12 @@ const Bus = () => {
         let matches = []
         if (text.length > 0) {
             matches = districts.filter(district => {
-                console.log(district)
+                // console.log(district)
                 const regex = new RegExp(`${text}`, 'gi');
                 return district.district.match(regex)
             })
         }
-        console.log('Matches: ', matches)
+        // console.log('Matches: ', matches)
         setSuggestions(matches)
         setText(text);
     }
@@ -60,12 +60,12 @@ const Bus = () => {
         let matches2 = []
         if (text2.length > 0) {
             matches2 = districts2.filter(district2 => {
-                console.log(district2)
+                // console.log(district2)
                 const regex = new RegExp(`${text2}`, 'gi');
                 return district2.district.match(regex)
             })
         }
-        console.log('Matches: ', matches2)
+        // console.log('Matches: ', matches2)
         setSuggestions2(matches2)
         setText2(text2);
     }
@@ -83,10 +83,10 @@ const Bus = () => {
     //date-picker
     const [selectedDate, setSelectedDate] = useState(new Date())
     const select=selectedDate?._d;
-    console.log(select);
+    // console.log(select);
     const [selectedDate2, setSelectedDate2] = useState(new Date())
     const select2=selectedDate2?._d;
-    console.log(select2);
+    // console.log(select2);
 
     // const select=selectedDate;
 

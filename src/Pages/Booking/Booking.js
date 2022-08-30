@@ -8,74 +8,101 @@ import { format } from 'date-fns';
 import axios from "axios";
 
 const Booking = ({ setOpen, busId, item, travelDate }) => {
-    const [selectSeats, setSelectSeats] = useState([])
-    const [goingDate,setGoingDate]=useState(travelDate)
-    const [busItem,setBusItem]=useState(item)
-    const [seatName,setSeatName]=useState('')
-    console.log(goingDate);
-    console.log("busItem",busItem)
-    console.log("seatName:",seatName);
-    const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`)
+  const [selectSeats, setSelectSeats] = useState([])
+  const [goingDate, setGoingDate] = useState(travelDate)
+  const [busItem, setBusItem] = useState(item)
 
-    const travelingDate = travelDate;
-    console.log("traveling", travelingDate)
-    // console.log(new Date())
+  const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`)
+  // console.log("busSeats2", data)
 
-    // const isAvailable = (seatNumber) => {
-    //     console.log(seatNumber)
-    //     const isFound = seatNumber.unavailableDates.some((date) =>
-    //         travelingDate.includes(new Date(date))
 
-    //     )
-    //     console.log(isFound);
-    //     return !isFound;
-    // }
-    console.log("name 12:",seatName);
-    console.log("seat id",selectSeats);
+  // const date1 = [format(travelDate, 'PP')];
+  // console.log(date1);
 
-    const handleSelect = (e,SeatName) => {
-        const checked = e.target.checked
-        const value = e.target.value
-        const newValue=value.split(",")
-        console.log(newValue);
-        setSelectSeats(checked
-            ? [...selectSeats, newValue]
-            : selectSeats.filter((item) => item !== newValue)
-        );
-        setSeatName(SeatName)
-    };
-    console.log(selectSeats);
+  const newDate=travelDate.toISOString().split('T')[0]
+  // console.log("newDate:",newDate)
 
-    const navigate = useNavigate();
+  const newDateX=newDate + 'T00:00:00.000Z';
+  // console.log("formattedDate:",newDateX)
 
-    const handleClick = async () => {
-        console.log("clicked")
-      try {
-        await Promise.all(
-          selectSeats[0].map((seatId) => {
-            console.log(seatId)
-            const res = axios.put(`https://hidden-stream-11117.herokuapp.com/seats/availability/${seatId}`, {
-              dates: travelingDate,
-            });
-            return res.data;
-          })
-        );
-        setOpen(false);
-        navigate("/payment",{ state: { selectSeats,goingDate,busItem} });
-      } catch (err) {}
-    };
+  const isAvailable = (seatNumber) => {
+    // console.log(seatNumber)
+    // console.log(newDateX)
+    console.log(seatNumber.length)
+    seatNumber.unavailableDates.map(date=>{
+        console.log(date);
+    })
+    const founded = seatNumber.unavailableDates.filter(a => newDateX.includes(a));
+    console.log(founded.length);
+    
+    const isFound = seatNumber.unavailableDates.some((date =>
+      newDateX.includes(date))
 
-    return (
+    )
+    // console.log(isFound);
+    return isFound;
+  }
 
-        <div className="reserve">
-        <div className="rContainer">
-          <FontAwesomeIcon
-            icon={faCircleXmark}
-            className="rClose mt-2 mx-2 "
-            onClick={() => setOpen(false)}
-          />
-          <span className='seatTitle'>Select Your Seats</span>
-          <div className='rItem'>
+
+  const handleSelect = (e) => {
+    const checked = e.target.checked
+    console.log(checked);
+    const value = e.target.value
+    console.log(value)
+    if(checked===true){
+      setSelectSeats([...selectSeats, value])
+    }
+    else{
+      setSelectSeats(selectSeats.filter(i => i !== value))
+    }
+    // setSelectSeats(checked
+    //   ? [...selectSeats, newValue[0]]
+    //   : selectSeats.filter((item) => item !== newValue)
+    // );
+  };
+  console.log(selectSeats)
+
+  const navigate = useNavigate();
+
+  const handleClick = async () => {
+    // console.log(selectSeats)
+    try {
+      await Promise.all(
+        selectSeats.map((Id) => {
+          const newValue = Id.split(",")
+          console.log(newValue);
+          console.log(newValue[2])
+          // console.log("seatInfo:", seatId)
+          // console.log("seatId:", seatId[2])
+          const res = axios.put(`https://hidden-stream-11117.herokuapp.com/seats/availability/${newValue[2]}`, {
+            dates: newDateX,
+          });
+          return res.data;
+          // seatId.map((singleId) => {
+          //   console.log("singleInfo:", singleId)
+          //   // console.log("travel", newDateX)
+
+
+          // })
+        })
+      );
+      setOpen(false);
+      navigate("/payment", { state: { selectSeats, goingDate, busItem } });
+    } catch (err) { }
+  };
+
+  return (
+
+    <div className="reserve">
+      <div className="rContainer">
+        <FontAwesomeIcon
+          icon={faCircleXmark}
+          className="rClose mt-2 mx-2 "
+          onClick={() => setOpen(false)}
+        />
+        <span className='seatTitle'>Select Your Seats</span>
+
+        <div className='rItem'>
           {data.map((item) => (
             <div className="" key={item._id}>
               <div className="rSelectRooms">
@@ -84,10 +111,9 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
                     <label className='seatName'>{seatNumber.seatName}</label>
                     <input
                       type="checkbox"
-                      value={[seatNumber.seatName," /",seatNumber._id]} 
-                      // SeatName={seatNumber.seatName}
-                      onChange={handleSelect}
-                      // disabled={!isAvailable(seatNumber)}
+                      value={[seatNumber.seatName, " /", seatNumber._id]}
+                      onChange={(e)=>handleSelect(e)}
+                      disabled={isAvailable(seatNumber)}
                       className="chkBox"
                     />
                   </div>
@@ -95,14 +121,14 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
               </div>
             </div>
           ))}
-          </div>
-          
-          <button onClick={handleClick} className="rButton">
-            Reserve Now!
-          </button>
         </div>
+
+        <button onClick={handleClick} className="rButton">
+          Reserve Now!
+        </button>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Booking;
