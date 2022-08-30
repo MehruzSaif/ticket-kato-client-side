@@ -46,6 +46,7 @@ import AddBuses from "./pages/Dashboard/AddBuses";
 import Feedback from './pages/Home/Feedback';
 import Refund from "./pages/Home/Refund";
 import BagInfo from "./pages/Home/BagInfo";
+import AskQus from "./pages/Home/AskQus";
 
 // import About from "./pages/shared/About";
 
@@ -78,6 +79,7 @@ function App() {
           <Route path='/feedback' element={<Feedback></Feedback>} />
           <Route path='/refund' element={<Refund></Refund>} />
           <Route path='/bagInfo' element={<BagInfo></BagInfo>} />
+          <Route path='/askQus' element={<AskQus></AskQus>} />
           
 
 

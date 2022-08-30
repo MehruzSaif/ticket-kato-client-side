@@ -139,6 +139,11 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
+                    <Link class="dropdown-item" to="/askQus">
+                    Frequently Asked Questions
+                    </Link>
+                  </li>
+                  <li>
                     <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
                     </Link>
