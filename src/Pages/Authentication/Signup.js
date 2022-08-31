@@ -10,7 +10,7 @@ import auth from "../../firebase.init";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import Lottie from "react-lottie";
-import signup from "../../assests/signup.json"
+import signup from "../../assests/signup.json";
 import useToken from "../../hooks/useToken";
 
 const Signup = () => {
@@ -24,6 +24,13 @@ const Signup = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  // const [token] = useToken(user || gUser);
+
+  // useEffect(() => {
+  //   if (token) {
+  //     navigate("/");
+  //   }
+  // }, [token, navigate]);
 
   const {
     register,
@@ -65,13 +72,6 @@ const Signup = () => {
   //   toast.success("User Created Successfully");
   //   navigate("/");
   // }
-  const [token] = useToken(user || gUser)
-
-  useEffect(() => {
-    if (token) {
-      navigate('/')
-    }
-  }, [token, navigate])
 
   const onSubmit = async (data, e) => {
     await createUserWithEmailAndPassword(data.email, data.password);
@@ -99,7 +99,7 @@ const Signup = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full border-0 ">
                   <label className="label">
-                    <span className="label-text fs-4">Name</span>
+                    <span className="label-text fs-4 mx-auto">Name</span>
                   </label>
                   <input
                     type="text"
@@ -124,9 +124,9 @@ const Signup = () => {
                 </div>
 
                 {/* Email */}
-                <div className="form-control w-full max-w-xs border-0 ">
+                <div className="form-control w-full max-w-xs border-0 mx-auto">
                   <label className="label">
-                    <span className="label-text fs-4">Email</span>
+                    <span className="label-text fs-4 mx-auto">Email</span>
                   </label>
                   <input
                     type="email"
@@ -163,7 +163,7 @@ const Signup = () => {
                 {/* Password */}
                 <div className="form-control w-full border-0 ">
                   <label className="label">
-                    <span className="label-text fs-4">Password</span>
+                    <span className="label-text fs-4 mx-auto">Password</span>
                   </label>
                   <input
                     type="password"
@@ -197,7 +197,7 @@ const Signup = () => {
 
                 {signInError}
                 <input
-                  className="btn btn-outline btn-info w-full max-w-xs mb-4 fs-5"
+                  className="btn bg-cyan-500 px-4 mb-3 border-0 text-white"
                   type="submit"
                   value="Sign Up"
                 />
@@ -220,10 +220,10 @@ const Signup = () => {
               </div>
               <button
                 onClick={() => signInWithGoogle()}
-                className="btn btn-outline-success d-flex justify-center mx-auto"
+                className="text-green-600 mx-auto text-xl font-semibold flex border-2 p-3 rounded-xl hover:bg-green-300"
               >
                 Continue with Google
-                <FcGoogle className="w-6 h-7 ml-3"></FcGoogle>
+                <FcGoogle className="w-7 h-7 ml-3"></FcGoogle>
               </button>
             </div>
           </div>
