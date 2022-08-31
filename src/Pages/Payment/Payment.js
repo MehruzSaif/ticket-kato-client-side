@@ -38,7 +38,7 @@ const Payment = () => {
 
   return (
     <div>
-      <div className="journeyInfo">
+      <div className="journeyInfo mt-0">
         <div className="journeyDetails">
           <p className="jTitle text-center">Journey Details</p>
 

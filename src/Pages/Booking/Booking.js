@@ -74,7 +74,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
             className="rClose mt-2 mx-2 "
             onClick={() => setOpen(false)}
           />
-          <span className='seatTitle'>Select Your Seats</span>
+          <span className='seatTitle'>Please Select Your Seats</span>
           <div className='rItem'>
           {data.map((item) => (
             <div className="" key={item._id}>

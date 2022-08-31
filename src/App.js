@@ -58,7 +58,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
-        <div className="content-bg-color main-content">
+        <div className="content-bg-color mt-0 main-content">
           <Navbar></Navbar>
           <Routes>
             <Route path="/" element={<Home></Home>}>

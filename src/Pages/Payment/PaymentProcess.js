@@ -27,7 +27,7 @@ const PaymentProcess = () => {
      <div className="mt-10 p-5">
        <div className="card w-50 max-w-md bg-base-100 shadow-xl my-12">
          <div className="card-body">
-           <p className="text-success font-bold">Hello, {user?.displayName}</p>
+           <p className="text-success font-bold">Hello Dear, {user?.displayName}</p>
            <h2 className="card-title">Please Pay for {busItem.route} Ticket</h2>
            <p className="font-semibold text-orange-500">
              Ticket Quantity Selected: {seats.length}
