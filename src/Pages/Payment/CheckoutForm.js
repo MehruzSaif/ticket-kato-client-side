@@ -126,7 +126,7 @@ const CheckoutForm = () => {
              type="submit"
              
            >
-             Pay
+             Pay Now
            </button>
          </form>
          {cardError && <p className="text-red-500">{cardError}</p>}
