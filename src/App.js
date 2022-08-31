@@ -25,6 +25,7 @@ import UserPanel from "./pages/Dashboard/UserPanel";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
+
 function App() {
   // const [theme,setTheme]=useState(false)
   // const [theme,setTheme]=useH
@@ -33,7 +34,6 @@ function App() {
   return (
     <div >
       <div className="content-bg-color main-content">
-
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}>

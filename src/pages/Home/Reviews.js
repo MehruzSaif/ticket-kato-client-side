@@ -99,8 +99,7 @@ const Reviews = () => {
           swipeable
         >
           {reviews
-            .slice(-6)
-            .reverse()
+           
             .map((review) => (
               <Review key={review._id} review={review}></Review>
             ))}
