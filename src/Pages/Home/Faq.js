@@ -16,7 +16,7 @@ const Faq = () => {
   const faq = [
     {
       number:1,
-      question:"Where is Your Company Located?",
+      question:"Where Is Your Company Located?",
       answer:"Our company is located in Dhanmondi, Road No. 15, Dhaka."
     },
     {

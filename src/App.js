@@ -47,8 +47,6 @@ import Feedback from './Pages/Home/Feedback';
 import Refund from "./Pages/Home/Refund";
 import BagInfo from "./Pages/Home/BagInfo";
 import AskQus from "./Pages/Home/AskQus";
-import Payment from "./Pages/Payment/Payment";
-import PaymentProcess from "./Pages/Payment/PaymentProcess";
 
 // import About from "./Pages/shared/About";
 
@@ -68,11 +66,6 @@ function App() {
               <Route path="train" element={<Train></Train>}></Route>
               <Route path="launch" element={<Launch></Launch>}></Route>
             </Route>
-            <Route path="/Payment" element={<Payment></Payment>} />
-            <Route
-              path="/paymentProcess"
-              element={<PaymentProcess></PaymentProcess>}
-            ></Route>
             <Route path="BookList" element={<BookTicket />}></Route>
             <Route path="/busList" element={<BusList />}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
