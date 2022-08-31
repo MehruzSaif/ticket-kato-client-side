@@ -7,7 +7,6 @@ import './BusList.css'
 import './BusItem.css';
 import RefineSearch from './RefineSearch';
 import SearchBanner from './SearchBanner';
-import BusItem from './BusItem';
 const BusList = () => {
     const location = useLocation();
     console.log(location)
@@ -26,6 +25,7 @@ const BusList = () => {
         ))
     }
     console.log(operator);
+    
     const [bus,setBus]=useState([]);
     useEffect(()=>{
       fetch(`https://hidden-stream-11117.herokuapp.com/buses?departure_city=${departure}&arrival_city=${arrival}`)
@@ -49,15 +49,20 @@ const BusList = () => {
     return (
         <div className='BusListContainer'>
             <SearchBanner></SearchBanner>
+
             <p className='text-center fs-4 busRoute'>Search Result For: {departure}-{arrival} </p>
             <div className='d-flex justify-content-center'>
+
             </div>
+
             <div className='listContainer'>
+
                 <div className='listWrapper'>
                     <div className='listSearch'>
                         <p className='text-center refine'>Refine Search</p>
                         <p className='filterTitle'>Operators</p>
                         <p className='filterLine'><span></span></p>
+
                         {loading ? "loading" : <>
                             {data.slice(0, 1).map(item => (
                                 <div className='IsItem'>
@@ -95,12 +100,42 @@ const BusList = () => {
                         </div>
                         {loading ? "loading" : <>
                             {bus.map(item => (
-                                <BusItem
-                                    item={item}
-                                    key={item._id}
-                                    travelDate={travelDate}
-                                    returnDate={returnDate}
-                                />
+                              <div className="searchItem p-4" >
+                              <img
+                                  src={item.photos[0]}
+                                  alt=""
+                                  className="siImg mt-5"
+                              />
+                              <div className="siDesc">
+                                  <h1 className="siTitle">{item.operator_name}</h1>
+                                  <span className="siDistance">{item.bus_type}</span>
+                                  <span className="siTaxiOp" style={{"width":"150px"}}>Departure Time: {item.departure_time}</span>
+                                  <span className="siTaxiOp" style={{"width":"150px"}}>Arrival Time: {item.arrival_time}</span>
+                                  <span className="siSubtitle">
+                                  {item.bus_class}
+                                  </span>
+                                  <span className="siFeatures">
+                                      Coach-Number: {item.coach_number}
+                                  </span>
+                                  <span className="siCancelOp">Free Cancellation </span>
+                                  <span className="siTaxOp">Boarding Point:{item.boarding_point}</span>
+                                      <span className="siTaxOp">Dropping Point Point:{item.dropping_point}</span>
+                              </div>
+                              <div className="siDetails">
+                                  {item.rating &&
+                                      <div className="siRating">
+                                          <span>Excellent</span>
+                                          <button>{item.rating}</button>
+                                      </div>
+                                  }
+                  
+                                  <div className="siDetailTexts">
+                                      <span className="siPrice">{item.price} Tk</span>
+                                      
+                                      <Link to='/singleHotel'><button className="siCheckButton">View Seats</button></Link>
+                                  </div>
+                              </div>
+                          </div>
                             ))}
                         </>}
                     </div>

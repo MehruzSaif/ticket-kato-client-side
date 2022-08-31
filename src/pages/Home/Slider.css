@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--slider-bg);  */
+    background-color: var(--slider-bg);
     /* clip-path:circle(180vh at 50%  -80vh); */
 }
 

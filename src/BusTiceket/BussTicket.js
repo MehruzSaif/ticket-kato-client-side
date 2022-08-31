@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useEffect,useState } from 'react';
 import { useQueries, useQuery } from 'react-query';
 
-import Search from '../Pages/Searching/Search';
+import Search from '../pages/Searching/Search';
 import './BussTiceket.css'
 
 const BussTicket = () => {

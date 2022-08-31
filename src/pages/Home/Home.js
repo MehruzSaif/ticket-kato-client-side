@@ -14,6 +14,7 @@ import Privacy from "./Privacy";
 import Feedback from "./Feedback";
 import Refund from "./Refund";
 import BagInfo from "./BagInfo";
+import AskQus from "./AskQus";
 
 const Home = () => {
   return (
@@ -35,6 +36,7 @@ const Home = () => {
       {/* <Feedback></Feedback> */}
       {/* <Refund></Refund> */}
       {/* <BagInfo></BagInfo> */}
+      {/* <AskQus></AskQus> */}
       <Footer></Footer>
     </div>
   );
