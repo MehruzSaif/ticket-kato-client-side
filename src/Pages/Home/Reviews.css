@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--slider-bg) !important;
+    /* background-color: var(--slider-bg) !important;  */
 }
 
 .owl-theme {
@@ -41,7 +41,8 @@
 }
 
 .review-container {
-    background-color: var(--slider-bg);
+    /* background-color: var(--slider-bg);  */
+    background-color: skyblue;
     padding: 30px;
     color: #92A1B6;
 }

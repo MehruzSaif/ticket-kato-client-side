@@ -24,8 +24,7 @@ const Navbar = () => {
 
 
 
-  // const [theme, setTheme] = UseHooks()
-  // // console.log(theme);
+ 
 
   const [user] = useAuthState(auth);
   const [dark, setDark] = useState(false);
@@ -34,9 +33,11 @@ const Navbar = () => {
     // setTheme(!theme);
   }
 
+
   // useEffect(() => {
   // }, [])
   // console.log(user);
+
 
 
   const logout = () => {
@@ -138,27 +139,27 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/privacy">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/refund">
                       Refund Request & Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/termsCondition">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -208,9 +209,9 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/feedback">
                       Feedback
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/about">
@@ -222,25 +223,46 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                <Link to='/dashboard'>Dashboard</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                {
-                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
-                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
-                }
+                {dark ? (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaSun></FaSun>
+                  </a>
+                ) : (
+                  <a
+                    onClick={() => {
+                      toggleTheme();
+                      themes();
+                    }}
+                  >
+                    <FaMoon></FaMoon>
+                  </a>
+                )}
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
-                  <button onClick={logout} className="btn btn-success text-white">
+                  <button
+                    onClick={logout}
+                    className="bg-red-500 p-2 rounded-lg text-lg font-semibold"
+                  >
                     Logout
                   </button>
                 ) : (
-                  <Link to="/login" className="btn btn-success">
+                  <Link
+                    to="/login"
+                    className="bg-green-500 p-2 rounded-lg text-lg font-semibold hover:text-white"
+                  >
                     Login
                   </Link>
                 )}

@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 const MyProfile = () => {
     const [user] = useAuthState(auth)
     const { data, isLoading, refetch } = useQuery(['user'], () => fetch(`https://hidden-stream-11117.herokuapp.com/users/${user.email}`, {
+
+
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -61,14 +63,19 @@ const MyProfile = () => {
                         <div className='flex justify-center'>
                             <div class="card w-96 bg-slate-200 shadow-xl">
                                 <div class="card-body">
-                               
+
+
+                                   {/* {
+                                        data.img && <div class="avatar justify-center">
+
                                    {
                                         data?.img && <div class="avatar justify-center">
+
                                             <div class="w-36 rounded-full ">
                                                 <img src={data.img} alt='' />
                                             </div>
                                         </div>
-                                    }
+                                    } */}
                                    {/* {
                                         user?.photoURL?
                                          <div class="avatar justify-center">

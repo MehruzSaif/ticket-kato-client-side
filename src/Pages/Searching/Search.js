@@ -16,7 +16,7 @@ const Search = () => {
         <div className='d-flex justify-content-center search p-lg-5 p-sm-0 shadow-lg'>
             <div className='search-container search-main p-lg-4 p-sm-0 mt-sm-0 w-lg-75 w-sm-100'>
                 <div className='text-center search-title mb-3'>
-                    <h3>Find Your Tickets</h3>
+                    <p className='ticketTitle'>Find Your Tickets</p>
                 </div>
                 <div className='w-lg-100 d-flex justify-content-center flex-lg-row flex-sm-column flex-sm-wrap flex-lg-nowrap search-content'>
                     <div className='w-lg-100 w-sm-100 d-flex justify-content-evenly search-icon-container  '>

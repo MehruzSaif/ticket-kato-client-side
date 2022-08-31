@@ -9,6 +9,11 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import Offer from "./Offer";
 import { BackTop } from "antd";
 import "./Home.css"
+import TermsConditions from "./TermsConditions";
+import Privacy from "./Privacy";
+import Feedback from "./Feedback";
+import Refund from "./Refund";
+import BagInfo from "./BagInfo";
 
 const Home = () => {
   return (
@@ -25,6 +30,11 @@ const Home = () => {
       <Reviews></Reviews>
       <BackTop />
       <strong className="site-back-top-basic"> </strong>
+      {/* <TermsConditions></TermsConditions> */}
+      {/* <Privacy></Privacy> */}
+      {/* <Feedback></Feedback> */}
+      {/* <Refund></Refund> */}
+      {/* <BagInfo></BagInfo> */}
       <Footer></Footer>
     </div>
   );
