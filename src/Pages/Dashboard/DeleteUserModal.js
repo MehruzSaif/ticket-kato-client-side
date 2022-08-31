@@ -21,6 +21,7 @@ const DeleteUserModal = ({ deleteConfirm, setDeleteConfirm, refetch }) => {
                     toast.error(`Failed to delete content!`)
                 }
             })
+
     }
     return (
         <div>

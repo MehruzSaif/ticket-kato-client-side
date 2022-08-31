@@ -15,9 +15,5 @@
 }
 
 .footers {
-    /* background-color: var(--footer-bg);  */
-}
-
-a {
-    color: var(--text-color);
+    background-color: var(--footer-bg);
 }

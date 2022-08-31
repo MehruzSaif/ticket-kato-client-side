@@ -139,6 +139,11 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
+                    <Link class="dropdown-item" to="/askQus">
+                    Frequently Asked Questions
+                    </Link>
+                  </li>
+                  <li>
                     <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
                     </Link>
@@ -223,46 +228,25 @@ const Navbar = () => {
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                <Link to="/dashboard">Dashboard</Link>
+                <Link to='/dashboard'>Dashboard</Link>
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
-                {dark ? (
-                  <a
-                    onClick={() => {
-                      toggleTheme();
-                      themes();
-                    }}
-                  >
-                    <FaSun></FaSun>
-                  </a>
-                ) : (
-                  <a
-                    onClick={() => {
-                      toggleTheme();
-                      themes();
-                    }}
-                  >
-                    <FaMoon></FaMoon>
-                  </a>
-                )}
+                {
+                  dark ? <a onClick={() => { toggleTheme(); themes() }} ><FaSun></FaSun></a> :
+                    <a onClick={() => { toggleTheme(); themes() }} ><FaMoon></FaMoon></a>
+                }
               </li>
             </ul>
             <ul class="navbar-nav me-end mb-2 mb-lg-0">
               <li class="nav-item">
                 {user ? (
-                  <button
-                    onClick={logout}
-                    className="bg-red-500 p-2 rounded-lg text-lg font-semibold"
-                  >
+                  <button onClick={logout} className="btn btn-success text-white">
                     Logout
                   </button>
                 ) : (
-                  <Link
-                    to="/login"
-                    className="bg-green-500 p-2 rounded-lg text-lg font-semibold hover:text-white"
-                  >
+                  <Link to="/login" className="btn btn-success">
                     Login
                   </Link>
                 )}
