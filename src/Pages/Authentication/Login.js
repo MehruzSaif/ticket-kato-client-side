@@ -113,7 +113,7 @@ const Login = () => {
           />
         </div>
         <div className="login border-0 my-5 mt-5">
-          <div className="my-5 p-4 text-center w-full border-1 shadow-lg mx-auto my-3 d-flex justify-content-center align-item-center mt-5">
+          <div className="p-4 text-center w-full border-1 shadow-lg mx-auto my-3 d-flex justify-content-center align-item-center mt-5">
             <div className="flex h-screen justify-center items-center border-0">
               <div className="card border-0">
                 <div className="card-body border-0">
