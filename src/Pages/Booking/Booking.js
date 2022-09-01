@@ -11,7 +11,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
   const [selectSeats, setSelectSeats] = useState([])
   const [goingDate, setGoingDate] = useState(travelDate)
   const [busItem, setBusItem] = useState(item)
-
+  const [datePro,setDatePro]=useState([])
   const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`)
   // console.log("busSeats2", data)
 
@@ -28,21 +28,29 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
   const isAvailable = (seatNumber) => {
     // console.log(seatNumber)
     // console.log(newDateX)
-    console.log(seatNumber.length)
-    seatNumber.unavailableDates.map(date=>{
-        console.log(date);
-    })
-    const founded = seatNumber.unavailableDates.filter(a => newDateX.includes(a));
-    console.log(founded.length);
-    
+    // console.log(seatNumber.length)
+    // seatNumber.unavailableDates.map(date=>{
+    //     console.log(date);
+    //     setDatePro([...datePro,date])
+    // })
+    // const founded = seatNumber.unavailableDates.filter(a =>{
+    //   newDateX.includes(a)
+    // } );
+
     const isFound = seatNumber.unavailableDates.some((date =>
       newDateX.includes(date))
 
     )
-    // console.log(isFound);
+
     return isFound;
   }
+  // let isFound=[];
+  // if(isFound==true){
+  //   count++
+  // }
 
+  // console.log(datePro) 
+  // console.log(count);
 
   const handleSelect = (e) => {
     const checked = e.target.checked

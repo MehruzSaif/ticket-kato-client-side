@@ -44,6 +44,7 @@ import MyProfile from "./pages/Dashboard/MyProfile";
 import DashboardIndex from "./pages/Dashboard/DashboardIndex"
 import AddBuses from "./pages/Dashboard/AddBuses";
 import Payment from "./pages/Payment/Payment";
+import CompletePayment from "./pages/Payment/CompletePayment"
 import Feedback from './pages/Home/Feedback';
 import Refund from "./pages/Home/Refund";
 import BagInfo from "./pages/Home/BagInfo";
@@ -70,6 +71,7 @@ function App() {
             <Route path='launch' element={<Launch></Launch>}></Route>
           </Route>
           <Route path='/payment' element={<Payment></Payment>}/>
+          <Route path='/CompletePayment' element={<CompletePayment></CompletePayment>}/>
           <Route path='BookList' element={<BookTicket />}></Route>
           <Route path='/busList' element={<BusList />}></Route>
           <Route path="/login" element={<Login></Login>}></Route>

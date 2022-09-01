@@ -48,14 +48,14 @@ const BusList = () => {
     }
     return (
         <div className='BusListContainer'>
-
+            <SearchBanner></SearchBanner>
             <div className='mainRoute'>
                 <div className='routeNameDate'>
                     <div className='nameDate'>
                         <p className='text-center fs-4 busRoute'>Search Result For: {departure}-{arrival} </p>
                         {/* <p className='filterLine'><span></span></p> */}
                         <div className='dateMain'>
-                        <div className='d-flex justify-content-center dateOfTravel'>
+                        <div className='d-flex justify-content-evenly dateOfTravel'>
                             <p className='text-center travelDate'>Travel Date:{`${format(travelDate, "dd-MM-yyyy")}`}</p>
                             <p className='text-center returnDate'>Return Date:{`${format(returnDate, "dd-MM-yyyy")}`}</p>
                         </div>
