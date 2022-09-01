@@ -48,6 +48,7 @@ import Feedback from './pages/Home/Feedback';
 import Refund from "./pages/Home/Refund";
 import BagInfo from "./pages/Home/BagInfo";
 
+
 // import About from "./pages/shared/About";
 
 
@@ -61,6 +62,8 @@ function App() {
       <div className="content-bg-color main-content">
 
         <Navbar></Navbar>
+       
+
         <Routes>
           <Route path="/" element={<Home></Home>}>
             <Route path='/' element={<Bus></Bus>}></Route>

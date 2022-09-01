@@ -1,7 +1,7 @@
 .light-theme {
   --text-color: #000000;
   --bg-color: #ffffff;
-  --slider-bg: #A4638D;
+  --slider-bg: white;
   --business-bg: lightBlue;
   --footer-bg: #424445;
 }
