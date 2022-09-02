@@ -74,57 +74,88 @@ const Launch = () => {
         setSuggestions2([])
     }
     return (
-        <div>
-            <h6 className='text-center mt-3 flight-info'>Make Traveling Convenient by Launch with Attractive Ticket Price !</h6>
-        <div className='d-flex justify-content-evenly text-center search-content mt-0'>
-        <div>
-            <label for="From" class="form-label mt-2 fs-4">From</label>
-            <input type="text"
-                onChange={e => onChangeHandler(e.target.value)}
-                value={text}
-                class="form-control"
-                name='From'
-                placeholder='        Departure Place'
-                required />
-        </div>
+      <div>
+        <h6 className="text-center mt-3 flight-info">
+          Make Traveling Convenient by Launch with Attractive Ticket Price !
+        </h6>
+        <div className="d-flex justify-content-evenly text-center search-content mt-0">
+          <div>
+            <label for="From" class="form-label mt-2 fs-4">
+              From
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler(e.target.value)}
+              value={text}
+              class="form-control"
+              name="From"
+              placeholder="        Departure Place"
+              required
+            />
+          </div>
 
-        <div>
-            <label for="To" class="form-label mt-2 fs-4">To</label>
-            <input type="text"
-                onChange={e => onChangeHandler2(e.target.value)}
-                value={text2}
-                class="form-control"
-                name='To'
-                placeholder='          Arrival Place'
-                required />
+          <div>
+            <label for="To" class="form-label mt-2 fs-4">
+              To
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler2(e.target.value)}
+              value={text2}
+              class="form-control"
+              name="To"
+              placeholder="          Arrival Place"
+              required
+            />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Travel Date
+            </label>
+            <br />
+            <DatePicker className="departing" />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Return Date
+            </label>
+            <br />
+            <DatePicker className="returning" />
+          </div>
+        </div>
+        <div className="d-flex justify-content-center mt-3">
+          <button className="search-button">Search Launches</button>
         </div>
         <div>
-            <label for="date" class="form-label mt-2 fs-4">Travel Date</label><br />
-            <DatePicker
-
-            className='departing' />
+          <h2 className="text-2xl text-center font-semibold text-green-500 mt-2">
+            Coming Soon...
+          </h2>
         </div>
-        <div>
-            <label for="date" class="form-label mt-2 fs-4">Return Date</label><br />
-            <DatePicker className='returning' />
-        </div>
-    </div>
-    <div className='d-flex justify-content-center mt-3'>
-            <button className='search-button'>Search Launches</button>
-        </div>
-        <div className='from-text' >{suggestions && suggestions.slice(0,4).map((suggestion, i) =>
-            <div
+        <div className="from-text">
+          {suggestions &&
+            suggestions.slice(0, 4).map((suggestion, i) => (
+              <div
                 onClick={() => onSuggestionHandler(suggestion.district)}
-                className='suggestion' key={i}>{suggestion.district}</div>
-        )}</div>
-        <div className='from-text2' >{suggestions2 && suggestions2.slice(0,4).map((suggestion2, i) =>
-            <div
+                className="suggestion"
+                key={i}
+              >
+                {suggestion.district}
+              </div>
+            ))}
+        </div>
+        <div className="from-text2">
+          {suggestions2 &&
+            suggestions2.slice(0, 4).map((suggestion2, i) => (
+              <div
                 onClick={() => onSuggestionHandler2(suggestion2.district)}
-                className='suggestion' key={i}>{suggestion2.district}</div>
-        )}</div>
-
-
-    </div>
+                className="suggestion"
+                key={i}
+              >
+                {suggestion2.district}
+              </div>
+            ))}
+        </div>
+      </div>
     );
 };
 
