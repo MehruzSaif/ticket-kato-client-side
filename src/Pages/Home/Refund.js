@@ -2,7 +2,7 @@ import React from 'react';
 
 const Refund = () => {
     return (
-        <div className='ttbody'>
+        <div className='ttbody  pt-32'>
             <div className='terms-box'>
                 <div className='terms-text'>
             <h1 className='fs-1 text-blue-600 font-semibold text-center mt-16 mb-5'>Return and Refund Policy</h1>

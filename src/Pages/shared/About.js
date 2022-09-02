@@ -46,7 +46,7 @@ const About = () => {
         </div>
       </div> */}
 
-      <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-10 p-5">
+      <div className="2xl:container 2xl:mx-auto lg:py-32 lg:px-20 md:py-24 md:px-6 py-9 px-4 mt-10">
         <p className=" leading-3 text-indigo-700 hover:text-indigo-800 cursor-pointer pb-2 fs-1 font-semibold text-center">
           About
         </p>

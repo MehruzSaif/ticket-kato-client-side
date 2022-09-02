@@ -1,51 +1,51 @@
 import "./App.css";
-import Navbar from "./Pages/shared/Navbar";
+import Navbar from "./pages/shared/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/Home";
-import Login from "./Pages/Authentication/Login";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Authentication/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Signup from "./Pages/Authentication/Signup";
+import Signup from "./pages/Authentication/Signup";
 import BookTicket from "./BooksTicket/BookTicket";
-// import Footer from "./Pages/shared/Footer";
-import AddReview from "./Pages/Dashboard/AddReview";
-import Flight from "./Pages/Searching/Flight";
-import Train from "./Pages/Searching/Train";
-import Launch from "./Pages/Searching/Launch";
-import Bus from "./Pages/Searching/Bus";
-import NotFound from "./Pages/shared/NotFound";
-// import BusList from "./Pages/SearchResult/BusList";
-import BusList from "./Pages/SearchResult/BusList";
-import Contact from "./Pages/Home/Contact";
+// import Footer from "./pages/shared/Footer";
+import AddReview from "./pages/Dashboard/AddReview";
+import Flight from "./pages/Searching/Flight";
+import Train from "./pages/Searching/Train";
+import Launch from "./pages/Searching/Launch";
+import Bus from "./pages/Searching/Bus";
+import NotFound from "./pages/shared/NotFound";
+// import BusList from "./pages/SearchResult/BusList";
+import BusList from "./pages/SearchResult/BusList";
+import Contact from "./pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
-import RequireAuth from "./Pages/Authentication/RequireAuth";
-import About from './Pages/shared/About';
-import Dashboard from './Pages/Dashboard/Dashboard'
-import UserPanel from "./Pages/Dashboard/UserPanel";
-import MyProfile from "./Pages/Dashboard/MyProfile";
-import DashboardIndex from "./Pages/Dashboard/DashboardIndex"
-import AddBuses from "./Pages/Dashboard/AddBuses";
-// import Dashboard from "./Pages/Dashboard/Dashboard";
-// import About from './Pages/About';
-// import RequireAuth from "./Pages/Authentication/RequireAuth";
-// import About from './Pages/shared/About';
-import Privacy from './Pages/Home/Privacy';
-import TermsConditions from './Pages/Home/TermsConditions';
-// import Dashboard from './Pages/Dashboard/Dashboard'
-// import UserPanel from "./Pages/Dashboard/UserPanel";
-// import MyProfile from "./Pages/Dashboard/MyProfile";
-// import DashboardIndex from "./Pages/Dashboard/DashboardIndex"
-// import AddBuses from "./Pages/Dashboard/AddBuses";
-import Payment from "./Pages/Payment/Payment";
-import Feedback from './Pages/Home/Feedback';
-import Refund from "./Pages/Home/Refund";
-import BagInfo from "./Pages/Home/BagInfo";
-import Map from "./Pages/Maps/Map";
-import LimitedOffer from "./Pages/Offers/LimitedOffer";
-import CompletePayment from "./Pages/Payment/CompletePayment";
-import Pay from "./Pages/Payment/Pay";
+import RequireAuth from "./pages/Authentication/RequireAuth";
+import About from './pages/shared/About';
+import Dashboard from './pages/Dashboard/Dashboard'
+import UserPanel from "./pages/Dashboard/UserPanel";
+import MyProfile from "./pages/Dashboard/MyProfile";
+import DashboardIndex from "./pages/Dashboard/DashboardIndex"
+import AddBuses from "./pages/Dashboard/AddBuses";
+// import Dashboard from "./pages/Dashboard/Dashboard";
+// import About from './pages/About';
+// import RequireAuth from "./pages/Authentication/RequireAuth";
+// import About from './pages/shared/About';
+import Privacy from './pages/Home/Privacy';
+import TermsConditions from './pages/Home/TermsConditions';
+// import Dashboard from './pages/Dashboard/Dashboard'
+// import UserPanel from "./pages/Dashboard/UserPanel";
+// import MyProfile from "./pages/Dashboard/MyProfile";
+// import DashboardIndex from "./pages/Dashboard/DashboardIndex"
+// import AddBuses from "./pages/Dashboard/AddBuses";
+import Payment from "./pages/Payment/Payment";
+import Feedback from './pages/Home/Feedback';
+import Refund from "./pages/Home/Refund";
+import BagInfo from "./pages/Home/BagInfo";
+import Map from "./pages/Maps/Map";
+import LimitedOffer from "./pages/Offers/LimitedOffer";
+import CompletePayment from "./pages/Payment/CompletePayment";
+import Pay from "./pages/Payment/Pay";
 
-// import About from "./Pages/shared/About";
+// import About from "./pages/shared/About";
 
 function App() {
   return (
