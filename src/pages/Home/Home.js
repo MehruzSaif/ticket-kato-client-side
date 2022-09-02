@@ -15,7 +15,6 @@ import Feedback from "./Feedback";
 import Refund from "./Refund";
 import BagInfo from "./BagInfo";
 import Faq from "./Faq";
-import AskQus from "./AskQus";
 
 const Home = () => {
   return (
@@ -28,8 +27,8 @@ const Home = () => {
         appId="2208598849306516"
       />
       <Business></Business>
+      {/* <Slider></Slider>   */}
       <Faq></Faq>
-      {/* <Slider></Slider>  */}
       <Reviews></Reviews>
       <BackTop />
       <strong className="site-back-top-basic"> </strong>

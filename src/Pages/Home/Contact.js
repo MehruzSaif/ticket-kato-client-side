@@ -35,9 +35,7 @@ const Contact = () => {
           <div class="row">
             <div class="col-md-6 contract-col1">
               <h3>Get in Touch...</h3>
-              <p class="p">
-                Ticket Kato Ensures Client Satisfaction at Top.
-              </p>
+              <p class="p">Ticket Kato Ensures Client Satisfaction at Top.</p>
 
               <div class="contact-icone">
                 <div>
@@ -74,7 +72,9 @@ const Contact = () => {
               </div>
             </div>
             <div class="col-md-6 contract-2">
-              <h1 className="text-blue-600 font-semibold fs-3">Write Your Message:</h1>
+              <h1 className="text-blue-600 font-semibold fs-3">
+                Write Your Message:
+              </h1>
               <form onSubmit={sendEmail}>
                 {/* <!--  --> */}
                 <div class="name-email">

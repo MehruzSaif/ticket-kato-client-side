@@ -18,45 +18,38 @@ import NotFound from "./Pages/shared/NotFound";
 import BusList from "./Pages/SearchResult/BusList";
 import Contact from "./Pages/Home/Contact";
 import BussTicket from "./BusTiceket/BussTicket";
-
-import Dashboard from "./Pages/Dashboard/Dashboard";
-// import About from './Pages/About';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
-
-
-
 import RequireAuth from "./Pages/Authentication/RequireAuth";
-
-
-
-
 import About from './Pages/shared/About';
-
-import Privacy from './Pages/Home/Privacy';
-import TermsConditions from './Pages/Home/TermsConditions';
-
-
-
-// import Dashboard from './Pages/Dashboard/Dashboard'
-
+import Dashboard from './Pages/Dashboard/Dashboard'
 import UserPanel from "./Pages/Dashboard/UserPanel";
 import MyProfile from "./Pages/Dashboard/MyProfile";
 import DashboardIndex from "./Pages/Dashboard/DashboardIndex"
 import AddBuses from "./Pages/Dashboard/AddBuses";
+// import Dashboard from "./Pages/Dashboard/Dashboard";
+// import About from './Pages/About';
+// import RequireAuth from "./Pages/Authentication/RequireAuth";
+// import About from './Pages/shared/About';
+import Privacy from './Pages/Home/Privacy';
+import TermsConditions from './Pages/Home/TermsConditions';
+// import Dashboard from './Pages/Dashboard/Dashboard'
+// import UserPanel from "./Pages/Dashboard/UserPanel";
+// import MyProfile from "./Pages/Dashboard/MyProfile";
+// import DashboardIndex from "./Pages/Dashboard/DashboardIndex"
+// import AddBuses from "./Pages/Dashboard/AddBuses";
+import Payment from "./Pages/Payment/Payment";
 import Feedback from './Pages/Home/Feedback';
 import Refund from "./Pages/Home/Refund";
 import BagInfo from "./Pages/Home/BagInfo";
-import AskQus from "./Pages/Home/AskQus";
+import PaymentProcess from "./Pages/Payment/PaymentProcess";
+import Map from "./Pages/Maps/Map";
+import LimitedOffer from "./Pages/Offers/LimitedOffer";
 
 // import About from "./Pages/shared/About";
 
-
 function App() {
-  const queryClient = new QueryClient()
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>
-        <div className="content-bg-color mt-0 main-content">
+    <div >
+        <div className="content-bg-color main-content">
           <Navbar></Navbar>
           <Routes>
             <Route path="/" element={<Home></Home>}>
@@ -66,6 +59,10 @@ function App() {
               <Route path="train" element={<Train></Train>}></Route>
               <Route path="launch" element={<Launch></Launch>}></Route>
             </Route>
+            <Route path="/Payment" element={<Payment></Payment>} />
+            <Route path="/destination" element={<Map></Map>} />
+            <Route path="/offer" element={<LimitedOffer></LimitedOffer>} />
+            <Route path="/paymentProcess" element={<PaymentProcess></PaymentProcess>}></Route>
             <Route path="BookList" element={<BookTicket />}></Route>
             <Route path="/busList" element={<BusList />}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
@@ -80,8 +77,6 @@ function App() {
             <Route path="/feedback" element={<Feedback></Feedback>} />
             <Route path="/refund" element={<Refund></Refund>} />
             <Route path="/bagInfo" element={<BagInfo></BagInfo>} />
-            <Route path="/askQus" element={<AskQus></AskQus>} />
-
             <Route
               path="dashboard"
               element={
@@ -118,7 +113,7 @@ function App() {
           <ToastContainer position="top-center" />
         </div>
       </div>
-    </QueryClientProvider>
+   
   );
 
 }
