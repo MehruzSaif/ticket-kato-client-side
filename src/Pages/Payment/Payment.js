@@ -51,7 +51,7 @@ const Payment = () => {
                                 )
                             }
 
-                            <p className='jp '>Total Price:{busProfile.price * selectSeats.length}<small className='ml-3 jp2'>Tk</small></p>
+                            <p className='jp '>Total Price: ${busProfile.price * selectSeats.length}<small className='ml-3 jp2'></small></p>
 
 
                         </div>
