@@ -4,7 +4,7 @@ import "./TermsConditions.css";
 
 const TermsConditions = () => {
     return (
-      <div className="tbody">
+      <div className="tbody pt-32">
         <div className="bg">{/* <img src={bg} alt='Background'/> */}</div>
         <div className="terms-box">
           <div className="terms-text">

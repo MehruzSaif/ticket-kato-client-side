@@ -8,7 +8,7 @@ const Feedback = () => {
       toast("Thank You for your feedback ");
     };
     return (
-      <div className="bodyy">
+      <div className="bodyy mt-28">
         <div className="container">
           <div className="row">
             <div className="col-md-2"></div>

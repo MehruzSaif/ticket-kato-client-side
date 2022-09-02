@@ -3,8 +3,8 @@ import  "./Privacy.css";
 
 const Privacy = () => {
     return (
-      <div className="ttbody">
-        <div className="terms-box">
+      <div className="ttbody pt-16 mt-16">
+        <div className="terms-box pt-32">
           <div className="terms-text">
             {/* <h1 className='h1 text-center'>Privacy Policy for Ticket Kato</h1> */}
             <h1 className="fs-1 text-blue-600 font-semibold text-center mt-16">

@@ -30,22 +30,22 @@ const handleAddBuses = async (event) => {
         // console.log(res.response.data)
         toast.success("New Bus added Successfully!");
 
-        setOperatorName('');
-        setBusType('')
-        setBusClass('')
-        setCoachNumber('')
-        setRoute('')
-        setDepartureCity('')
-        setArrivalCity('')
-        setDepartureTime('')
-        setArrivalTime('')
-        setPhotos('')
-        setAvailableSeats('')
-        setBoardingPoint('')
-        setDroppingPoint('')
-        setPrice('')
-        setRating('')
-        setFeatured('')
+        // setOperatorName('');
+        // setBusType('')
+        // setBusClass('')
+        // setCoachNumber('')
+        // setRoute('')
+        // setDepartureCity('')
+        // setArrivalCity('')
+        // setDepartureTime('')
+        // setArrivalTime('')
+        // setPhotos('')
+        // setAvailableSeats('')
+        // setBoardingPoint('')
+        // setDroppingPoint('')
+        // setPrice('')
+        // setRating('')
+        // setFeatured('')
  
             }
     catch (err) {
@@ -102,7 +102,7 @@ const handleAddBuses = async (event) => {
                     <label className="label ml-6">
                         <span className="label-text text-lg">Available Seats</span>
                     </label>
-                    <input type="number"  onChange={(e) => setAvailableSeats(e.target.value)} value={availableSeats} class="input input-bordered input-lg w-full mb-4 mx-4" name='available_seats' required placeholder='Enter Available Seats'/>
+                    <input type="number"  onChange={(e) => setAvailableSeats(e.target.value)} value={availableSeats} class="input input-bordered input-lg w-full mb-4 mx-4" name='available_seats' disabled placeholder='Enter Available Seats'/>
                     <label className="label ml-6">
                         <span className="label-text text-lg">Boarding Point</span>
                     </label>

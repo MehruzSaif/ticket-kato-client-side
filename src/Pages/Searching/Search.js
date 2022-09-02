@@ -60,7 +60,9 @@ const Search = () => {
                 </div>
                 <Outlet />
             </div>
-
+            <div>
+                
+            </div>
 
         </div>
     );

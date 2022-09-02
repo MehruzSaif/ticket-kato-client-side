@@ -117,7 +117,7 @@ const Navbar = () => {
                     src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
                     class="rounded-circle d-flex justify-center align-items-center"
                     style={{ width: "50px", height: "40px" }}
-                    alt="Avatar"
+                    alt="avatar"
                   />
                 </div>
               )}
@@ -155,20 +155,11 @@ const Navbar = () => {
         </a>
         <ul class="p-2 bg-indigo-600">
         <li>
-                    <Link class="dropdown-item" to="BookList">
-                      Book a Tickets
+                    <Link class="dropdown-item" to="/destination">
+                      Destinations
                     </Link>
                   </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Destinations
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Schedules
-                    </a>
-                  </li>
+                  
         </ul>
       </li>
       <li tabindex="0">
@@ -206,15 +197,10 @@ const Navbar = () => {
         </a>
         <ul class="p-2 bg-indigo-600">
         <li>
-                    <a class="dropdown-item" href="#">
-                      Ticket Discounts
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Limited Offers
-                    </a>
-                  </li>
+        <Link class="dropdown-item" to="/offer">
+                      Offer
+                    </Link>
+       </li>
         </ul>
       </li>
       <li tabindex="0">

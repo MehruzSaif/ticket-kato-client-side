@@ -4,7 +4,7 @@ import "./BagInfo.css";
 
 const BagInfo = () => {
     return (
-        <div className='t'>
+        <div className='t pt-16'>
             <h2 className='h1 text-center mt-16 pt-5'>Bagging Info</h2>
             <div className='container bg-slate-100'>
                 <h2 className='font-weight-bold h2'>Checked Baggage</h2>
