@@ -4,8 +4,10 @@
 
 .busRoute{
     font-size: bolder;
-    margin-top: 5px;
-    color: #0071C2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(1, 1, 1);
+
 }
 
 .listContainer{
@@ -13,24 +15,44 @@
     justify-content: center;
     margin-top: 20px;
 
+
+}
+.mainRoute{
+    display: flex;
+    /* height: 200px; */
+    justify-content: center;
+    margin-top: 0px;
+}
+.routeNameDate{
+    /* background-color: #2C4966; */
+
+    width: 100%;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+
 }
 
 .listWrapper{
     width: 100%;
     max-width: 1024px;
     display: flex;
-    gap: 20px;
+    gap: 60px;
 
 }
 
 .listSearch{
     flex: 1;
-    background-color: #293C5A;
+    /* background-color: #293C5A; */
+    background-color: #2C4966;
     padding: 20px;
     border-radius: 10px;
     position: sticky;
     top: 10px;
     height: max-content;
+
 }
 
 .IsTitle{
@@ -127,9 +149,37 @@
 .travelDate{
     margin-right: 100px;
     font-size: 20px;
-    color: #008009;
+    /* color: #17c2f1; */
+    color: #ffffff;
+    margin-bottom: 0px;
 }
 .returnDate{
     font-size: 20px;
-    color: #008009;
+    /* color: #17c2f1; */
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.containerOfBus{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 0px;
+}
+
+.dateOfTravel{
+    border: 1px solid rgb(1, 1, 1);
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0px;
+    width: 700px;
+    padding: 12px;
+    background-color: #2C4966;
+}
+.dateMain{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
 }

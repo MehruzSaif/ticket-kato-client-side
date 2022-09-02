@@ -3,15 +3,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Booking from '../Booking/Booking';
 import './BusItem.css';
-const BusItem = ({ item, travelDate,returnDate}) => {
+const BusItem = ({ item, travelDate}) => {
     const [openModal, setOpenModal] = useState(false);
 
     const handleClick = () => {
-        // if (user) {
           setOpenModal(true);
-        // } else {
-        //   navigate("/login");
-        // }
       };
     return (
         <div>
@@ -36,14 +32,14 @@ const BusItem = ({ item, travelDate,returnDate}) => {
                 <span className="siCancelOp">Free Cancellation </span>
                 <span className="siTaxOp">Boarding Point:{item.boarding_point}</span>
                     <span className="siTaxOp">Dropping Point Point:{item.dropping_point}</span>
-                    <span>{`${format(travelDate, "dd/MM/yyyy")}`}</span>
+                    
             </div>
            
 
             <div className="siDetails">
                 {item.rating &&
                     <div className="siRating">
-                        <span>Seats:{item.available_seats.length}</span>
+                        <span></span>
                         <button>{item.rating}</button>
                     </div>
                 }
@@ -56,7 +52,7 @@ const BusItem = ({ item, travelDate,returnDate}) => {
             </div>
             
         </div>
-{openModal && <Booking setOpen={setOpenModal} busId={item._id} item={item} travelDate={travelDate} />}
+        {openModal && <Booking setOpen={setOpenModal} busId={item._id} item={item} travelDate={travelDate} />}
         </div>
         
     );

@@ -1,5 +1,5 @@
 .searchBanner{
-    background-color: #293C5A;
+    background-color: #2C4966;
     width: 100%;
     height: 240px;
     margin: 0px;
@@ -20,10 +20,13 @@
   }
   .searchBannerText2{
     display: inline;
-    color: #ffffff;
+    color: #17c2f1;
     position: absolute;
     top: 110px;
     left: 620px;
     font-size: 20px;
   }
-  
+  .searchBanImg{
+    width: 100%;
+
+  }
