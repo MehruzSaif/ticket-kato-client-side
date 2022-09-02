@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Search.css';
 
 import { DatePicker } from 'antd';
+import { Divider } from "antd";
 import "antd/dist/antd.css";
+import { MdLocationPin } from "react-icons/md";
 
 import axios from 'axios';
 import moment from 'moment';
@@ -98,51 +100,71 @@ const Bus = () => {
     };
 
     return (
-        <div>
-            <h6 className='text-center mt-3 flight-info'>Buy Bus Tickets with Best Offers and Discounts !</h6>
-            {/* <h2>{select}</h2> */}
-            <div className='d-flex justify-content-evenly text-center search-content mt-0'>
-                <div>
-                    <label for="From" class="form-label mt-2 fs-4">From</label>
-                    <input type="text"
-                        onChange={e => onChangeHandler(e.target.value)}
-                        value={text}
-                        class="form-control"
-                        name='From'
-                        placeholder='        Departure Place'
-                        required />
-                </div>
-                <div>
-                    <label for="To" class="form-label mt-2 fs-4">To</label>
-                    <input type="text"
-                        onChange={e => onChangeHandler2(e.target.value)}
-                        value={text2}
-                        class="form-control"
-                        name='To'
-                        placeholder='          Arrival Place'
-                        required />
-                </div>
-                <div>
-                    <label for="date" class="form-label mt-2 fs-4">Travel Date</label><br />
-                    {/* <DatePicker className='returning'
+      <div>
+        <h6 className="text-center mt-3 flight-info">
+          Buy Bus Tickets with Best Offers and Discounts !
+        </h6>
+        {/* <h2>{select}</h2> */}
+        <div className="d-flex justify-content-evenly text-center search-content mt-0">
+          <div>
+            <label for="From" class="form-label mt-2 fs-4">
+              From
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler(e.target.value)}
+              value={text}
+              class="form-control"
+              name="From"
+              placeholder="        Departure Place"
+              required
+            />
+          </div>
+          <div>
+            <label for="To" class="form-label mt-2 fs-4">
+              To
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler2(e.target.value)}
+              value={text2}
+              class="form-control"
+              name="To"
+              placeholder="          Arrival Place"
+              required
+            />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Travel Date
+            </label>
+            <br />
+            {/* <DatePicker className='returning'
                         selected={selectedDate}
                         onChange={date => setSelectedDate(date)}
                         dateFormat='dd/MM/yyyy'
                         minDate={new Date()}
                         isClearable
                     /> */}
-                    <DatePicker className='returning'
-                        selected={selectedDate}
-                        onChange={date => setSelectedDate(date)}
-                        disabledDate={disabledDate}/>
-                </div>
-                <div>
-                    <label for="date" class="form-label mt-2 fs-4">Return Date</label><br />
-                    <DatePicker className='returning'
-                        selected={selectedDate2}
-                        onChange={date => setSelectedDate2(date)}
-                        disabledDate={disabledDate}/>
-                    {/* <DatePicker className='returning'
+            <DatePicker
+              className="returning"
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              disabledDate={disabledDate}
+            />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Return Date
+            </label>
+            <br />
+            <DatePicker
+              className="returning"
+              selected={selectedDate2}
+              onChange={(date) => setSelectedDate2(date)}
+              disabledDate={disabledDate}
+            />
+            {/* <DatePicker className='returning'
                         selected={selectedDate2}
                         onChange={date => setSelectedDate2(date)}
                         dateFormat='dd/MM/yyyy'
@@ -150,24 +172,76 @@ const Bus = () => {
                         isClearable
                         
                     /> */}
-
-
-                </div>
-            </div>
-            <div className='d-flex justify-content-center mt-3'>
-                <button className='search-button' onClick={handleSearch}>Search Buses</button>
-            </div>
-            <div className='from-text' >{suggestions && suggestions.map((suggestion, i) =>
-                <div
-                    onClick={() => onSuggestionHandler(suggestion.district)}
-                    className='suggestion' key={i}>{suggestion.district}</div>
-            )}</div>
-            <div className='from-text2' >{suggestions2 && suggestions2.map((suggestion2, i) =>
-                <div
-                    onClick={() => onSuggestionHandler2(suggestion2.district)}
-                    className='suggestion' key={i}>{suggestion2.district}</div>
-            )}</div>
+          </div>
         </div>
+        <div className="d-flex justify-content-center mt-3">
+          <button className="search-button" onClick={handleSearch}>
+            Search Buses
+          </button>
+        </div>
+        <div>
+          <h2 className="text-2xl text-center text-gray-600 mt-2">
+            Available Bus Routes
+          </h2>
+          <Divider />
+          <div className='grid grid-cols-3 justify-evenly justify-items-center '>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Cox's Bazar
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Khulna
+              </p>
+            </div>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Chattogram
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Rajshahi
+              </p>
+            </div>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Sylhet
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Rangpur
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="from-text">
+          {suggestions &&
+            suggestions.map((suggestion, i) => (
+              <div
+                onClick={() => onSuggestionHandler(suggestion.district)}
+                className="suggestion"
+                key={i}
+              >
+                {suggestion.district}
+              </div>
+            ))}
+        </div>
+        <div className="from-text2">
+          {suggestions2 &&
+            suggestions2.map((suggestion2, i) => (
+              <div
+                onClick={() => onSuggestionHandler2(suggestion2.district)}
+                className="suggestion"
+                key={i}
+              >
+                {suggestion2.district}
+              </div>
+            ))}
+        </div>
+      </div>
     );
 };
 
