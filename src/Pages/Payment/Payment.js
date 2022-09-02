@@ -31,9 +31,7 @@ const Payment = () => {
 
   console.log(data);
   const handlePayment = () => {
-    navigate("/paymentProcess", {
-      state: { selectSeats, travelDate, busProfile },
-    });
+    
   };
 
   return (
