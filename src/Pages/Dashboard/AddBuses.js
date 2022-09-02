@@ -21,61 +21,6 @@ const AddBuses = () => {
     const [price, setPrice] = useState()
     const [rating, setRating] = useState()
     const [featured, setFeatured] = useState()
-//     const handleAddReview = event => {
-//         event.preventDefault();
-//         const busInfo = {
-//             operator_name: event.target.operator_name.value,
-//             bus_type: event.target.bus_type.value,
-//             bus_class: event.target.bus_class.value,
-//             coach_number: event.target.coach_number.value,
-//             route: event.target.route.value,
-//             departure_city: event.target.departure_city.value,
-//             arrival_city: event.target.arrival_city.value,
-//             departure_time: event.target.departure_time.value,
-//             arrival_time: event.target.arrival_time.value,
-//             photos: event.target.photos.value,
-//             available_seats: event.target.available_seats.value,
-//             boarding_point: event.target.boarding_point.value,
-//             dropping_point: event.target.dropping_point.value,
-//             price: event.target.price.value,
-//             rating: event.target.rating.value,
-//             featured: event.target.featured.value,
-//         }
-// console.log(busInfo)
-//         fetch('http://localhost:5000/buses', {
-//             method: 'POST',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             body: JSON.stringify(busInfo)
-//         })
-//             .then(res => res.json())
-//             .then(data => {
-//                 if (data) {
-//                     toast.success("New Bus added Successfully!");
-//                     event.target.operator_name.value = ''
-//                     event.target.bus_type.value = ''
-//                     event.target.bus_class.value = ''
-//                     event.target.coach_number.value = ''
-//                     event.target.route.value = ''
-//                     event.target.departure_city.value = ''
-//                     event.target.arrival_city.value = ''
-//                     event.target.departure_time.value = ''
-//                     event.target.arrival_time.value = ''
-//                     event.target.photos.value = ''
-//                     event.target.available_seats.value = ''
-//                     event.target.boarding_point.value = ''
-//                     event.target.dropping_point.value = ''
-//                     event.target.price.value = ''
-//                     event.target.rating.value = ''
-//                     event.target.featured.value = ''
-                    
-//                 }
-//                 else {
-//                     toast.error("Failed to add Bus!");
-//                 }
-//             });
-//     }
 
 const handleAddBuses = async (event) => {
     event.preventDefault();

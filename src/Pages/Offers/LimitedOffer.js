@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const LimitedOffer = () => {
    return (
-     <div className="mt-10 pt-5 grid justify-center mb-10">
+     <div className="mt-10 pt-32 grid justify-center mb-10">
        <div className="2xl:mx-auto 2xl:container 2xl:px-20 xl:px-12 sm:px-6 px-4 6">
          <h1 className="lg:text-4xl text-4xl font-semibold leading-9 text-orange-500 ">
            Grab Our Limited Offers

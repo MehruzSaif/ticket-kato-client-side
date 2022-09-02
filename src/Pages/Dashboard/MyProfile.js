@@ -76,19 +76,20 @@ const MyProfile = () => {
                                             </div>
                                         </div>
                                     } */}
-                                   {/* {
-                                        user?.photoURL?
-                                         <div class="avatar justify-center">
-                                            <div class="w-36 rounded-full ">
-                                                <img src={user?.photoURL} alt='' />
-                                            </div>
+                                   {
+                                        data?.img?
+                                        <div class="avatar justify-center">
+
+                                           <div class="w-36 rounded-full ">
+                                            <img src={data.img} alt='' />
+                                           </div>
                                         </div> : 
                                         <div class="avatar justify-center">
                                             <div class="w-36 rounded-full ">
                                                 <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"alt='' />
                                             </div>
                                         </div>
-                                    } */}
+                                    }
                                     <h2 class="card-title font-bold py-2 text-3xl text-slate-700 justify-center">{user?.displayName}</h2>
                                     <p className='text-xl font-semibold'>Email: <span className='font-thin'>{user?.email}</span></p>
                                     {
