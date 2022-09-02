@@ -35,24 +35,27 @@ const SubNavbar = () => {
         </a>
         <ul class="p-2 bg-indigo-600">
         <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/privacy">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/refund">
                       Refund Request & Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/termsCondition">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
         </ul>
       </li>
@@ -86,9 +89,9 @@ const SubNavbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/feedback">
                       Feedback
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/about">
@@ -135,24 +138,27 @@ const SubNavbar = () => {
           </a>
           <ul class="p-2 ml-2 bg-indigo-600">
           <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/bagInfo">
                       Baggage Info
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/privacy">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/refund">
                       Refund Request & Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/termsCondition">
                       Terms & Conditions
-                    </a>
+                    </Link>
                   </li>
           </ul>
         </li>
@@ -186,9 +192,9 @@ const SubNavbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/feedback">
                       Feedback
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link class="dropdown-item" to="/about">

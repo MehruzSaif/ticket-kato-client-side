@@ -1,13 +1,11 @@
-// import React, { useEffect } from "react";
 import "./Navber.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
-import UseHooks from "./UseHooks";
 import { FaMoon, FaSun } from "react-icons/fa";
-
+import logo from '../../assests/logo.png'
 const Navbar = () => {
   const [tm, setTm] = useState('light-theme')
   const toggleTheme = () => {
@@ -33,13 +31,6 @@ const Navbar = () => {
     // setTheme(!theme);
   }
 
-
-  // useEffect(() => {
-  // }, [])
-  // console.log(user);
-
-
-
   const logout = () => {
     signOut(auth);
     localStorage.removeItem('accessToken')
@@ -60,14 +51,9 @@ const Navbar = () => {
         <div class="container-fluid fs-5">
           <div class="flex items-center justify-center">
             <Link class="navbar-brand" to="/">
-              {/* <img
-                src="https://i.ibb.co/MsmSNWq/My-project-1.png?fbclid=IwAR2MinoRXSa1rYKjZdbwfQtQxwz4x7TzHB8Dj37ow-rGO6mDOd1z14FyQxU"
-                alt=""
-                width="160"
-                height="120"
-              /> */}
-              <h2 className="text-2xl text-white ">Ticket-Kato</h2>
+            <h2 className="text-2xl text-white ">Ticket-Kato</h2>
             </Link>
+
           </div>
           <button
             class="navbar-toggler"
@@ -84,149 +70,15 @@ const Navbar = () => {
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            {/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-            </ul> */}
-            <ul class="d-flex navbar-nav text-black ">
-              <li class="nav-item dropdown me-2 text-white">
-                <a
-                  class="nav-link active dropdown-toggle text-white"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Book Tickets
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link class="dropdown-item" to="BookList">
-                      Book a Tickets
-                    </Link>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Destinations
-                    </a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Schedules
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="d-flex navbar-nav">
-              <li class="nav-item dropdown me-4">
-                <a
-                  class="nav-link active dropdown-toggle text-white"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Travel Info
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link class="dropdown-item" to="/bagInfo">
-                      Baggage Info
-                    </Link>
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/privacy">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/refund">
-                      Refund Request & Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/termsCondition">
-                      Terms & Conditions
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="d-flex navbar-nav ">
-              <li class="nav-item dropdown me-4">
-                <a
-                  class="nav-link active dropdown-toggle text-white"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Offers
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Ticket Discounts
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Limited Offers
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="d-flex navbar-nav ">
-              <li class="nav-item dropdown me-5">
-                <a
-                  class="nav-link active dropdown-toggle text-white"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Contact
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link class="dropdown-item" to="/contactus">
-                      Contact Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/feedback">
-                      Feedback
-                    </Link>
-                  </li>
-                  <li>
-                    <Link class="dropdown-item" to="/about">
-                      About Us
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+             <div class="form-control">
+      <input type="text" placeholder="Search" class="input"  />
+    </div>
             <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
               <li class="nav-item">
                 <Link to="/dashboard">Dashboard</Link>
               </li>
             </ul>
-            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-3">
+            <ul class="navbar-nav me-end mb-2 mb-lg-0 px-2">
               <li class="nav-item">
                 {dark ? (
                   <a
@@ -249,27 +101,7 @@ const Navbar = () => {
                 )}
               </li>
             </ul>
-            <ul class="navbar-nav me-end mb-2 mb-lg-0">
-              <li class="nav-item">
-                {user ? (
-                  <button
-                    onClick={logout}
-                    className="bg-red-500 p-2 rounded-lg text-lg font-semibold"
-                  >
-                    Logout
-                  </button>
-                ) : (
-                  <Link
-                    to="/login"
-                    className="bg-green-500 p-2 rounded-lg text-lg font-semibold hover:text-white"
-                  >
-                    Login
-                  </Link>
-                )}
-              </li>
-            </ul>
-
-            <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-3">
+            <ul className="navbar-nav me-end mb-2 mb-lg-0 mx-2">
               {user?.photoURL ? (
                 <div className="h-10 w-10 sm:mb-2 lg:mb-0 mr-3 ml-4">
                   <img
@@ -290,9 +122,229 @@ const Navbar = () => {
                 </div>
               )}
             </ul>
+            <ul class="navbar-nav me-end mb-2 mb-lg-0">
+              <li class="nav-item">
+                {user ? (
+                  <button
+                    onClick={logout}
+                    className="bg-red-500 p-2 rounded-lg text-lg font-semibold"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="bg-green-500 p-2 rounded-lg text-lg font-semibold hover:text-white"
+                  >
+                    Login
+                  </Link>
+                )}
+              </li>
+            </ul>
+
           </div>
         </div>
       </nav>
+      <div class="navbar bg-blue-900 py-0">
+      <div class="navbar-center ml-96 hidden lg:flex pb-0 mb-0">
+    <ul class="menu menu-horizontal p-0 pb-0 mb-0">
+      <li tabindex="0">
+        <a>
+          Book Tickets
+          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul class="p-2 bg-indigo-600">
+        <li>
+                    <Link class="dropdown-item" to="BookList">
+                      Book a Tickets
+                    </Link>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Destinations
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Schedules
+                    </a>
+                  </li>
+        </ul>
+      </li>
+      <li tabindex="0">
+        <a>
+          Travel Info
+          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul class="p-2 bg-indigo-600">
+        <li>
+                    <Link class="dropdown-item" to="/bagInfo">
+                      Baggage Info
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/privacy">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/refund">
+                      Refund Request & Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/termsCondition">
+                      Terms & Conditions
+                    </Link>
+                  </li>
+        </ul>
+      </li>
+      <li tabindex="0">
+        <a>
+          Offers
+          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul class="p-2 bg-indigo-600">
+        <li>
+                    <a class="dropdown-item" href="#">
+                      Ticket Discounts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Limited Offers
+                    </a>
+                  </li>
+        </ul>
+      </li>
+      <li tabindex="0">
+        <a>
+          Contact us
+          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+        <ul class="p-2 bg-indigo-600">
+        <li>
+                    <Link class="dropdown-item" to="/contactus">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/feedback">
+                      Feedback
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/about">
+                      About Us
+                    </Link>
+                  </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-2 p-2 shadow bg-indigo-700 rounded-box w-52">
+        <li tabindex="0">
+          <a class="justify-between">
+            Book Tickets
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2 ml-2 bg-indigo-600">
+          <li>
+                    <Link class="dropdown-item" to="BookList">
+                      Book a Tickets
+                    </Link>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Destinations
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Schedules
+                    </a>
+                  </li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a class="justify-between">
+            Travel Info
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2 ml-2 bg-indigo-600">
+          <li>
+                    <Link class="dropdown-item" to="/bagInfo">
+                      Baggage Info
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/privacy">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/refund">
+                      Refund Request & Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/termsCondition">
+                      Terms & Conditions
+                    </Link>
+                  </li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a class="justify-between">
+          Offers
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2 ml-2 bg-indigo-600">
+          <li>
+                    <a class="dropdown-item" href="#">
+                      Ticket Discounts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Limited Offers
+                    </a>
+                  </li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a class="justify-between">
+            Contact us 
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+          </a>
+          <ul class="p-2 ml-2 bg-indigo-600">
+          <li>
+                    <Link class="dropdown-item" to="/contactus">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/feedback">
+                      Feedback
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/about">
+                      About Us
+                    </Link>
+                  </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+</div>
     </div>
 
   );
