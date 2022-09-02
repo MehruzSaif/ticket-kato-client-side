@@ -17,7 +17,7 @@ const onLoad = (marker) => {
 
 function Map() {
   return (
-    <section className="mt-10 pt-5 -mb-4">
+    <section className="mt-10 pt-32 -mb-4">
       <h1 className="text-center fs-1 text-blue-500 font-semibold">
         Find Your Destination
       </h1>

@@ -43,7 +43,7 @@ const BusItem = ({ item, travelDate,returnDate}) => {
             <div className="siDetails">
                 {item.rating &&
                     <div className="siRating">
-                        <span>Seats:{item.available_seats.length}</span>
+                        {/* <span>Seats:{item.available_seats.length}</span> */}
                         <button>{item.rating}</button>
                     </div>
                 }
