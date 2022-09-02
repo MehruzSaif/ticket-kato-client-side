@@ -5,7 +5,9 @@ import { FaPlaneDeparture } from "react-icons/fa";
 import { RiShipLine } from "react-icons/ri";
 import { GiCommercialAirplane } from "react-icons/gi";
 import './Search.css';
+import { DatePicker } from 'antd';
 import "antd/dist/antd.css";
+import axios from 'axios';
 import { NavLink, Outlet } from "react-router-dom";
 
 
@@ -25,6 +27,13 @@ const Search = () => {
                             </NavLink>
 
                         </div>
+                        {/* <div className='text-center'>
+                        <NavLink className='search-bar' to='/bus'>
+                            <BiBus className='search-icon' />
+                            <p className='search-icon-name'>Buses</p>
+                            </NavLink>
+                            
+                        </div> */}
                         <div className='text-center'>
                             <NavLink className='search-bar' to='/flight'>
                                 <GiCommercialAirplane className='search-icon' />
@@ -51,7 +60,9 @@ const Search = () => {
                 </div>
                 <Outlet />
             </div>
-
+            <div>
+                
+            </div>
 
         </div>
     );

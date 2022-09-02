@@ -37,8 +37,8 @@ const Pay = ({ ticketPriceNow }) => {
     }, [stripeToken])
 
     return (
-        <div className='pay'>
-            {stripeToken?(<span className='successFul'>Successful !</span>):
+        <div className='text-center'>
+            {stripeToken?(<span className='successFul text-center'>Payment Successful!</span>):
                      <StripeCheckout
                      name="Ticket-Kato"
                      billingAddress
@@ -48,7 +48,7 @@ const Pay = ({ ticketPriceNow }) => {
                      token={onToken}
                      stripeKey={KEY}
                  >
-                     <button className='payButton'>Pay Now</button>
+                     <button className='payButton text-center'>Pay Now</button>
                  </StripeCheckout>   
         
         }

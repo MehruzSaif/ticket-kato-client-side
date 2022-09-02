@@ -110,18 +110,18 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link to="/destination" class="dropdown-item" href="#">
                       Destinations
-                    </a>
+                    </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
                       Schedules
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
             </ul>
@@ -178,14 +178,9 @@ const Navbar = () => {
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Ticket Discounts
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
+                    <Link to="/offer" class="dropdown-item" href="#">
                       Limited Offers
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -285,7 +280,7 @@ const Navbar = () => {
                     src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png"
                     class="rounded-circle d-flex justify-center align-items-center"
                     style={{ width: "50px", height: "40px" }}
-                    alt="Avatar"
+                    alt="avatar"
                   />
                 </div>
               )}

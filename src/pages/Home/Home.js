@@ -27,7 +27,7 @@ const Home = () => {
         appId="2208598849306516"
       />
       <Business></Business>
-      {/* <Slider></Slider>  */}
+      {/* <Slider></Slider>   */}
       <Faq></Faq>
       <Reviews></Reviews>
       <BackTop />

@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 import { useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import './Payment.css'
-import CheckoutFormNew from './CheckoutFormNew';
+// import CheckoutFormNew from './CheckoutFormNew'; 
 import Pay from './Pay';
 const stripePromise = loadStripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
@@ -41,7 +41,7 @@ const CompletePayment = () => {
                         <p className="font-semibold text-indigo-500">
                             Selected Seats:{" "}
                             {seats.map((seat) => (
-                                <span className="seatId text-red-400">{seat.slice(0, 2)}</span>
+                                <span className="seatId text-red-400">{seat.slice(0, 1)}</span>
                             ))}
                         </p>
                     </div>

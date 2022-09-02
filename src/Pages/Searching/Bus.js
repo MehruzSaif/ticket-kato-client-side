@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Search.css';
 
 import { DatePicker } from 'antd';
+import { Divider } from "antd";
 import "antd/dist/antd.css";
+import { MdLocationPin } from "react-icons/md";
 
 import axios from 'axios';
 import moment from 'moment';
@@ -24,6 +26,7 @@ const Bus = () => {
     useEffect(() => {
         const loadDistricts = async () => {
             const response = await axios.get('https://bdapis.herokuapp.com/api/v1.1/districts');
+            console.log(response.data.data);
             setDistricts(response.data.data)
         }
         loadDistricts();
@@ -31,6 +34,7 @@ const Bus = () => {
     useEffect(() => {
         const loadDistricts2 = async () => {
             const response = await axios.get('https://bdapis.herokuapp.com/api/v1.1/districts');
+            console.log(response);
             setDistricts2(response.data.data)
         }
         loadDistricts2();
@@ -40,11 +44,12 @@ const Bus = () => {
         let matches = []
         if (text.length > 0) {
             matches = districts.filter(district => {
-
+                console.log(district)
                 const regex = new RegExp(`${text}`, 'gi');
                 return district.district.match(regex)
             })
         }
+        console.log('Matches: ', matches)
         setSuggestions(matches)
         setText(text);
     }
@@ -57,10 +62,12 @@ const Bus = () => {
         let matches2 = []
         if (text2.length > 0) {
             matches2 = districts2.filter(district2 => {
+                console.log(district2)
                 const regex = new RegExp(`${text2}`, 'gi');
                 return district2.district.match(regex)
             })
         }
+        console.log('Matches: ', matches2)
         setSuggestions2(matches2)
         setText2(text2);
     }
@@ -71,77 +78,170 @@ const Bus = () => {
     }
 
     const disabledDate = (select) => {
+        // Can not select days before today and today
         return select && select < moment().add(-1, 'days').endOf('day');
     };
 
-
+    //date-picker
     const [selectedDate, setSelectedDate] = useState(new Date())
-    const select = selectedDate?._d;
-
+    const select=selectedDate?._d;
+    console.log(select);
     const [selectedDate2, setSelectedDate2] = useState(new Date())
-    const select2 = selectedDate2?._d;
+    const select2=selectedDate2?._d;
+    console.log(select2);
 
+    // const select=selectedDate;
 
 
 
     const navigate = useNavigate();
     const handleSearch = () => {
-        navigate("/busList", { state: { text, text2, select, select2 } });
+        navigate("/busList", { state: { text, text2,select,select2 } });
     };
 
     return (
-        <div>
-            <h6 className='text-center mt-3 flight-info'>Buy Bus Tickets with Best Offers and Discounts !</h6>
-            <div className='d-flex justify-content-evenly text-center search-content mt-0'>
-                <div>
-                    <label for="From" class="form-label mt-2 fs-4">From</label>
-                    <input type="text"
-                        onChange={e => onChangeHandler(e.target.value)}
-                        value={text}
-                        class="form-control"
-                        name='From'
-                        placeholder='        Departure Place'
-                        required />
-                </div>
-                <div>
-                    <label for="To" class="form-label mt-2 fs-4">To</label>
-                    <input type="text"
-                        onChange={e => onChangeHandler2(e.target.value)}
-                        value={text2}
-                        class="form-control"
-                        name='To'
-                        placeholder='          Arrival Place'
-                        required />
-                </div>
-                <div>
-                    <label for="date" class="form-label mt-2 fs-4">Travel Date</label><br />
-                    <DatePicker className='returning'
+      <div>
+        <h6 className="text-center mt-3 flight-info">
+          Buy Bus Tickets with Best Offers and Discounts !
+        </h6>
+        {/* <h2>{select}</h2> */}
+        <div className="d-flex justify-content-evenly text-center search-content mt-0">
+          <div>
+            <label for="From" class="form-label mt-2 fs-4">
+              From
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler(e.target.value)}
+              value={text}
+              class="form-control"
+              name="From"
+              placeholder="        Departure Place"
+              required
+            />
+          </div>
+          <div>
+            <label for="To" class="form-label mt-2 fs-4">
+              To
+            </label>
+            <input
+              type="text"
+              onChange={(e) => onChangeHandler2(e.target.value)}
+              value={text2}
+              class="form-control"
+              name="To"
+              placeholder="          Arrival Place"
+              required
+            />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Travel Date
+            </label>
+            <br />
+            {/* <DatePicker className='returning'
                         selected={selectedDate}
                         onChange={date => setSelectedDate(date)}
-                        disabledDate={disabledDate} />
-                </div>
-                <div>
-                    <label for="date" class="form-label mt-2 fs-4">Return Date</label><br />
-                    <DatePicker className='returning'
+                        dateFormat='dd/MM/yyyy'
+                        minDate={new Date()}
+                        isClearable
+                    /> */}
+            <DatePicker
+              className="returning"
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              disabledDate={disabledDate}
+            />
+          </div>
+          <div>
+            <label for="date" class="form-label mt-2 fs-4">
+              Return Date
+            </label>
+            <br />
+            <DatePicker
+              className="returning"
+              selected={selectedDate2}
+              onChange={(date) => setSelectedDate2(date)}
+              disabledDate={disabledDate}
+            />
+            {/* <DatePicker className='returning'
                         selected={selectedDate2}
                         onChange={date => setSelectedDate2(date)}
-                        disabledDate={disabledDate} />
-                </div>
-            </div>
-            <div className='d-flex justify-content-center mt-3'>
-                <button className='search-button' onClick={handleSearch}>Search Buses</button>
-            </div>
-            <div className='from-text' >{suggestions && suggestions.map((suggestion, i) =>
-                <div
-                    onClick={() => onSuggestionHandler(suggestion.district)}
-                    className='suggestion' key={i}>{suggestion.district}</div>
-            )}</div>
-            <div className='from-text2' >{suggestions2 && suggestions2.map((suggestion2, i) =>
-                <div
-                    onClick={() => onSuggestionHandler2(suggestion2.district)}
-                    className='suggestion' key={i}>{suggestion2.district}</div>
-            )}</div>
+                        dateFormat='dd/MM/yyyy'
+                        minDate={selectedDate}
+                        isClearable
+                        
+                    /> */}
+          </div>
         </div>
+        <div className="d-flex justify-content-center mt-3">
+          <button className="search-button" onClick={handleSearch}>
+            Search Buses
+          </button>
+        </div>
+        <div>
+          <h2 className="text-2xl text-center text-gray-600 mt-2">
+            Available Bus Routes
+          </h2>
+          <Divider />
+          <div className='grid grid-cols-3 justify-evenly justify-items-center '>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Cox's Bazar
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Khulna
+              </p>
+            </div>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Chattogram
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Rajshahi
+              </p>
+            </div>
+            <div>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Sylhet
+              </p>
+              <p className="flex align-middle">
+                <MdLocationPin className="text-green-500 text-xl" />
+                Dhaka - Rangpur
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="from-text">
+          {suggestions &&
+            suggestions.map((suggestion, i) => (
+              <div
+                onClick={() => onSuggestionHandler(suggestion.district)}
+                className="suggestion"
+                key={i}
+              >
+                {suggestion.district}
+              </div>
+            ))}
+        </div>
+        <div className="from-text2">
+          {suggestions2 &&
+            suggestions2.map((suggestion2, i) => (
+              <div
+                onClick={() => onSuggestionHandler2(suggestion2.district)}
+                className="suggestion"
+                key={i}
+              >
+                {suggestion2.district}
+              </div>
+            ))}
+        </div>
+      </div>
     );
 };
 
