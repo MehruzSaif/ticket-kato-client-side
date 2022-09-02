@@ -140,3 +140,18 @@
 
 /*-----------payment----------*/
 
+.stripePay{
+    background-color: #1CA470;
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.completePayment{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.carddd{
+    font-size: 18px;
+    border-radius: 10px;
+}

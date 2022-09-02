@@ -42,76 +42,79 @@ import Refund from "./Pages/Home/Refund";
 import BagInfo from "./Pages/Home/BagInfo";
 import Map from "./Pages/Maps/Map";
 import LimitedOffer from "./Pages/Offers/LimitedOffer";
+import CompletePayment from "./Pages/Payment/CompletePayment";
+import Pay from "./Pages/Payment/Pay";
 
 // import About from "./Pages/shared/About";
 
 function App() {
   return (
-    <div >
-        <div className="content-bg-color main-content">
-          <Navbar></Navbar>
-          <Routes>
-            <Route path="/" element={<Home></Home>}>
-              <Route path="/" element={<Bus></Bus>}></Route>
-              <Route path="bus" element={<Bus></Bus>}></Route>
-              <Route path="flight" element={<Flight></Flight>}></Route>
-              <Route path="train" element={<Train></Train>}></Route>
-              <Route path="launch" element={<Launch></Launch>}></Route>
-            </Route>
-            <Route path="/Payment" element={<Payment></Payment>} />
-            <Route path="/destination" element={<Map></Map>} />
-            <Route path="/offer" element={<LimitedOffer></LimitedOffer>} />
-            <Route path="BookList" element={<BookTicket />}></Route>
-            <Route path="/busList" element={<BusList />}></Route>
-            <Route path="/login" element={<Login></Login>}></Route>
-            <Route path="/signup" element={<Signup></Signup>}></Route>
+    <div>
+      <div className="content-bg-color main-content">
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}>
+            <Route path="/" element={<Bus></Bus>}></Route>
+            <Route path="bus" element={<Bus></Bus>}></Route>
+            <Route path="flight" element={<Flight></Flight>}></Route>
+            <Route path="train" element={<Train></Train>}></Route>
+            <Route path="launch" element={<Launch></Launch>}></Route>
+          </Route>
+          <Route path="/Payment" element={<Payment></Payment>} />
+          <Route path="/pay" element={<Pay></Pay>}></Route>
+          <Route
+            path="/CompletePayment"
+            element={<CompletePayment></CompletePayment>}
+          />
+          <Route path="/destination" element={<Map></Map>} />
+          <Route path="/offer" element={<LimitedOffer></LimitedOffer>} />
+          <Route path="BookList" element={<BookTicket />}></Route>
+          <Route path="/busList" element={<BusList />}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/signup" element={<Signup></Signup>}></Route>
 
-            <Route path="/addReview" element={<AddReview></AddReview>} />
-            <Route path="/Privacy" element={<Privacy></Privacy>} />
-            <Route
-              path="/termsCondition"
-              element={<TermsConditions></TermsConditions>}
-            />
-            <Route path="/feedback" element={<Feedback></Feedback>} />
-            <Route path="/refund" element={<Refund></Refund>} />
-            <Route path="/bagInfo" element={<BagInfo></BagInfo>} />
-            <Route
-              path="dashboard"
-              element={
-                <RequireAuth>
-                  <Dashboard></Dashboard>
-                </RequireAuth>
-              }
-            >
-              <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
-              <Route index element={<DashboardIndex></DashboardIndex>}></Route>
-              <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
-              <Route path="addReview" element={<AddReview></AddReview>}></Route>
-              <Route path="addReview" element={<AddReview></AddReview>}></Route>
-              <Route path="addBuses" element={<AddBuses></AddBuses>}></Route>
-            </Route>
+          <Route path="/addReview" element={<AddReview></AddReview>} />
+          <Route path="/Privacy" element={<Privacy></Privacy>} />
+          <Route
+            path="/termsCondition"
+            element={<TermsConditions></TermsConditions>}
+          />
+          <Route path="/feedback" element={<Feedback></Feedback>} />
+          <Route path="/refund" element={<Refund></Refund>} />
+          <Route path="/bagInfo" element={<BagInfo></BagInfo>} />
+          <Route
+            path="dashboard"
+            element={
+              <RequireAuth>
+                <Dashboard></Dashboard>
+              </RequireAuth>
+            }
+          >
+            <Route path="userPanel" element={<UserPanel></UserPanel>}></Route>
+            <Route index element={<DashboardIndex></DashboardIndex>}></Route>
+            <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+            <Route path="addReview" element={<AddReview></AddReview>}></Route>
+            <Route path="addReview" element={<AddReview></AddReview>}></Route>
+            <Route path="addBuses" element={<AddBuses></AddBuses>}></Route>
+          </Route>
 
-            <Route
-              path="/addReview"
-              element={
-                <RequireAuth>
-                  <AddReview></AddReview>
-                </RequireAuth>
-              }
-            />
+          <Route
+            path="/addReview"
+            element={
+              <RequireAuth>
+                <AddReview></AddReview>
+              </RequireAuth>
+            }
+          />
 
-            <Route path="/contactus" element={<Contact></Contact>} />
-            <Route path="/about" element={<About></About>} />
-            <Route
-              path="/busTicket"
-              element={<BussTicket></BussTicket>}
-            ></Route>
-            <Route path="*" element={<NotFound></NotFound>}></Route>
-          </Routes>
-          <ToastContainer position="top-center" />
-        </div>
+          <Route path="/contactus" element={<Contact></Contact>} />
+          <Route path="/about" element={<About></About>} />
+          <Route path="/busTicket" element={<BussTicket></BussTicket>}></Route>
+          <Route path="*" element={<NotFound></NotFound>}></Route>
+        </Routes>
+        <ToastContainer position="top-center" />
       </div>
-   
+    </div>
   );
 
 }

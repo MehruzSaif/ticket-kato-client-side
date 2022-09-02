@@ -49,7 +49,7 @@ const BusItem = ({ item, travelDate,returnDate}) => {
                 }
 
                 <div className="siDetailTexts">
-                    <span className="siPrice">{item.price} Tk</span>
+                    <span className="siPrice">${item.price}</span>
                     
                     <button className="siCheckButton" onClick={handleClick}>View Seats</button>
                 </div>
