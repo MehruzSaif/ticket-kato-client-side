@@ -18,14 +18,8 @@ const BusList = () => {
     const [operator, setOperator] = useState('');
 
     const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses?departure_city=${departure}&arrival_city=${arrival}`)
-    // console.log(data);
 
-    const handleOperator = () => {
-        data.slice(0, 1).map(item => (
-            setOperator(item.operator_names[0])
-        ))
-    }
-    // console.log(operator);
+
     const [bus, setBus] = useState([]);
     useEffect(() => {
         fetch(`https://hidden-stream-11117.herokuapp.com/buses?departure_city=${departure}&arrival_city=${arrival}`)
@@ -53,7 +47,7 @@ const BusList = () => {
                 <div className='routeNameDate'>
                     <div className='nameDate'>
                         <p className='text-center fs-4 busRoute'>Search Result For: {departure}-{arrival} </p>
-                        {/* <p className='filterLine'><span></span></p> */}
+                   
                         <div className='dateMain'>
                         <div className='d-flex justify-content-evenly dateOfTravel'>
                             <p className='text-center travelDate'>Travel Date:{`${format(travelDate, "dd-MM-yyyy")}`}</p>

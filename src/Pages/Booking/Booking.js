@@ -13,44 +13,14 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
   const [busItem, setBusItem] = useState(item)
   const [datePro,setDatePro]=useState([])
   const { data, loading, error, refetch } = useFetch(`https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`)
-  // console.log("busSeats2", data)
-
-
-  // const date1 = [format(travelDate, 'PP')];
-  // console.log(date1);
-
   const newDate=travelDate.toISOString().split('T')[0]
-  // console.log("newDate:",newDate)
-
   const newDateX=newDate + 'T00:00:00.000Z';
-  // console.log("formattedDate:",newDateX)
-
   const isAvailable = (seatNumber) => {
-    // console.log(seatNumber)
-    // console.log(newDateX)
-    // console.log(seatNumber.length)
-    // seatNumber.unavailableDates.map(date=>{
-    //     console.log(date);
-    //     setDatePro([...datePro,date])
-    // })
-    // const founded = seatNumber.unavailableDates.filter(a =>{
-    //   newDateX.includes(a)
-    // } );
-
     const isFound = seatNumber.unavailableDates.some((date =>
       newDateX.includes(date))
-
     )
-
     return isFound;
   }
-  // let isFound=[];
-  // if(isFound==true){
-  //   count++
-  // }
-
-  // console.log(datePro) 
-  // console.log(count);
 
   const handleSelect = (e) => {
     const checked = e.target.checked
@@ -63,35 +33,23 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
     else{
       setSelectSeats(selectSeats.filter(i => i !== value))
     }
-    // setSelectSeats(checked
-    //   ? [...selectSeats, newValue[0]]
-    //   : selectSeats.filter((item) => item !== newValue)
-    // );
   };
   console.log(selectSeats)
 
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    // console.log(selectSeats)
+
     try {
       await Promise.all(
         selectSeats.map((Id) => {
           const newValue = Id.split(",")
           console.log(newValue);
           console.log(newValue[2])
-          // console.log("seatInfo:", seatId)
-          // console.log("seatId:", seatId[2])
           const res = axios.put(`https://hidden-stream-11117.herokuapp.com/seats/availability/${newValue[2]}`, {
             dates: newDateX,
           });
           return res.data;
-          // seatId.map((singleId) => {
-          //   console.log("singleInfo:", singleId)
-          //   // console.log("travel", newDateX)
-
-
-          // })
         })
       );
       setOpen(false);

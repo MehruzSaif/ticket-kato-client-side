@@ -14,7 +14,7 @@
 
 }
 #contract .container h1{
-    color:black;
+    /* color:black;  */
     margin-left: 20px;
 }
 #contract .container center  h1::after{
@@ -94,30 +94,30 @@ margin-top: 30px;
   margin-left: 20px;
   margin-top: 20px;
   padding-left:10px ;
-  border: none;
+  /* border: none;  */
   border-radius: 30px;
   overflow: hidden;
-  background-color: black;
+  /* background-color: black;  */
 }
 #contract .name-email input{
   height: 30px;
   width: 40%;
   margin-left: 20px;
   padding-left:10px ;
-  border: none;
+  /* border: none;  */
   border-radius: 30px;
   overflow: hidden;
-  background-color: black;
+  /* background-color: black;  */
 }
 #contract textarea{
   width: 80%;
   margin-left: 20px;
   margin-top: 10px;
   padding:10px ;
-  border: none;
+  /* border: none;  */
   border-radius: 20px;
   overflow: hidden;
-  background-color: black;
+  /* background-color: black;  */
 }
 #contract input{
   color:white;
@@ -131,7 +131,7 @@ margin-top: 30px;
   color:white;
   background-color: #CA003A;
   border-radius: 30px;
-  border:none;
+  /* border:none;  */
   margin-left:20px;
   margin-top:20px;
 }

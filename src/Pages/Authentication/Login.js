@@ -44,14 +44,13 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const [token] = useToken(user || gUser)
+  const [token] = useToken(user || gUser);
 
   useEffect(() => {
     if (token) {
       navigate(from, { replace: true });
     }
-  }, [token, from, navigate])
-
+  }, [token, from, navigate]);
 
   useEffect(() => {
     const errorMsg = error || gError;
@@ -80,10 +79,7 @@ const Login = () => {
   }, [error, gError]);
 
   if (loading || gLoading) {
-
-    return (
-      <Loading />
-    );
+    return <Loading />;
   }
   const resetPassword = async () => {
     const email = emailRef.current.value;
@@ -95,16 +91,15 @@ const Login = () => {
     }
   };
 
-
   const onSubmit = (data) => {
     // console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
     // reset({});
   };
 
-  // if (user || gUser) {
-  //   navigate('/')
-  // }
+  if (user || gUser) {
+    navigate("/");
+  }
 
   return (
     <>
@@ -118,16 +113,20 @@ const Login = () => {
           />
         </div>
         <div className="login border-0 my-5 mt-5">
-          <div className="my-5 p-4 text-center w-full border-1 shadow-lg mx-auto my-3 d-flex justify-content-center align-item-center mt-5">
+          <div className="p-4 text-center w-full border-1 shadow-lg mx-auto my-3 d-flex justify-content-center align-item-center mt-5">
             <div className="flex h-screen justify-center items-center border-0">
               <div className="card border-0">
                 <div className="card-body border-0">
-                  <h2 className="text-center text-success text-2xl font-semibold">Login</h2>
+                  <h2 className="text-center text-success text-2xl font-semibold">
+                    Login
+                  </h2>
                   <form className="border-0" onSubmit={handleSubmit(onSubmit)}>
                     {/* Email */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text text-lg">Email</span>
+                        <span className="label-text text-lg text-center mx-auto">
+                          Email
+                        </span>
                       </label>
                       <input
                         {...register("email", {
@@ -165,7 +164,9 @@ const Login = () => {
                     {/* Password */}
                     <div className="form-control w-full border-0">
                       <label className="label">
-                        <span className="label-text text-lg">Password</span>
+                        <span className="label-text text-lg mx-auto">
+                          Password
+                        </span>
                       </label>
                       <input
                         {...register("password", {
@@ -202,7 +203,7 @@ const Login = () => {
                       value="Login"
                     />
                   </form>
-                  <p className="text-danger fs-5">
+                  {/* <p className="text-danger fs-5">
                     Forget Password?
                     <button
                       className="btn btn-link text-decoration-none b-0 fs-5"
@@ -210,7 +211,7 @@ const Login = () => {
                     >
                       Reset Password
                     </button>
-                  </p>
+                  </p> */}
                   <p>
                     <small className="fs-5">
                       New To Ticket-Kato?
@@ -227,14 +228,15 @@ const Login = () => {
                     <span>OR</span>
                     <span></span>
                   </div>
-                  <div className="mt-4">
+                  <div className="mt-4 ">
                     <button
                       onClick={() => signInWithGoogle()}
-                      className="btn btn-outline-success d-flex justify-center mx-auto"
+                      className="text-green-600 mx-auto text-xl font-semibold flex border-2 p-3 rounded-xl hover:bg-green-300"
                     >
-                      Continue With Google
-                      <FcGoogle className="w-6 h-7 ml-1"></FcGoogle>
+                      Continue With Google{" "}
+                      <FcGoogle className="w-7 h-7 ml-3"></FcGoogle>
                     </button>
+                    <span></span>
                   </div>
                 </div>
               </div>

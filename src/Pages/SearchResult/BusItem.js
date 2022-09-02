@@ -3,15 +3,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Booking from '../Booking/Booking';
 import './BusItem.css';
-const BusItem = ({ item, travelDate,returnDate}) => {
+const BusItem = ({ item, travelDate}) => {
     const [openModal, setOpenModal] = useState(false);
 
     const handleClick = () => {
-        // if (user) {
           setOpenModal(true);
-        // } else {
-        //   navigate("/login");
-        // }
       };
     return (
         <div>
@@ -44,7 +40,6 @@ const BusItem = ({ item, travelDate,returnDate}) => {
                 {item.rating &&
                     <div className="siRating">
                         <span></span>
-                        {/* <span>Seats:{item.available_seats.length}</span> */}
                         <button>{item.rating}</button>
                     </div>
                 }
@@ -57,7 +52,7 @@ const BusItem = ({ item, travelDate,returnDate}) => {
             </div>
             
         </div>
-{openModal && <Booking setOpen={setOpenModal} busId={item._id} item={item} travelDate={travelDate} />}
+        {openModal && <Booking setOpen={setOpenModal} busId={item._id} item={item} travelDate={travelDate} />}
         </div>
         
     );

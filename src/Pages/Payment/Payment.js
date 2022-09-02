@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import './Payment.css'
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -12,7 +13,6 @@ const Payment = () => {
     const [user, loading] = useAuthState(auth)
     console.log(user)
     const location = useLocation();
-    // console.log(location)
     const [selectSeats, setSelectSeats] = useState(location.state.selectSeats)
     const [travelDate, setTravelDate] = useState(location.state.goingDate)
     const [busProfile, setBusProfile] = useState(location.state.busItem)
@@ -22,16 +22,9 @@ const Payment = () => {
     const [gender, setGender] = useState()
 
     console.log(selectSeats.length)
-    // console.log(travelDate)
-    // console.log(busProfile)
-
-
-
-    // const { data, loading, error, refetch } = useFetch(`http://localhost:8800/seats/singleSeat/${selectSeats}`)
-    // // console.log(data);
     const navigate = useNavigate();
     const handlePayment = () => {
-        navigate("/CompletePayment", { state: { selectSeats, travelDate, busProfile} });
+        navigate("/CompletePayment", { state: { selectSeats, travelDate, busProfile } });
     }
 
     return (
@@ -77,38 +70,11 @@ const Payment = () => {
                         <input type="text" onChange={(e) => setGender(e.target.value)} value={gender} placeholder=" Your Gender" class="nameField mb-4 mx-4" name='description' required /><br></br>
                         <label>Phone</label><br></br>
                         <input type="text" onChange={(e) => setPhone(e.target.value)} value={phone} placeholder="Phone" class="nameField mb-4 mx-4" name='phone' /><br></br>
-                        {/* <p className='payment'>Payment Method</p><br></br> */}
-
-                        {/* <div className="flex-1 ml-28">
-                            <div className="card w-96 bg-base-100 shadow-xl">
-                                <p className='stripePay'>Pay with Stripe</p>
-                                <div className="card-body">
-                                    <Elements stripe={stripePromise}>
-                                        <CheckoutForm />
-                                    </Elements>
-                                </div>
-                            </div>
-                        </div> */}
                         <input type="submit" value="Pay with Stripe" className='stripePay border-0 bg-cyan-500 mb-4 mt-1' required />
                     </form>
                 </div>
-
-
-
             </div>
-            <div >
-                {/* <div className='d-flex justify-content-center'>
-                <Elements stripe={stripePromise}>
-                    <CheckoutForm />
-                </Elements>
-            </div> */}
-
-            </div>
-
-
         </div>
-
     );
 };
-
 export default Payment;
