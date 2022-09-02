@@ -33,6 +33,8 @@ import CompletePayment from "./pages/Payment/CompletePayment"
 import Feedback from './pages/Home/Feedback';
 import Refund from "./pages/Home/Refund";
 import BagInfo from "./pages/Home/BagInfo";
+import Pay from "./pages/Payment/Pay";
+// import Success from "./pages/Payment/Success";
 
 
 
@@ -42,8 +44,8 @@ function App() {
       <div className="content-bg-color main-content">
         <Navbar></Navbar>
         <Routes>
-
-          
+          {/* <Route path="/success" element={<Success></Success>}></Route> */}
+          <Route path="/pay" element={<Pay></Pay>}></Route>
           <Route path="/" element={<Home></Home>}>
             <Route path='/' element={<Bus></Bus>}></Route>
             <Route path='bus' element={<Bus></Bus>}></Route>

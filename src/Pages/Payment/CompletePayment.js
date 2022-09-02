@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { format } from 'date-fns';
 import './Payment.css'
 import CheckoutFormNew from './CheckoutFormNew';
+import Pay from './Pay';
 const stripePromise = loadStripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
 const CompletePayment = () => {
@@ -24,18 +25,19 @@ const CompletePayment = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-center  px-5">
                 <div className="card w-50 max-w-md bg-base-100 shadow-xl my-12">
-                    <div className="card-body">
+                    <div className="card-body carddd">
                         <p className="text-success font-bold">Hello, {user?.displayName}</p>
                         <h2 className="card-title">Please Pay for {busPro.route} Ticket</h2>
-                        <p className="font-semibold text-orange-500">
-                            Ticket Quantity Selected: {seats.length}
-                        </p>
-                        <p className="font-semibold text-indigo-500">
-                            Your Total Price: ${busPro.price * seats.length}
-                        </p>
                         <p className="font-semibold text-green-500">
                             Bus Name: {busPro.operator_name}
                         </p>
+                        <p className="font-semibold text-indigo-500">
+                            Ticket Quantity Selected: {seats.length}
+                        </p>
+                        <p className="font-semibold text-orange-500">
+                            Your Total Price: ${busPro.price * seats.length}
+                        </p>
+
                         <p className="font-semibold text-indigo-500">
                             Selected Seats:{" "}
                             {seats.map((seat) => (
@@ -49,10 +51,13 @@ const CompletePayment = () => {
                     <div className="card w-96 bg-base-100 shadow-xl ml-10">
                         <p className='stripePay text-center'>Pay with Stripe</p>
                         <div className="card-body">
-                            <Elements stripe={stripePromise}>
+                            {/* <Elements stripe={stripePromise}>
                                 <CheckoutFormNew
                                     ticketPriceNow={busPro.price * seats.length} />
-                            </Elements>
+                            </Elements> */}
+                            <Pay ticketPriceNow={busPro.price * seats.length}>
+
+                            </Pay>
                         </div>
                     </div>
                 </div>
