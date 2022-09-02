@@ -41,6 +41,8 @@ import Feedback from './Pages/Home/Feedback';
 import Refund from "./Pages/Home/Refund";
 import BagInfo from "./Pages/Home/BagInfo";
 import PaymentProcess from "./Pages/Payment/PaymentProcess";
+import Map from "./Pages/Maps/Map";
+import LimitedOffer from "./Pages/Offers/LimitedOffer";
 
 // import About from "./Pages/shared/About";
 
@@ -58,6 +60,8 @@ function App() {
               <Route path="launch" element={<Launch></Launch>}></Route>
             </Route>
             <Route path="/Payment" element={<Payment></Payment>} />
+            <Route path="/destination" element={<Map></Map>} />
+            <Route path="/offer" element={<LimitedOffer></LimitedOffer>} />
             <Route path="/paymentProcess" element={<PaymentProcess></PaymentProcess>}></Route>
             <Route path="BookList" element={<BookTicket />}></Route>
             <Route path="/busList" element={<BusList />}></Route>

@@ -57,11 +57,13 @@ const Payment = () => {
             <p className="jArr">Coach Number:{busProfile.coach_number}</p>
             <p className="jTic">Tickets:</p>
             {selectSeats.map((seat) => (
-              <p className="seatId">{seat}</p>
+              <div className="flex">
+                <p className="seatId flex">{seat.slice(0, 1)}</p>
+              </div>
             ))}
             <p className="jp ">
-              Price:{busProfile.price}
-              <small className="ml-3 jp2">(Per Ticket)</small>
+              Price:{busProfile.price * selectSeats.length}
+              <small className="ml-3 jp2">(Total price)</small>
             </p>
           </div>
         </div>

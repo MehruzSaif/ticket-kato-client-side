@@ -41,7 +41,7 @@ const Faq = () => {
       {/* :HEADER */}
       <div className="w-full pt-2 bg-indigo-400 text-center text-white">
         {/* ::Brand */}
-        <h2 className="p-5 text-5xl sm:text-6xl font-semibold tracking-wider text-indigo-500">
+        <h2 className="p-5 text-5xl sm:text-6xl font-semibold tracking-wider text-indigo-700">
           Want To Know More About Us?
         </h2>
         {/* ::Menu */}
