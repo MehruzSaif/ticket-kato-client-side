@@ -50,7 +50,7 @@ const Payment = () => {
               <p className="jArr">Coach Number:{busProfile.coach_number}</p>
               <p className="jTic">Tickets:</p>
               {selectSeats.map((seat) => (
-                <span className="seatId">{seat.slice(0, 1)}</span>
+                <span className="seatId">{seat.slice(0, 2)}</span>
               ))}
 
               <p className="jp ">

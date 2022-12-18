@@ -146,8 +146,8 @@ const Navbar = () => {
         </div>
       </nav>
       <div class="navbar bg-blue-900 py-0">
-      <div class="navbar-center ml-96 hidden lg:flex pb-0 mb-0">
-    <ul class="menu menu-horizontal p-0 pb-0 mb-0">
+      <div class="navbar-center ml-96 hidden lg:flex pb-0 mb-0 justify-center">
+    <ul class="menu menu-horizontal p-0 pb-0 mb-0 w-full flex justify-center">
       <li tabindex="0">
         <a>
           Book Tickets

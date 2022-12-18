@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './Reviews.css'
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { Link } from 'react-router-dom';
-import Review from './Review';
+import React, { useEffect, useState } from "react";
+import "./Reviews.css";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Link } from "react-router-dom";
+import Review from "./Review";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://hidden-stream-11117.herokuapp.com/reviews")
+    fetch("https://ticket-kato.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -25,8 +25,8 @@ const Reviews = () => {
   };
 
   return (
-    <div className='review-container'>
-<div>
+    <div className="review-container">
+      <div>
         <h2 className="text-center text-light fs-1">
           See, What Our Clients Are Saying!
         </h2>
@@ -98,11 +98,9 @@ const Reviews = () => {
           slidesToSlide={2}
           swipeable
         >
-          {reviews
-           
-            .map((review) => (
-              <Review key={review._id} review={review}></Review>
-            ))}
+          {reviews.map((review) => (
+            <Review key={review._id} review={review}></Review>
+          ))}
         </Carousel>
       </div>
       <div className="text-center mt-4">
@@ -115,4 +113,3 @@ const Reviews = () => {
 };
 
 export default Reviews;
-
