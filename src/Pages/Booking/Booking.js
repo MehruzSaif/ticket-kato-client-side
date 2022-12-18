@@ -13,7 +13,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
   const [busItem, setBusItem] = useState(item);
   const [datePro, setDatePro] = useState([]);
   const { data, loading, error, refetch } = useFetch(
-    `https://hidden-stream-11117.herokuapp.com/buses/seats/${busId}`
+    `https://ticket-kato.onrender.com/buses/seats/${busId}`
   );
   const newDate = travelDate.toISOString().split("T")[0];
   const newDateX = newDate + "T00:00:00.000Z";
@@ -47,7 +47,7 @@ const Booking = ({ setOpen, busId, item, travelDate }) => {
           console.log(newValue);
           console.log(newValue[2]);
           const res = axios.put(
-            `https://hidden-stream-11117.herokuapp.com/seats/availability/${newValue[2]}`,
+            `https://ticket-kato.onrender.com/seats/availability/${newValue[2]}`,
             {
               dates: newDateX,
             }

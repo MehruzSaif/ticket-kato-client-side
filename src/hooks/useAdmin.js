@@ -7,7 +7,7 @@ const useAdmin = (user) => {
   useEffect(() => {
     const email = user?.email;
     if (email) {
-      fetch(`https://hidden-stream-11117.herokuapp.com/users/getAdmin/${email}`, {
+      fetch(`https://ticket-kato.onrender.com/users/getAdmin/${email}`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
