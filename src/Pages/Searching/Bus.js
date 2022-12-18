@@ -116,7 +116,7 @@ const Bus = () => {
               value={text}
               class="form-control"
               name="From"
-              placeholder="        Departure Place"
+              placeholder="          Dhaka"
               required
             />
           </div>
@@ -130,7 +130,7 @@ const Bus = () => {
               value={text2}
               class="form-control"
               name="To"
-              placeholder="          Arrival Place"
+              placeholder="          Cox's Bazar"
               required
             />
           </div>

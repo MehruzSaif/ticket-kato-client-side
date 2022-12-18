@@ -126,11 +126,11 @@ const Launch = () => {
         <div className="d-flex justify-content-center mt-3">
           <button className="search-button">Search Launches</button>
         </div>
-        <div>
+        {/* <div>
           <h2 className="text-2xl text-center font-semibold text-green-500 mt-2">
             Coming Soon...
           </h2>
-        </div>
+        </div> */}
         <div className="from-text">
           {suggestions &&
             suggestions.slice(0, 4).map((suggestion, i) => (

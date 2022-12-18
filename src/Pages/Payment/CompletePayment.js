@@ -41,7 +41,7 @@ const CompletePayment = () => {
                         <p className="font-semibold text-indigo-500">
                             Selected Seats:{" "}
                             {seats.map((seat) => (
-                                <span className="seatId text-red-400">{seat.slice(0, 1)}</span>
+                                <span className="seatId text-red-400">{seat.slice(0, 2)}</span>
                             ))}
                         </p>
                     </div>

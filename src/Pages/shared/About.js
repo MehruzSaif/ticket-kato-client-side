@@ -53,7 +53,8 @@ const About = () => {
         <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
           <div className="w-full lg:w-6/12">
             <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">
-              We Are Here To Create A New Digital Era For Ticketing System In Bangladesh.
+              We Are Here To Create A New Digital Era For Ticketing System In
+              Bangladesh.
             </h2>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
               It is a long established fact that a reader will be distracted by
@@ -464,7 +465,7 @@ const About = () => {
             <div class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-blue-600 rounded-xl border-gray-700 border-1 shadow-lg">
               <img
                 class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                src="https://scontent.fdac11-1.fna.fbcdn.net/v/t39.30808-6/269943857_104579172104902_5696678123455811689_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFNOEkWPkrbinIt4oAfDCP5Ju1YD79k6Cwm7VgPv2ToLO9wB4n7Ed0S23eJUx4sKBO-PennssnaMyx8A5-5Z8pC&_nc_ohc=NolChN0Q6c8AX-nlfAE&tn=nzgR1Grm4EITYMrm&_nc_ht=scontent.fdac11-1.fna&oh=00_AT-tboWHARcCyPTln1yI5wZ_c61ajYHYYX5IaKXPgSgQxw&oe=6314EA80"
+                src="https://avatars.githubusercontent.com/u/62128195?v=4"
                 alt=""
               />
 
@@ -708,7 +709,7 @@ const About = () => {
             <div class="flex flex-col items-center p-8 transition-colors duration-300 transform cursor-pointer group hover:bg-blue-600 rounded-xl border-gray-700 border-1 shadow-lg w-full mx-auto lg:ml-52">
               <img
                 class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                src="https://scontent.fdac11-2.fna.fbcdn.net/v/t39.30808-6/284662441_1422206321579440_7727757908508457760_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHRGbpvVPy--udxTdUF3sDsKAoyXXEkJK0oCjJdcSQkrUTS0yxyD_tQpcd6H2VCfZn0UHwQmfvH0eMFDkFPhH4F&_nc_ohc=cycisnVejkwAX9KwRg7&_nc_ht=scontent.fdac11-2.fna&oh=00_AT_dywNPyM0hKZKTUdSiC9Re4Os9wzJe16l5u9v8Rnh9FA&oe=63147772"
+                src="https://avatars.githubusercontent.com/u/86368809?v=4"
                 alt=""
               />
 
